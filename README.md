@@ -2,7 +2,7 @@
 
 A starter repository showing how to build a blog with the [Eleventy](https://github.com/11ty/eleventy) static site generator.
 
-[![Build Status](https://travis-ci.org/11ty/eleventy-base-blog.svg?branch=master)](https://travis-ci.org/11ty/eleventy-base-blog)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/faab84cf-52cb-4150-b142-f0c4e0e5312f/deploy-status)](https://app.netlify.com/sites/yetty/deploys)
 
 ## Demos
 
