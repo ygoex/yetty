@@ -1,4 +1,4 @@
-# eleventy-base-blog
+# yetty: Yet another 11ty boilerplate to start a new website with optional blog.
 
 A starter repository showing how to build a blog with the [Eleventy](https://github.com/11ty/eleventy) static site generator.
 
