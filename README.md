@@ -10,23 +10,23 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 
 ## Deploy this to your own site
 
-These builders are amazing—try them out to get your own Eleventy site in a few clicks!
+This builder is amazing. Try it out to get your own yetty site in a few clicks!
 
-* [Get your own Eleventy web site on Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/ygoex/yetty)
+* [Get your own yetty web site on Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/ygoex/yetty)
 
 ## Getting Started
 
 ### 1. Clone this Repository
 
 ```
-git clone https://github.com/ygoex/yetty.git my-blog-name
+git clone https://github.com/ygoex/yetty.git my-new-project
 ```
 
 
 ### 2. Navigate to the directory
 
 ```
-cd my-blog-name
+cd my-new-project
 ```
 
 Specifically have a look at `.eleventy.js` to see if you want to configure any Eleventy options differently.
