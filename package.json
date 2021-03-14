@@ -3,11 +3,15 @@
   "version": "5.0.2",
   "description": "A starter repository for a blog web site using the Eleventy static site generator.",
   "scripts": {
-    "build": "eleventy",
+    "build": "eleventy && npm run sass",
     "watch": "eleventy --watch",
-    "serve": "eleventy --serve",
+    "serve": "concurrently 'eleventy --serve' 'npm run sass:watch'",
     "start": "eleventy --serve",
-    "debug": "DEBUG=* eleventy"
+    "debug": "DEBUG=* eleventy",
+    "sass": "node-sass --output dist/styles/ styles/",
+    "sass:watch": "npm run sass && npm run sass -- -w",
+    "clean": "rm -rf dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -30,6 +34,8 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
     "luxon": "^1.25.0",
     "markdown-it": "^8.4.2",
-    "markdown-it-anchor": "^5.2.5"
+    "markdown-it-anchor": "^5.2.5",
+    "concurrently": "^6.0.0",
+    "node-sass": "^5.0.0"
   }
 }
