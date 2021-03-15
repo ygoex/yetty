@@ -6,9 +6,10 @@
     "build": "eleventy && npm run sass",
     "watch": "eleventy --watch",
     "serve": "concurrently 'eleventy --serve' 'npm run sass:watch'",
+    "dev": "npm run build && eleventy --serve",
     "start": "eleventy --serve",
     "debug": "DEBUG=* eleventy",
-    "sass": "node-sass --output dist/styles/ styles/",
+    "sass": "node-sass --output dist/styles/ src/styles/",
     "sass:watch": "npm run sass && npm run sass -- -w",
     "clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
