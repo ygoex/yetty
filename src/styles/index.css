@@ -202,7 +202,7 @@ a[href].post-tag:visited {
 
 /* Warning */
 .warning {
-  background-color: lemonchiffon;
+  background-color: #ffc;
   padding: 1em 0.625em;
   /* 16px 10px /16 */ }
 
