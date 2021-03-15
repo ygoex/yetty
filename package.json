@@ -3,13 +3,13 @@
   "version": "5.0.2",
   "description": "A starter repository for a blog web site using the Eleventy static site generator.",
   "scripts": {
-    "build": "eleventy && npm run sass",
+    "build": "npm run sass && eleventy",
     "watch": "eleventy --watch",
     "serve": "concurrently 'eleventy --serve' 'npm run sass:watch'",
     "dev": "npm run build && eleventy --serve",
     "start": "eleventy --serve",
     "debug": "DEBUG=* eleventy",
-    "sass": "node-sass --output dist/styles/ src/styles/",
+    "sass": "node-sass --output src/styles/ src/styles/scss/",
     "sass:watch": "npm run sass && npm run sass -- -w",
     "clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
