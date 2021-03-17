@@ -7,6 +7,17 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 ## New features:
 - [Sass/Scss](https://github.com/sass/node-sass): Scss files are compiled before Eleventy builds the site. The files are compiled in the `./src/styles` folder and then will be passed through copy (see `.eleventy.js`) to the new site created under `./dist/`. For Netlify users, an alternative option with plugins is explained here: [https://css-tricks.com/making-my-netlify-build-run-sass/](https://css-tricks.com/making-my-netlify-build-run-sass/).
 
+## TO-DO:
+- [x] Sass/Scss
+- [ ] Compile JS with Webpack/Parcel?
+- [ ] PWA
+- [ ] Add html-minifier
+- [ ] Critical CSS
+- [ ] Add custom style
+- [ ] Add cross-env
+- [ ] PostCSS: Autoprefixer
+- [ ] Purge CSS
+
 ## Demo
 
 * [yetty](https://yetty.netlify.app/)
