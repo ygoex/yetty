@@ -8,6 +8,9 @@
   --blue: #082840;
   --white: #fff;
 }
+.debugging-class {
+  border: red;
+}
 * {
   box-sizing: border-box;
 }
@@ -200,7 +203,7 @@ a[href].post-tag:visited {
 
 /* Warning */
 .warning {
-  background-color: #ffc;
+  background-color: lemonchiffon;
   padding: 1em 0.625em; /* 16px 10px /16 */
 }
 .warning ol:only-child {
