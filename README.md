@@ -15,8 +15,8 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 - [ ] Critical CSS
 - [ ] Add custom style
 - [ ] Add cross-env
-- [ ] PostCSS: Autoprefixer
-- [ ] Purge CSS
+- [x] PostCSS: Autoprefixer
+- [x] Purge CSS
 
 ## Demo
 
