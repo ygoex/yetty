@@ -3,13 +3,13 @@
   "version": "5.0.2",
   "description": "A starter repository for a blog web site using the Eleventy static site generator.",
   "scripts": {
-    "build": "npm run sass && eleventy",
+    "build": "npm run sass && eleventy && postcss dist/styles/index.css --replace",
     "watch": "eleventy --watch",
     "serve": "concurrently 'eleventy --serve' 'npm run sass:watch'",
     "dev": "npm run build && eleventy --serve",
     "start": "eleventy --serve",
     "debug": "DEBUG=* eleventy",
-    "sass": "node-sass --output src/styles/ src/styles/scss/",
+    "sass": "node-sass --output src/styles/ src/styles/scss/ --output-style compressed",
     "sass:watch": "npm run sass && npm run sass -- -w",
     "clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -33,10 +33,15 @@
     "@11ty/eleventy-navigation": "^0.1.6",
     "@11ty/eleventy-plugin-rss": "^1.1.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "autoprefixer": "^9.5.1",
+    "concurrently": "^6.0.0",
+    "critical": "^2.0.0-23",
     "luxon": "^1.25.0",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.2.5",
-    "concurrently": "^6.0.0",
-    "node-sass": "^5.0.0"
+    "node-sass": "^5.0.0",
+    "postcss": "^8.1.0",
+    "postcss-cli": "^8.3.1"
   }
 }
