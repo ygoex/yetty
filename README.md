@@ -12,7 +12,7 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 - [ ] Compile JS with Webpack/Parcel?
 - [ ] PWA
 - [ ] Add html-minifier
-- [ ] Critical CSS
+- [x] Critical CSS
 - [ ] Add custom style
 - [ ] Add cross-env
 - [x] PostCSS: Autoprefixer
