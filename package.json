@@ -3,13 +3,13 @@
   "version": "5.0.2",
   "description": "A starter repository for a blog web site using the Eleventy static site generator.",
   "scripts": {
-    "build": "npm run sass && eleventy && postcss dist/styles/index.css --replace",
+    "build": "npm run sass && eleventy && postcss dist/style/main.css --replace",
     "watch": "eleventy --watch",
     "serve": "concurrently 'eleventy --serve' 'npm run sass:watch'",
     "dev": "npm run build && eleventy --serve",
     "start": "eleventy --serve",
     "debug": "DEBUG=* eleventy",
-    "sass": "node-sass --output src/styles/ src/styles/scss/ --output-style compressed",
+    "sass": "node-sass src/_includes/critical_style/scss/ --output src/_includes/critical_style/ --output-style compressed && node-sass src/style/scss/ --output src/style/  --output-style compressed",
     "sass:watch": "npm run sass && npm run sass -- -w",
     "clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -42,6 +42,7 @@
     "markdown-it-anchor": "^5.2.5",
     "node-sass": "^5.0.0",
     "postcss": "^8.1.0",
-    "postcss-cli": "^8.3.1"
+    "postcss-cli": "^8.3.1",
+    "clean-css": "latest"
   }
 }
