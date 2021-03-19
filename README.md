@@ -6,6 +6,8 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 
 ## New features:
 - [Sass/Scss](https://github.com/sass/node-sass): Scss files are compiled before Eleventy builds the site. The files are compiled in the `./src/styles` folder and then will be passed through copy (see `.eleventy.js`) to the new site created under `./dist/`. For Netlify users, an alternative option with plugins is explained here: [https://css-tricks.com/making-my-netlify-build-run-sass/](https://css-tricks.com/making-my-netlify-build-run-sass/).
+- Critical CSS: Critical CSS has been added manually as explained in the following links: [https://www.11ty.dev/docs/quicktips/inline-css/](https://www.11ty.dev/docs/quicktips/inline-css/), [https://www.11ty.dev/docs/quicktips/concatenate/](https://www.11ty.dev/docs/quicktips/concatenate/) and [https://danabyerly.com/articles/manually-splitting-css-files-in-eleventy/](https://danabyerly.com/articles/manually-splitting-css-files-in-eleventy/)
+- PostCSS (Autoprefixer and PurgeCSS): Both dependencies have been set up to run through the main css stylesheet after Eleventy has generated the dist folder.
 
 ## TO-DO:
 - [x] Sass/Scss
@@ -16,7 +18,7 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 - [ ] Add custom style
 - [ ] Add cross-env
 - [x] PostCSS: Autoprefixer
-- [x] Purge CSS
+- [x] PostCSS: Purge CSS
 
 ## Demo
 
