@@ -11,12 +11,17 @@
     <link rel="stylesheet" href="{{ '/style/prism-base16-monokai.dark.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+
+    <!-- Snippet showing how to inline style:
+    delete from _includes/layouts/base.njk. if not required -->
     {% set css %}
-    {% include "critical_style/critical.css" %}
+    {% include "inline_style/inline_test.css" %}
     {% endset %}
     <style>
       {{css | cssmin | safe}}
     </style>
+    <!-- Stop deleting inline css -->
+
   </head>
   <body>
     <header>
