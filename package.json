@@ -9,7 +9,7 @@
     "dev": "npm run build && eleventy --serve",
     "start": "eleventy --serve",
     "debug": "DEBUG=* eleventy",
-    "sass": "node-sass src/_includes/critical_style/scss/ --output src/_includes/critical_style/ --output-style compressed && node-sass src/style/scss/ --output src/style/  --output-style compressed",
+    "sass": "node-sass src/_includes/inline_style/scss/ --output src/_includes/inline_style/ --output-style compressed && node-sass src/style/scss/ --output src/style/  --output-style compressed",
     "sass:watch": "npm run sass && npm run sass -- -w",
     "clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -29,20 +29,21 @@
   },
   "homepage": "https://github.com/ygoex/yetty#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-navigation": "^0.1.6",
     "@11ty/eleventy-plugin-rss": "^1.1.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
     "@fullhuman/postcss-purgecss": "^1.2.0",
     "autoprefixer": "^9.5.1",
+    "clean-css": "latest",
     "concurrently": "^6.0.0",
     "critical": "^2.0.0-23",
+    "eleventy-critical-css": "^0.2.3",
     "luxon": "^1.25.0",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.2.5",
     "node-sass": "^5.0.0",
     "postcss": "^8.1.0",
-    "postcss-cli": "^8.3.1",
-    "clean-css": "latest"
+    "postcss-cli": "^8.3.1"
   }
 }
