@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "Yet another starter repository for a website with optional blog using the Eleventy static site generator.",
   "scripts": {
-    "build": "npm run sass && eleventy && postcss dist/style/main.css --replace",
+    "build": "npm run sass:prod && eleventy && npm run postcss",
+    "postcss": "postcss dist/style/main.css --replace",
     "dev": "concurrently 'eleventy --serve' 'npm run sass:watch'",
     "start": "eleventy --serve",
     "debug": "DEBUG=* eleventy",
-    "sass": "node-sass src/_includes/inline_style/scss/ --output src/_includes/inline_style/ --output-style compressed && node-sass src/style/scss/ --output src/style/  --output-style compressed",
-    "sass:watch": "npm run sass && npm run sass -- -w",
+    "sass:prod": "node-sass src/_includes/inline_style/scss/ --output src/_includes/inline_style/ --output-style compressed && node-sass src/style/scss/ --output src/style/  --output-style compressed",
+    "sass:dev": "node-sass src/_includes/inline_style/scss/ --output src/_includes/inline_style/ --source-map true --source-map-contents true && node-sass src/style/scss/ --output src/style/  --source-map true --source-map-contents true",
+    "sass:watch": "npm run sass:dev && npm run sass -- -w",
     "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
