@@ -1,4 +1,8 @@
-dist/
+# node
 node_modules/
-package-lock.json
+
+# MacOS
 .DS_Store
+
+# build directory
+dist
