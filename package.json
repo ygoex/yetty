@@ -4,14 +4,12 @@
   "description": "Yet another starter repository for a website with optional blog using the Eleventy static site generator.",
   "scripts": {
     "build": "npm run sass && eleventy && postcss dist/style/main.css --replace",
-    "watch": "eleventy --watch",
-    "serve": "concurrently 'eleventy --serve' 'npm run sass:watch'",
-    "dev": "npm run build && eleventy --serve",
+    "dev": "concurrently 'eleventy --serve' 'npm run sass:watch'",
     "start": "eleventy --serve",
     "debug": "DEBUG=* eleventy",
     "sass": "node-sass src/_includes/inline_style/scss/ --output src/_includes/inline_style/ --output-style compressed && node-sass src/style/scss/ --output src/style/  --output-style compressed",
     "sass:watch": "npm run sass && npm run sass -- -w",
-    "clean": "rm -rf dist",
+    "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -46,6 +44,7 @@
     "markdown-it-anchor": "^5.2.5",
     "node-sass": "^5.0.0",
     "postcss": "^8.1.0",
-    "postcss-cli": "^8.3.1"
+    "postcss-cli": "^8.3.1",
+    "rimraf": "^3.0.2"
   }
 }
