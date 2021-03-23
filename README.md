@@ -1,6 +1,6 @@
 # yetty: Yet another 11ty boilerplate to start a new website with optional blog.
 
-This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog).
+This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog) et al.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/faab84cf-52cb-4150-b142-f0c4e0e5312f/deploy-status)](https://app.netlify.com/sites/yetty/deploys)
 
@@ -14,13 +14,13 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 
 ## TO-DO:
 - [x] Sass/Scss
-- [ ] Compile JS with Webpack/Parcel?
+- [ ] Compile JS with Webpack
 - [ ] PWA
-- [ ] Add html-minifier
+- [x] Add html-minifier
 - [x] Inline CSS
 - [x] Critical CSS
 - [ ] Add custom style
-- [ ] Add cross-env
+- [x] Add cross-env
 - [x] PostCSS: Autoprefixer
 - [x] PostCSS: Purge CSS
 
