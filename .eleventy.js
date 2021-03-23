@@ -8,6 +8,13 @@ const markdownItAnchor = require("markdown-it-anchor");
 const CleanCSS = require("clean-css");
 const criticalCss = require("eleventy-critical-css");
 
+// Import transforms
+const htmlMinTransform = require("./utils/transforms/html-min-transform.js");
+
+// Temporary get rid of warnings regarding the number of listeners
+// TO-DO: Debug to find the resource leakage
+process.setMaxListeners(15);
+
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
@@ -18,6 +25,8 @@ module.exports = function(eleventyConfig) {
     width: 1300,
   });
 
+  // Deep merge when combining the Data Cascade
+  // Documentation: https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
@@ -44,9 +53,15 @@ module.exports = function(eleventyConfig) {
     return Math.min.apply(null, numbers);
   });
 
+  //Minify inline style
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
   });
+
+  //Transform: Minify html
+  if (process.env.ELEVENTY_ENV === 'production') {
+    eleventyConfig.addTransform("htmlmin", htmlMinTransform);
+  }
 
   eleventyConfig.addCollection("tagList", function(collection) {
     let tagSet = new Set();
@@ -77,11 +92,12 @@ module.exports = function(eleventyConfig) {
     return [...tagSet];
   });
 
+  //Copy
   eleventyConfig.addPassthroughCopy("./src/img");
   eleventyConfig.addPassthroughCopy("./src/style/*.css");
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
 
-  /* Markdown Overrides */
+  // Markdown Overrides
   let markdownLibrary = markdownIt({
     html: true,
     breaks: true,
@@ -132,7 +148,6 @@ module.exports = function(eleventyConfig) {
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
 
-    // These are all optional, defaults are shown:
     dir: {
       input: "./src",
       includes: "_includes",
