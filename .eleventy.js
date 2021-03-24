@@ -16,21 +16,42 @@ const htmlMinTransform = require("./utils/transforms/html-min-transform.js");
 process.setMaxListeners(15);
 
 module.exports = function(eleventyConfig) {
+
+  /**
+   * Add plugins
+   *
+   * @link https://www.11ty.dev/docs/plugins/
+   */
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
-  eleventyConfig.addPlugin(criticalCss, {
-    minify: true,
-    height: 900,
-    width: 1300,
-  });
+  if (process.env.ELEVENTY_ENV === 'production') {
+    eleventyConfig.addPlugin(criticalCss, {
+      minify: true,
+      height: 900,
+      width: 1300,
+    });
+  }
 
-  // Deep merge when combining the Data Cascade
-  // Documentation: https://www.11ty.dev/docs/data-deep-merge/
+  /**
+   * Opts in to a full deep merge when combining the Data Cascade.
+   *
+   * @link https://www.11ty.dev/docs/data-deep-merge/#data-deep-merge
+   */
   eleventyConfig.setDataDeepMerge(true);
 
+  /**
+   * Add layout aliases
+   *
+   * @link https://www.11ty.dev/docs/layouts/#layout-aliasing
+   */
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
+  /**
+   * Add filters
+   *
+   * @link https://www.11ty.io/docs/filters/
+   */
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
   });
@@ -58,11 +79,20 @@ module.exports = function(eleventyConfig) {
     return new CleanCSS({}).minify(code).styles;
   });
 
-  //Transform: Minify html
-  if (process.env.ELEVENTY_ENV === 'production') {
-    eleventyConfig.addTransform("htmlmin", htmlMinTransform);
-  }
+  /**
+   * Add Transforms
+   *
+   * @link https://www.11ty.io/docs/config/#transforms
+   */
 
+  //Minify html
+  eleventyConfig.addTransform("htmlmin", htmlMinTransform);
+
+  /**
+   * Add Collections
+   *
+   * @link https://www.11ty.io/docs/collections
+   */
   eleventyConfig.addCollection("tagList", function(collection) {
     let tagSet = new Set();
     collection.getAll().forEach(function(item) {
@@ -92,12 +122,20 @@ module.exports = function(eleventyConfig) {
     return [...tagSet];
   });
 
-  //Copy
+  /**
+   * Passthrough file copy
+   *
+   * @link https://www.11ty.io/docs/copy/
+   */
   eleventyConfig.addPassthroughCopy("./src/img");
   eleventyConfig.addPassthroughCopy("./src/style/*.css");
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
 
-  // Markdown Overrides
+  /**
+   * Set custom markdown library instance
+   *
+   * @link https://www.11ty.dev/docs/languages/liquid/#optional-set-your-own-library-instance
+   */
   let markdownLibrary = markdownIt({
     html: true,
     breaks: true,
@@ -109,7 +147,11 @@ module.exports = function(eleventyConfig) {
   });
   eleventyConfig.setLibrary("md", markdownLibrary);
 
-  // Browsersync Overrides
+  /**
+   * Override BrowserSync Server options
+   *
+   * @link https://www.11ty.dev/docs/config/#override-browsersync-server-options
+   */
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
       ready: function(err, browserSync) {
