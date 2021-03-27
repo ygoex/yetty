@@ -33,6 +33,15 @@ module.exports = function(eleventyConfig) {
     });
   }
 
+  // setup mermaid markdown highlighter
+  const highlighter = eleventyConfig.markdownHighlighter;
+  eleventyConfig.addMarkdownHighlighter((str, language) => {
+    if (language === 'mermaid') {
+      return `<pre class="mermaid">${str}</pre>`;
+    }
+    return highlighter(str, language);
+  });
+
   /**
    * Opts in to a full deep merge when combining the Data Cascade.
    *
@@ -127,8 +136,10 @@ module.exports = function(eleventyConfig) {
    *
    * @link https://www.11ty.io/docs/copy/
    */
-  eleventyConfig.addPassthroughCopy("./src/img");
-  eleventyConfig.addPassthroughCopy("./src/style/*.css");
+  eleventyConfig.addPassthroughCopy("./src/assets/images");
+  eleventyConfig.addPassthroughCopy("./src/assets/style/*.css");
+  eleventyConfig.addPassthroughCopy("./src/assets/scripts/main.js");
+  eleventyConfig.addPassthroughCopy({"node_modules/mermaid/dist/mermaid.min.js": "/assets/scripts/mermaid.min.js"});
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
 
   /**
