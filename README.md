@@ -17,7 +17,8 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 - [x] Bundle JS with Webpack
 - [ ] PWA
 - [x] Add html-minifier
-- [x] Inline CSS
+- [ ] Remove inline CSS and leave only resources and documentation for doing it.
+- [ ] Refact scripts in package.json
 - [x] Critical CSS
 - [ ] Add custom style
 - [x] Add cross-env
