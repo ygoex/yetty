@@ -14,7 +14,7 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 
 ## TO-DO:
 - [x] Sass/Scss
-- [ ] Compile JS with Webpack
+- [x] Bundle JS with Webpack
 - [ ] PWA
 - [x] Add html-minifier
 - [x] Inline CSS
