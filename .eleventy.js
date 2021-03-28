@@ -138,7 +138,7 @@ module.exports = function(eleventyConfig) {
    */
   eleventyConfig.addPassthroughCopy("./src/assets/images");
   eleventyConfig.addPassthroughCopy("./src/assets/style/*.css");
-  eleventyConfig.addPassthroughCopy("./src/assets/scripts/main.js");
+  eleventyConfig.addPassthroughCopy("./src/assets/scripts/bundle.min.js");
   eleventyConfig.addPassthroughCopy({"node_modules/mermaid/dist/mermaid.min.js": "/assets/scripts/mermaid.min.js"});
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
 
