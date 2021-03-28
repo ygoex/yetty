@@ -1,3 +1,4 @@
 "use strict";
+//Testing bundle...
 //const mermaid = require("mermaid");
-console.log('Hiya!');
+console.log('Hello world!');
