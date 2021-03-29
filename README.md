@@ -8,7 +8,6 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 
 ## New features:
 - [Sass/Scss](https://github.com/sass/node-sass): Scss files are compiled before Eleventy builds the site. The files are compiled in the `./src/styles` folder and then will be passed through copy (see `.eleventy.js`) to the new site created under `./dist/`. For Netlify users, an alternative option with plugins is explained here: [https://css-tricks.com/making-my-netlify-build-run-sass/](https://css-tricks.com/making-my-netlify-build-run-sass/).
-- Inline CSS: Inline CSS has been added manually from `_includes` folder as explained in the following links: [https://www.11ty.dev/docs/quicktips/inline-css/](https://www.11ty.dev/docs/quicktips/inline-css/), [https://www.11ty.dev/docs/quicktips/concatenate/](https://www.11ty.dev/docs/quicktips/concatenate/) and [https://danabyerly.com/articles/manually-splitting-css-files-in-eleventy/](https://danabyerly.com/articles/manually-splitting-css-files-in-eleventy/)
 - [Critical CSS](https://github.com/gregives/eleventy-critical-css): Critical CSS is automatically included in the head of the document using the [eleventy-critical-css plugin](https://www.npmjs.com/package/eleventy-critical-css).
 - PostCSS ([Autoprefixer](https://github.com/postcss/autoprefixer) and [PurgeCSS](https://github.com/FullHuman/purgecss)): Both dependencies have been set up to run through the main css stylesheet after Eleventy has generated the dist folder.
 
@@ -17,7 +16,7 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 - [x] Bundle JS with Webpack
 - [ ] PWA
 - [x] Add html-minifier
-- [ ] Remove inline CSS and leave only resources and documentation for doing it.
+- [x] Remove inline CSS and leave only resources and documentation for doing it.
 - [ ] Refact scripts in package.json
 - [x] Critical CSS
 - [ ] Add custom style
@@ -94,3 +93,37 @@ DEBUG=* npx eleventy
   * `_includes/layouts/home.njk`: the home page template (wrapped into `base.njk`)
   * `_includes/layouts/post.njk`: the blog post template (wrapped into `base.njk`)
 * `_includes/postlist.njk` is a Nunjucks include and is a reusable component used to display a list of all the posts. `index.njk` has an example of how to use it.
+
+## Other features you might require:
+
+- **Inline CSS**: If you require further control over the above the fold & common style inlined by CriticalCSS, you can inline the style manually as follows:
+
+    1. Add the following code between the head tags in the base.njk file:
+
+        ```
+        {% set css %}
+          {% include "inline_style/inline_style.css" %}
+        {% endset %}
+        <style>
+          {{css | cssmin | safe}}
+        </style>
+        ```
+    2. Create a scss file with the name inline_style.scss under `_includes/inline_style/scss/inline_style.scss`
+
+    3. Add the following command to the beginning of the **sass:prod** script in `package.json`:
+
+        ```
+        node-sass src/_includes/inline_style/scss/ --output src/_includes/inline_style/ --output-style compressed &&
+        ```
+
+        And also, the following command to the beginning of the **sass:dev** script:
+
+        ```
+        node-sass src/_includes/inline_style/scss/ --output src/_includes/inline_style/ --source-map true --source-map-contents true &&
+        ```
+
+  For additional documentation about how to inline css in Eleventy visit:
+
+    1. [https://www.11ty.dev/docs/quicktips/inline-css/](https://www.11ty.dev/docs/quicktips/inline-css/)
+    2. [https://www.11ty.dev/docs/quicktips/concatenate/](https://www.11ty.dev/docs/quicktips/concatenate/)
+    3. [https://danabyerly.com/articles/manually-splitting-css-files-in-eleventy/](https://danabyerly.com/articles/manually-splitting-css-files-in-eleventy/)
