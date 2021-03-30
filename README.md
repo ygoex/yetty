@@ -17,12 +17,13 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 - [ ] PWA
 - [x] Add html-minifier
 - [x] Remove inline CSS and leave only resources and documentation for doing it.
-- [ ] Refact scripts in package.json
+- [x] Refact scripts in package.json
 - [x] Critical CSS
 - [ ] Add custom style
 - [x] Add cross-env
 - [x] PostCSS: Autoprefixer
 - [x] PostCSS: Purge CSS
+- [ ] Image processing
 
 ## Demo
 
