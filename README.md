@@ -17,12 +17,13 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 - [ ] PWA
 - [x] Add html-minifier
 - [x] Remove inline CSS and leave only resources and documentation for doing it.
-- [ ] Refact scripts in package.json
+- [x] Refact scripts in package.json
 - [x] Critical CSS
 - [ ] Add custom style
 - [x] Add cross-env
 - [x] PostCSS: Autoprefixer
 - [x] PostCSS: Purge CSS
+- [ ] Image processing
 
 ## Demo
 
@@ -61,28 +62,24 @@ npm install
 
 ### 5. Run Eleventy
 
+For local development and reload http://localhost:8080/ when a template, style or js changes:
 ```
-npx eleventy
-```
-
-Or build and host locally for local development
-```
-npx eleventy --serve
+npm start
 ```
 
-Or build automatically when a template changes:
+To build for production:
 ```
-npx eleventy --watch
+npm run build
 ```
 
-Or in debug mode:
+For debug mode:
 ```
 DEBUG=* npx eleventy
 ```
 
 ### Implementation Notes
 
-* `about/index.md` shows how to add a content page.
+* `about/index.md` shows how to add a new content page.
 * `posts/` has the blog posts but really they can live in any directory. They need only the `post` tag to be added to this collection.
 * Add the `nav` tag to add a template to the top level site navigation. For example, this is in use on `index.njk` and `about/index.md`.
 * Content can be any template format (blog posts needn’t be markdown, for example). Configure your supported templates in `.eleventy.js` -> `templateFormats`.
@@ -98,7 +95,7 @@ DEBUG=* npx eleventy
 
 - **Inline CSS**: If you require further control over the above the fold & common style inlined by CriticalCSS, you can inline the style manually as follows:
 
-    1. Add the following code between the head tags in the base.njk file:
+    1. Add the following code between the head tags in the `base.njk` file:
 
         ```
         {% set css %}
@@ -108,7 +105,7 @@ DEBUG=* npx eleventy
           {{css | cssmin | safe}}
         </style>
         ```
-    2. Create a scss file with the name inline_style.scss under `_includes/inline_style/scss/inline_style.scss`
+    2. Create a scss file with the name `inline_style.scss` under `_includes/inline_style/scss/inline_style.scss`
 
     3. Add the following command to the beginning of the **sass:prod** script in `package.json`:
 
