@@ -1,5 +1,6 @@
 const { DateTime } = require("luxon");
 const fs = require("fs");
+const slugify = require("slugify");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
@@ -16,6 +17,8 @@ const htmlMinTransform = require("./utils/transforms/html-min-transform.js");
 process.setMaxListeners(15);
 
 module.exports = function(eleventyConfig) {
+
+  let env = process.env.ELEVENTY_ENV;
 
   /**
    * Add plugins
@@ -88,6 +91,25 @@ module.exports = function(eleventyConfig) {
     return new CleanCSS({}).minify(code).styles;
   });
 
+  //Customize slugify: makes everything lowercase,
+  //replaces - with _, and strips unsafe chars from URLs
+  eleventyConfig.addFilter("slug", (str) => {
+    return slugify(str, {
+      lower: true,
+      replacement: "_",
+      remove: /[*+~·,()'"`´%!?¿:@\/]/g,
+    });
+  });
+
+  /**
+   * Add shortcodes
+   *
+   * @link https://www.11ty.dev/docs/shortcodes/
+   */
+
+  //Insert current year
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
   /**
    * Add Transforms
    *
@@ -138,9 +160,13 @@ module.exports = function(eleventyConfig) {
    */
   eleventyConfig.addPassthroughCopy("./src/assets/images");
   eleventyConfig.addPassthroughCopy("./src/assets/styles/*.css");
-  eleventyConfig.addPassthroughCopy("./src/assets/scripts/bundle.min.js");
   eleventyConfig.addPassthroughCopy({"node_modules/mermaid/dist/mermaid.min.js": "/assets/scripts/mermaid.min.js"});
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
+  if ( env === 'production') {
+    eleventyConfig.addPassthroughCopy("./src/assets/scripts/bundle.min.js");
+  } else {
+    eleventyConfig.addPassthroughCopy("./src/assets/scripts/index.js");
+  };
 
   /**
    * Set custom markdown library instance
@@ -154,9 +180,17 @@ module.exports = function(eleventyConfig) {
   }).use(markdownItAnchor, {
     permalink: true,
     permalinkClass: "direct-link",
-    permalinkSymbol: "#"
+    permalinkSymbol: "#",
+    slugify: (s) =>
+      s
+        .trim()
+        .toLowerCase()
+        .replace(/[\s+~\/]/g, "_")
+        .replace(/[().`,%·'"!?¿:@*]/g, ""),
   });
   eleventyConfig.setLibrary("md", markdownLibrary);
+
+  eleventyConfig.addWatchTarget('./src/assets/scripts/index.js');
 
   /**
    * Override BrowserSync Server options
