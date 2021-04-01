@@ -45,6 +45,7 @@
     "critical": "^3.0.0",
     "cross-env": "^7.0.3",
     "eleventy-critical-css": "^0.2.3",
+    "eleventy-plugin-pwa": "^1.0.8",
     "html-minifier": "^4.0.0",
     "luxon": "^1.26.0",
     "markdown-it": "^12.0.4",
