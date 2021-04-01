@@ -52,6 +52,12 @@ header:after {
   clear: both;
   content: "";
 }
+footer {
+  padding: 1rem;
+  border-top: 1px dashed var(--lightgray);
+  font-size: 0.85rem;
+  text-align: center;
+}
 table {
   margin: 1em 0;
 }
