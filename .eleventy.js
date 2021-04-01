@@ -8,6 +8,7 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const CleanCSS = require("clean-css");
 const criticalCss = require("eleventy-critical-css");
+const pluginPWA = require("eleventy-plugin-pwa");
 
 // Import transforms
 const htmlMinTransform = require("./utils/transforms/html-min-transform.js");
@@ -28,15 +29,18 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
-  if (process.env.ELEVENTY_ENV === 'production') {
+  // CriticalCSS
+  if (env === 'production') {
     eleventyConfig.addPlugin(criticalCss, {
       minify: true,
       height: 900,
       width: 1300,
     });
   }
+  // PWA
+  eleventyConfig.addPlugin(pluginPWA);
 
-  // setup mermaid markdown highlighter
+  // Setup mermaid markdown highlighter
   const highlighter = eleventyConfig.markdownHighlighter;
   eleventyConfig.addMarkdownHighlighter((str, language) => {
     if (language === 'mermaid') {
@@ -86,13 +90,13 @@ module.exports = function(eleventyConfig) {
     return Math.min.apply(null, numbers);
   });
 
-  //Minify inline style
+  // Minify inline style
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
   });
 
-  //Customize slugify: makes everything lowercase,
-  //replaces - with _, and strips unsafe chars from URLs
+  // Customize slugify: makes everything lowercase,
+  // replaces - with _, and strips unsafe chars from URLs
   eleventyConfig.addFilter("slug", (str) => {
     return slugify(str, {
       lower: true,
@@ -107,7 +111,7 @@ module.exports = function(eleventyConfig) {
    * @link https://www.11ty.dev/docs/shortcodes/
    */
 
-  //Insert current year
+  // Insert current year
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   /**
@@ -116,7 +120,7 @@ module.exports = function(eleventyConfig) {
    * @link https://www.11ty.io/docs/config/#transforms
    */
 
-  //Minify html
+  // Minify html
   eleventyConfig.addTransform("htmlmin", htmlMinTransform);
 
   /**
@@ -162,7 +166,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/styles/*.css");
   eleventyConfig.addPassthroughCopy({"node_modules/mermaid/dist/mermaid.min.js": "/assets/scripts/mermaid.min.js"});
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
-  if ( env === 'production') {
+  eleventyConfig.addPassthroughCopy("./src/manifest.json");
+  if (env === 'production') {
     eleventyConfig.addPassthroughCopy("./src/assets/scripts/bundle.min.js");
   } else {
     eleventyConfig.addPassthroughCopy("./src/assets/scripts/index.js");
@@ -190,6 +195,12 @@ module.exports = function(eleventyConfig) {
   });
   eleventyConfig.setLibrary("md", markdownLibrary);
 
+  /**
+   * Watch files that will trigger hot reload at localhost:8080
+   *
+   * @link https://www.11ty.dev/docs/watch-serve/
+   */
+  // Watch JS
   eleventyConfig.addWatchTarget('./src/assets/scripts/index.js');
 
   /**
