@@ -9,6 +9,7 @@ const markdownItAnchor = require("markdown-it-anchor");
 const CleanCSS = require("clean-css");
 const criticalCss = require("eleventy-critical-css");
 const pluginPWA = require("eleventy-plugin-pwa");
+const imageShortcode = require('./utils/shortcodes/imageProcess.js');
 
 // Import transforms
 const htmlMinTransform = require("./utils/transforms/html-min-transform.js");
@@ -113,6 +114,7 @@ module.exports = function(eleventyConfig) {
 
   // Insert current year
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
   /**
    * Add Transforms
