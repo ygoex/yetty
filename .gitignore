@@ -9,3 +9,6 @@ dist
 
 # sass
 *.map
+
+# remote images
+.cache/
