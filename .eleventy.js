@@ -10,7 +10,7 @@ const CleanCSS = require("clean-css");
 const criticalCss = require("eleventy-critical-css");
 const pluginPWA = require("eleventy-plugin-pwa");
 const imageShortcode = require('./utils/shortcodes/imageProcess.js');
-const pluginLocalRespimg = require('eleventy-plugin-local-respimg');
+//const pluginLocalRespimg = require('eleventy-plugin-local-respimg');
 
 // Import transforms
 const htmlMinTransform = require("./utils/transforms/html-min-transform.js");
@@ -43,43 +43,43 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginPWA);
 
   // Responsive images in markdown
-  eleventyConfig.addPlugin(pluginLocalRespimg, {
-    folders: {
-      source: './src', // Folder images are stored in
-      output: './dist', // Folder images should be output to
-    },
-    images: {
-      resize: {
-        min: 480, // Minimum width to resize an image to
-        max: 1440, // Maximum width to resize an image to
-        step: 480, // Width difference between each resized image
-      },
-      gifToVideo: false, // Convert GIFs to MP4 videos
-      sizes: '100vw', // Default image `sizes` attribute
-      lazy: true, // Include `loading="lazy"` attribute for images
-      watch: {
-        src: 'assets/images/**/*', // Glob of images that Eleventy should watch for changes to
-      },
-      pngquant: {
-        /* ... */
-      }, // imagemin-pngquant options
-      mozjpeg: {
-        /* ... */
-      }, // imagemin-mozjpeg options
-      svgo: {
-        /* ... */
-      }, // imagemin-svgo options
-      gifresize: {
-        /* ... */
-      }, // @gumlet/gif-resize options
-      webp: {
-        quality: 50,
-      }, // imagemin-webp options
-      gifwebp: {
-        /* ... */
-      }, // imagemin-gif2webp options
-    },
-  });
+  // eleventyConfig.addPlugin(pluginLocalRespimg, {
+  //   folders: {
+  //     source: './src', // Folder images are stored in
+  //     output: './dist', // Folder images should be output to
+  //   },
+  //   images: {
+  //     resize: {
+  //       min: 480, // Minimum width to resize an image to
+  //       max: 1440, // Maximum width to resize an image to
+  //       step: 480, // Width difference between each resized image
+  //     },
+  //     gifToVideo: false, // Convert GIFs to MP4 videos
+  //     sizes: '100vw', // Default image `sizes` attribute
+  //     lazy: true, // Include `loading="lazy"` attribute for images
+  //     watch: {
+  //       src: 'assets/images/**/*', // Glob of images that Eleventy should watch for changes to
+  //     },
+  //     pngquant: {
+  //       /* ... */
+  //     }, // imagemin-pngquant options
+  //     mozjpeg: {
+  //       /* ... */
+  //     }, // imagemin-mozjpeg options
+  //     svgo: {
+  //       /* ... */
+  //     }, // imagemin-svgo options
+  //     gifresize: {
+  //       /* ... */
+  //     }, // @gumlet/gif-resize options
+  //     webp: {
+  //       quality: 50,
+  //     }, // imagemin-webp options
+  //     gifwebp: {
+  //       /* ... */
+  //     }, // imagemin-gif2webp options
+  //   },
+  // });
 
   // Setup mermaid markdown highlighter
   const highlighter = eleventyConfig.markdownHighlighter;
