@@ -10,7 +10,7 @@ async function imageShortcode(src, alt, sizes = "100vw") {
   }
 
   let metadata = await Image(src, {
-    widths: [320, 640, 1280, 1920],
+    widths: [480, 960, 1440],
     /**
      * The eleventy-img plugin takes a while to work,
      * so let's skip all that image processing in development.
