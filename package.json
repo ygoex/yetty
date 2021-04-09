@@ -5,7 +5,7 @@
   "scripts": {
     "eleventy:dev": "cross-env ELEVENTY_ENV=development eleventy --serve",
     "eleventy:prod": "cross-env ELEVENTY_ENV=production eleventy",
-    "prebuild": "npm run lint:sass && npm run sass:prod && npm run scripts",
+    "prebuild": "npm run lint:sass && NODE_ENV=production npm run sass:prod && npm run scripts",
     "build": "npm run clean && npm run eleventy:prod",
     "postbuild": "npm run postcss",
     "dev": "concurrently 'npm run eleventy:dev' 'npm run sass:dev'",
@@ -35,6 +35,7 @@
   "homepage": "https://github.com/ygoex/yetty#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-img": "^0.8.3",
     "@11ty/eleventy-navigation": "^0.1.6",
     "@11ty/eleventy-plugin-rss": "^1.1.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
@@ -45,6 +46,7 @@
     "critical": "^3.0.0",
     "cross-env": "^7.0.3",
     "eleventy-critical-css": "^0.2.3",
+    "eleventy-plugin-local-respimg": "^0.4.0",
     "eleventy-plugin-pwa": "^1.0.8",
     "html-minifier": "^4.0.0",
     "luxon": "^1.26.0",
@@ -60,7 +62,6 @@
     "webpack-cli": "^4.5.0"
   },
   "dependencies": {
-    "@11ty/eleventy-img": "^0.8.3",
     "mermaid": "^8.9.2"
   }
 }
