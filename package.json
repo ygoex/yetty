@@ -45,6 +45,7 @@
     "critical": "^3.0.0",
     "cross-env": "^7.0.3",
     "eleventy-critical-css": "^0.2.3",
+    "eleventy-plugin-local-respimg": "^0.4.0",
     "eleventy-plugin-pwa": "^1.0.8",
     "html-minifier": "^4.0.0",
     "luxon": "^1.26.0",
@@ -54,6 +55,7 @@
     "postcss": "^8.2.8",
     "postcss-cli": "^8.3.1",
     "rimraf": "^3.0.2",
+    "stylelint": "^13.12.0",
     "stylelint-order": "^4.1.0",
     "webpack": "^5.28.0",
     "webpack-cli": "^4.5.0"
