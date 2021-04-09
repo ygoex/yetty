@@ -54,6 +54,7 @@ module.exports = function(eleventyConfig) {
         max: 1440, // Maximum width to resize an image to
         step: 480, // Width difference between each resized image
       },
+      hoistClasses: false, // Adds the image tag's classes to the output picture tag
       gifToVideo: false, // Convert GIFs to MP4 videos
       sizes: '100vw', // Default image `sizes` attribute
       lazy: true, // Include `loading="lazy"` attribute for images
