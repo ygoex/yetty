@@ -130,12 +130,12 @@ img {
   font-size: 0.875rem;
 }
 
-.date,
+.post-date,
 .read-time {
   color: grey;
 }
 
-.date:before {
+.post-date:before {
   color: black;
   content: "Published: ";
 }
@@ -185,7 +185,8 @@ main {
   h3,
   ul,
   hr,
-  pre {
+  pre,
+  time {
     grid-column: 2 / auto;
   }
   img {
