@@ -11,6 +11,7 @@ const criticalCss = require("eleventy-critical-css");
 const pluginPWA = require("eleventy-plugin-pwa");
 const imageShortcode = require('./utils/shortcodes/imageProcess.js');
 const pluginLocalRespimg = require('eleventy-plugin-local-respimg');
+const dateFilter = require("./utils/filters/date-filter.js");
 
 // Import transforms
 const htmlMinTransform = require("./utils/transforms/html-min-transform.js");
@@ -118,6 +119,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
   });
+
+  eleventyConfig.addFilter("dateFilter", dateFilter);
 
   // Get the first `n` elements of a collection.
   eleventyConfig.addFilter("head", (array, n) => {
