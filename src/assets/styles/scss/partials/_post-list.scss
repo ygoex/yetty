@@ -1,0 +1,22 @@
+/* Posts list */
+.postlist {
+  grid-column: 2 / auto;
+  margin-bottom: 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.postlist-date {
+  word-spacing: -0.5px;
+}
+.postlist-link {
+  display: inline-block;
+  padding: 0.25em 0.1875em; /* 4px 3px /16 */
+}
+.postlist-item-active .postlist-link {
+  font-weight: bold;
+}
+.tmpl-home .postlist-link {
+  font-size: 1.1875em; /* 19px /16 */
+  font-weight: 700;
+}
