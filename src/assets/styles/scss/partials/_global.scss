@@ -118,7 +118,7 @@ picture {
 
 img {
   aspect-ratio: 3 / 1;
-  width: 90vw;
+  max-width: 90vw;
   max-height: 70vh;
   margin: 3rem 0;
   margin-left: 10vw;
