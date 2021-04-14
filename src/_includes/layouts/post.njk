@@ -2,6 +2,11 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
+<p class="date-time">
+  <time class="post-date" datetime="{{ date | htmlDateString }}">{{ date | dateFilter }}</time>
+  <span class="read-time">WIP</span>
+</p>
+
 <h2>{{ title }}</h2>
 
 {{ content | safe }}
