@@ -58,7 +58,7 @@ module.exports = function(eleventyConfig) {
       hoistClasses: true, // Adds the image tag's classes to the output picture tag
       gifToVideo: false, // Convert GIFs to MP4 videos
       sizes: '100vw', // Default image `sizes` attribute
-      lazy: true, // Include `loading="lazy"` attribute for images
+      lazy: false, // Include `loading="lazy"` attribute for images
       watch: {
         src: 'assets/images/**/*', // Glob of images that Eleventy should watch for changes to
       },

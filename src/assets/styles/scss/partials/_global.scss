@@ -110,17 +110,12 @@ p {
 picture {
   grid-column: 1 / 4;
   width: 90vw;
-  height: auto;
   max-height: 70vh;
-  // justify-self: center;
-  // grid-column: 1 / 4;
-  // margin: 3rem 0;
-  // margin-left: 10vw;
 }
 
 img {
-  // width: 90vw;
-  // max-height: 70vh;
+  width: 90vw;
+  max-height: 70vh;
   margin: 3rem 0;
   margin-left: 10vw;
   justify-self: center;
