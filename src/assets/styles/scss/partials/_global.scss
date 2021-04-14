@@ -109,11 +109,11 @@ p {
 
 picture {
   grid-column: 1 / 4;
-  width: 90vw;
-  max-height: 70vh;
+  aspect-ratio: 3 / 1;
 }
 
 img {
+  aspect-ratio: 3 / 1;
   width: 90vw;
   max-height: 70vh;
   margin: 3rem 0;
