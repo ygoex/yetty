@@ -9,8 +9,8 @@ const markdownItAnchor = require("markdown-it-anchor");
 const CleanCSS = require("clean-css");
 const criticalCss = require("eleventy-critical-css");
 const pluginPWA = require("eleventy-plugin-pwa");
-const imageShortcode = require('./utils/shortcodes/imageProcess.js');
-//const pluginLocalRespimg = require('eleventy-plugin-local-respimg');
+//const imageShortcode = require('./utils/shortcodes/imageProcess.js');
+const pluginLocalRespimg = require('eleventy-plugin-local-respimg');
 const dateFilter = require("./utils/filters/date-filter.js");
 
 // Import transforms
@@ -43,45 +43,45 @@ module.exports = function(eleventyConfig) {
   // PWA
   eleventyConfig.addPlugin(pluginPWA);
 
-  // Responsive images in markdown
-  // eleventyConfig.addPlugin(pluginLocalRespimg, {
-  //   folders: {
-  //     source: './src', // Folder images are stored in
-  //     output: './dist', // Folder images should be output to
-  //   },
-  //   images: {
-  //     resize: {
-  //       min: 480, // Minimum width to resize an image to
-  //       max: 1440, // Maximum width to resize an image to
-  //       step: 480, // Width difference between each resized image
-  //     },
-  //     hoistClasses: false, // Adds the image tag's classes to the output picture tag
-  //     gifToVideo: false, // Convert GIFs to MP4 videos
-  //     sizes: '100vw', // Default image `sizes` attribute
-  //     lazy: true, // Include `loading="lazy"` attribute for images
-  //     watch: {
-  //       src: 'assets/images/**/*', // Glob of images that Eleventy should watch for changes to
-  //     },
-  //     pngquant: {
-  //       /* ... */
-  //     }, // imagemin-pngquant options
-  //     mozjpeg: {
-  //       /* ... */
-  //     }, // imagemin-mozjpeg options
-  //     svgo: {
-  //       /* ... */
-  //     }, // imagemin-svgo options
-  //     gifresize: {
-  //       /* ... */
-  //     }, // @gumlet/gif-resize options
-  //     webp: {
-  //       quality: 50,
-  //     }, // imagemin-webp options
-  //     gifwebp: {
-  //       /* ... */
-  //     }, // imagemin-gif2webp options
-  //   },
-  // });
+  //Responsive images in markdown
+  eleventyConfig.addPlugin(pluginLocalRespimg, {
+    folders: {
+      source: './src', // Folder images are stored in
+      output: './dist', // Folder images should be output to
+    },
+    images: {
+      resize: {
+        min: 480, // Minimum width to resize an image to
+        max: 1440, // Maximum width to resize an image to
+        step: 480, // Width difference between each resized image
+      },
+      hoistClasses: false, // Adds the image tag's classes to the output picture tag
+      gifToVideo: false, // Convert GIFs to MP4 videos
+      sizes: '100vw', // Default image `sizes` attribute
+      lazy: true, // Include `loading="lazy"` attribute for images
+      watch: {
+        src: 'assets/images/**/*', // Glob of images that Eleventy should watch for changes to
+      },
+      pngquant: {
+        /* ... */
+      }, // imagemin-pngquant options
+      mozjpeg: {
+        /* ... */
+      }, // imagemin-mozjpeg options
+      svgo: {
+        /* ... */
+      }, // imagemin-svgo options
+      gifresize: {
+        /* ... */
+      }, // @gumlet/gif-resize options
+      webp: {
+        quality: 50,
+      }, // imagemin-webp options
+      gifwebp: {
+        /* ... */
+      }, // imagemin-gif2webp options
+    },
+  });
 
   // Setup mermaid markdown highlighter
   const highlighter = eleventyConfig.markdownHighlighter;
@@ -158,7 +158,7 @@ module.exports = function(eleventyConfig) {
 
   // Insert current year
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+  //eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
   /**
    * Add Transforms
