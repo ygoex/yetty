@@ -189,9 +189,9 @@ main {
   time {
     grid-column: 2 / auto;
   }
-  img {
-    max-width: none;
-  }
+  // img {
+  //   max-width: none;
+  // }
 }
 main :first-child {
   margin-top: 0;
