@@ -108,8 +108,17 @@ p {
 }
 
 picture {
-  //grid-column: 1 / 4;
-  width: 90vw;
+  grid-column: 1 / 4;
+  aspect-ratio: 3 / 1;
+  // justify-self: center;
+  // grid-column: 1 / 4;
+  // margin: 3rem 0;
+  // margin-left: 10vw;
+}
+
+img {
+  aspect-ratio: 3 / 1;
+  max-width: 90vw;
   max-height: 70vh;
   margin: 3rem 0;
   margin-left: 10vw;
@@ -118,17 +127,6 @@ picture {
   object-fit: cover;
   object-position: center;
 }
-
-//img {
-  // width: 90vw;
-  // max-height: 70vh;
-  // margin: 3rem 0;
-  // margin-left: 10vw;
-  // justify-self: center;
-  // grid-column: 1 / 4;
-  // object-fit: cover;
-  // object-position: center;
-//}
 
 .date-time {
   font-size: 0.875rem;
