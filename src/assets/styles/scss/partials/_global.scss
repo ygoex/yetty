@@ -109,7 +109,9 @@ p {
 
 picture {
   grid-column: 1 / 4;
-  aspect-ratio: 3 / 1;
+  width: 90vw;
+  height: auto;
+  max-height: 70vh;
   // justify-self: center;
   // grid-column: 1 / 4;
   // margin: 3rem 0;
@@ -117,15 +119,18 @@ picture {
 }
 
 img {
-  aspect-ratio: 3 / 1;
-  max-width: 90vw;
-  max-height: 70vh;
+  // width: 90vw;
+  // max-height: 70vh;
   margin: 3rem 0;
   margin-left: 10vw;
   justify-self: center;
   grid-column: 1 / 4;
   object-fit: cover;
   object-position: center;
+}
+
+.img-test {
+  aspect-ratio: attr(width) / attr(height);
 }
 
 .date-time {
