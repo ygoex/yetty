@@ -1,5 +1,6 @@
 ---
-title: This is my fourth post.
+title: The spectacle before us was indeed sublime
+subtitle: You would have loved it
 description: This is a post on My Blog about touchpoints and circling wagons.
 date: 2018-09-30
 tags: second-tag
