@@ -1,17 +1,20 @@
 /* Tags */
 .post-tag {
   display: inline-block;
-  margin-left: 0.8em; /* 8px /10 */
-  padding: 2px 4px;
-  border-radius: 0.25em; /* 3px /12 */
-  background-color: var(--red);
-  color: var(--white);
-  font-size: 0.625em; /* 10px /16 */
-  text-decoration: none;
-  text-transform: uppercase;
+  margin: 0 0.5em; /* 8px /10 */
+  padding: 0.05em 0.5em;
+  font-size: 0.857rem; /* 14px /16 */
   vertical-align: text-top;
+  border: 1px solid black;
+  border-radius: 15px;
+  a {
+    text-decoration: none;
+  }
+  &:first-of-type {
+    margin-left: 0;
+  }
 }
-a[href].post-tag,
-a[href].post-tag:visited {
-  color: #fff;
-}
+// a[href].post-tag,
+// a[href].post-tag:visited {
+//   color: #fff;
+// }
