@@ -2,12 +2,32 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-<p class="date-time">
-  <time class="post-date" datetime="{{ date | htmlDateString }}">{{ date | dateFilter }}</time>
-  <span class="read-time">WIP</span>
-</p>
+{%- if date %}
+  <p class="date-time">
+    <time class="post-date" datetime="{{ date | htmlDateString }}">{{ date | dateFilter }}</time>
+    <span class="read-time">WIP</span>
+  </p>
+{% endif %}
 
-<h2>{{ title }}</h2>
+<h1>{{ title }}</h1>
+
+{%- if subtitle %}
+  <h2>{{ subtitle }}</h2>
+{% endif %}
+
+{%- if tags %}
+  {# https://stackoverflow.com/questions/66261187/11ty-how-to-display-post-tags-in-my-post-njk-file #}
+  <ul class="post-categories">
+    {% for tag in tags -%}
+      {% if tag !== 'posts' %}
+        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+        <li class="post-tag">
+          <a href="{{ tagUrl | url }}">#{{ tag }}</a>
+        </li>
+      {% endif %}
+    {%- endfor %}
+  </ul>
+{% endif %}
 
 {{ content | safe }}
 
