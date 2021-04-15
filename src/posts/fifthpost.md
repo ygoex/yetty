@@ -1,5 +1,6 @@
 ---
 title: Mermaid test!
+subtitle: Included just for fun :)
 description: This is a post about Mermaid library.
 date: '2021-03-22'
 tags:
