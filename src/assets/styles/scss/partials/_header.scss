@@ -4,22 +4,19 @@ header {
   border-bottom: 1px dashed var(--lightgray);
 }
 
-.home {
-  margin: 1.5rem 0;
+a.home {
   padding: 0 1.5rem 0 2rem;
-  float: left;
   font-family: var(--sans-font-family);
+  font-size: 3rem;
   font-weight: normal;
   letter-spacing: 1px;
   font-variant-caps: small-caps;
-  a[href] {
     color: var(--body-font-color);
     text-decoration: none;
     &:visited {
       color: inherit;
     }
   }
-}
 
 /* Nav */
 .nav {
