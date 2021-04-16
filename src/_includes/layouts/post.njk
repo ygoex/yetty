@@ -21,8 +21,8 @@ templateClass: tmpl-post
     {% for tag in tags -%}
       {% if tag !== 'posts' %}
         {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <li class="post-tag">
-          <a href="{{ tagUrl | url }}">#{{ tag }}</a>
+        <li>
+          <a class="post-tag" href="{{ tagUrl | url }}">#{{ tag }}</a>
         </li>
       {% endif %}
     {%- endfor %}
