@@ -1,18 +1,26 @@
 header {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  border-bottom: 1px dashed var(--lightgray);
+  @media only screen and (min-width: 36em) {
+    flex-direction: row;
+	}
 }
 
 a.home {
-  padding: 0 1.5rem 0 2rem;
-  font-family: var(--sans-font-family);
-  font-size: 3rem;
-  font-weight: normal;
-  letter-spacing: 1px;
-  font-variant-caps: small-caps;
+  width: fit-content;
+  margin: 1.5rem;
+  padding: 3px 9px 3px 6px;
   color: var(--body-font-color);
+  font-family: var(--sans-font-family);
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 0.5px;
   text-decoration: none;
+  font-variant-caps: small-caps;
+  line-height: 1;
+  border: 3px solid black;
+  border-radius: 4px;
   &:visited {
     color: inherit;
   }
@@ -21,14 +29,22 @@ a.home {
 /* Nav */
 .nav {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
+  margin-bottom: 1.5rem;
   padding: 0 1.5rem;
   list-style: none;
+  @media only screen and (min-width: 36em) {
+    margin-bottom: 0;
+	}
 }
 .nav-item {
   margin: 0 1rem;
   font-weight: 500;
   letter-spacing: 0.5px;
+  &:first-of-type{
+    margin-left: 0;
+  }
 }
 .nav-item a[href]:not(:hover) {
   text-decoration: none;
