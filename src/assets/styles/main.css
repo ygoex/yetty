@@ -1,4 +1,5 @@
 :root {
+  --breakpoint-xs: 36em;
   --red: #C5004A;
   --darkred: #7F0036;
   --lightgray: #e0e0e0;
@@ -223,32 +224,47 @@ pre {
 
 header {
   display: flex;
-  justify-content: space-between;
-  border-bottom: 1px dashed var(--lightgray); }
+  flex-direction: column;
+  justify-content: space-between; }
+  @media only screen and (min-width: 36em) {
+    header {
+      flex-direction: row; } }
 
 a.home {
-  padding: 0 1.5rem 0 2rem;
-  font-family: var(--sans-font-family);
-  font-size: 3rem;
-  font-weight: normal;
-  letter-spacing: 1px;
-  font-variant-caps: small-caps;
+  width: fit-content;
+  margin: 1.5rem;
+  padding: 3px 9px 3px 6px;
   color: var(--body-font-color);
-  text-decoration: none; }
+  font-family: var(--sans-font-family);
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  font-variant-caps: small-caps;
+  line-height: 1;
+  border: 3px solid black;
+  border-radius: 4px; }
   a.home:visited {
     color: inherit; }
 
 /* Nav */
 .nav {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
+  margin-bottom: 1.5rem;
   padding: 0 1.5rem;
   list-style: none; }
+  @media only screen and (min-width: 36em) {
+    .nav {
+      margin-bottom: 0; } }
 
 .nav-item {
   margin: 0 1rem;
   font-weight: 500;
   letter-spacing: 0.5px; }
+  .nav-item:first-of-type {
+    margin-left: 0; }
 
 .nav-item a[href]:not(:hover) {
   text-decoration: none; }
@@ -284,14 +300,12 @@ a.home {
 .post-tag {
   display: inline-block;
   margin: 0 0.5em;
-  /* 8px /10 */
-  padding: 0.05em 0.5em;
-  font-size: 0.857rem;
-  /* 14px /16 */
-  text-decoration: none;
-  vertical-align: text-top;
+  padding: 0.05em 0.35em;
   border: 1px solid black;
-  border-radius: 15px; }
+  border-radius: 4px;
+  font-size: 0.857rem;
+  text-decoration: none;
+  vertical-align: text-top; }
   .post-tag:first-of-type {
     margin-left: 0; }
 
