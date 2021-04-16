@@ -4,17 +4,15 @@
   margin: 0 0.5em; /* 8px /10 */
   padding: 0.05em 0.5em;
   font-size: 0.857rem; /* 14px /16 */
+  text-decoration: none;
   vertical-align: text-top;
   border: 1px solid black;
   border-radius: 15px;
-  a {
-    text-decoration: none;
-  }
   &:first-of-type {
     margin-left: 0;
   }
 }
-// a[href].post-tag,
-// a[href].post-tag:visited {
-//   color: #fff;
-// }
+a[href].post-tag,
+a[href].post-tag:visited {
+  color: initial;
+}
