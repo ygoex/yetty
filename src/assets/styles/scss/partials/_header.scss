@@ -11,12 +11,12 @@ a.home {
   font-weight: normal;
   letter-spacing: 1px;
   font-variant-caps: small-caps;
-    color: var(--body-font-color);
-    text-decoration: none;
-    &:visited {
-      color: inherit;
-    }
+  color: var(--body-font-color);
+  text-decoration: none;
+  &:visited {
+    color: inherit;
   }
+}
 
 /* Nav */
 .nav {
@@ -27,15 +27,16 @@ a.home {
 }
 .nav-item {
   margin: 0 1rem;
-  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 .nav-item a[href]:not(:hover) {
   text-decoration: none;
 }
+.nav-item a[href],
 .nav-item a[href]:visited {
-  color: var(--blue);
+  color: initial;
 }
 .nav-item-active {
-  font-weight: 700;
-  text-decoration: underline;
+  // TBD
 }

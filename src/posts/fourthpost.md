@@ -9,7 +9,7 @@ layout: layouts/post.njk
 
 <!-- ![Green ink](/assets/images/engin-akyurt--GVpdpShB7M-unsplash.jpg) -->
 
-<img class="img-test" src="/assets/images/engin-akyurt--GVpdpShB7M-unsplash.jpg" alt="Kitten" title="A cute kitten"/>
+<img class="img-post" src="/assets/images/engin-akyurt--GVpdpShB7M-unsplash.jpg" alt="Kitten" title="A cute kitten"/>
 
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
 

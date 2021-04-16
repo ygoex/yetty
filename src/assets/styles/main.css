@@ -115,15 +115,17 @@ img {
   aspect-ratio: 3 / 1;
   width: 90vw;
   max-height: 70vh;
-  margin: 3rem 0;
+  margin: 3rem 0 4rem;
   margin-left: 10vw;
   justify-self: center;
   grid-column: 1 / 4;
   object-fit: cover;
   object-position: center; }
 
-.img-test {
-  aspect-ratio: attr(width)/attr(height); }
+.img-post,
+.img-tmpl {
+  aspect-ratio: attr(width)/attr(height);
+  box-shadow: -1.5rem 1.5rem #a689ab; }
 
 .date-time {
   font-size: 0.875rem; }
@@ -139,6 +141,9 @@ img {
 .read-time:before {
   color: black;
   content: " \B7  Read time: "; }
+
+.post-categories {
+  display: flex; }
 
 .lead {
   font-size: 1.125rem; }
@@ -242,17 +247,15 @@ a.home {
 
 .nav-item {
   margin: 0 1rem;
-  font-size: 1.125rem; }
+  font-weight: 500;
+  letter-spacing: 0.5px; }
 
 .nav-item a[href]:not(:hover) {
   text-decoration: none; }
 
+.nav-item a[href],
 .nav-item a[href]:visited {
-  color: var(--blue); }
-
-.nav-item-active {
-  font-weight: 700;
-  text-decoration: underline; }
+  color: initial; }
 
 /* Posts list */
 .postlist {
@@ -285,12 +288,15 @@ a.home {
   padding: 0.05em 0.5em;
   font-size: 0.857rem;
   /* 14px /16 */
+  text-decoration: none;
   vertical-align: text-top;
   border: 1px solid black;
   border-radius: 15px; }
-  .post-tag a {
-    text-decoration: none; }
   .post-tag:first-of-type {
     margin-left: 0; }
+
+a[href].post-tag,
+a[href].post-tag:visited {
+  color: initial; }
 
 /*# sourceMappingURL=main.css.map */

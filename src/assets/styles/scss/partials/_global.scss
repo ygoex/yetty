@@ -119,7 +119,7 @@ img {
   aspect-ratio: 3 / 1;
   width: 90vw;
   max-height: 70vh;
-  margin: 3rem 0;
+  margin: 3rem 0 4rem;
   margin-left: 10vw;
   justify-self: center;
   grid-column: 1 / 4;
@@ -127,8 +127,10 @@ img {
   object-position: center;
 }
 
-.img-test {
+.img-post,
+.img-tmpl {
   aspect-ratio: attr(width) / attr(height);
+  box-shadow: -1.5rem 1.5rem #a689ab;
 }
 
 .date-time {
@@ -148,6 +150,10 @@ img {
 .read-time:before {
   color: black;
   content: " \B7  Read time: ";
+}
+
+.post-categories {
+  display: flex;
 }
 
 .lead {

@@ -50,7 +50,7 @@ async function imageShortcode(src, alt, sizes = "100vw") {
       return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
     }).join("\n")}
       <img
-        class="test"
+        class="img-tmpl"
         src="${lowsrc.url}"
         width="${lowsrc.width}"
         height="${lowsrc.height}"
