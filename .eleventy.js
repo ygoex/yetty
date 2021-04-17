@@ -249,6 +249,7 @@ module.exports = function(eleventyConfig) {
    */
   // Watch JS
   eleventyConfig.addWatchTarget('./src/assets/scripts/index.js');
+  eleventyConfig.addWatchTarget('./src/assets/styles/main.css');
 
   /**
    * Override BrowserSync Server options
