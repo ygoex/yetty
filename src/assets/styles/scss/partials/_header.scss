@@ -40,8 +40,10 @@ a.home {
 }
 .nav-item {
   margin: 0 1rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   &:first-of-type{
     margin-left: 0;
   }
