@@ -11,16 +11,16 @@ a.home {
   width: fit-content;
   margin: 1.5rem;
   padding: 3px 9px 3px 6px;
+  border: 3px solid black;
+  border-radius: 4px;
   color: var(--body-font-color);
   font-family: var(--sans-font-family);
   font-size: 2rem;
   font-weight: normal;
   letter-spacing: 0.5px;
+  line-height: 1;
   text-decoration: none;
   font-variant-caps: small-caps;
-  line-height: 1;
-  border: 3px solid black;
-  border-radius: 4px;
   &:visited {
     color: inherit;
   }
@@ -29,8 +29,8 @@ a.home {
 /* Nav */
 .nav {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
   margin-bottom: 1.5rem;
   padding: 0 1.5rem;
   list-style: none;
@@ -42,8 +42,8 @@ a.home {
   margin: 0 1rem;
   font-size: 0.875rem;
   font-weight: 500;
-  text-transform: uppercase;
   letter-spacing: 1px;
+  text-transform: uppercase;
   &:first-of-type{
     margin-left: 0;
   }
