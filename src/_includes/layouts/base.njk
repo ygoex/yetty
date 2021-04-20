@@ -1,41 +1,14 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>{{ title or metadata.title }}</title>
-    <meta name="author" content="Yolanda Gorriz Exposito"/>
-    <meta name="description" content="{{ description or metadata.description }}">
-    <meta name="theme-color" content="#ffffff"/>
-    <link rel="manifest" href="{{ '/manifest.json' | url }}"/>
-    <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
-    <link rel="stylesheet" href="{{ '/assets/styles/prism-base16-monokai.dark.css' | url }}">
-    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
-    <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
-  </head>
+  {% include 'layouts/partials/head.njk' %}
   <body>
-    <header>
-      <a class="home" href="{{ '/' | url }}">{{ metadata.title }}</a>
-
-      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-      <ul class="nav">
-        {%- for entry in collections.all | eleventyNavigation %}
-          <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
-            <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-          </li>
-        {%- endfor %}
-      </ul>
-    </header>
+    {% include 'layouts/partials/header.njk' %}
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
       {{ content | safe }}
     </main>
 
-    <footer>&copy; {% year %}
-      <a href="https://github.com/ygoex">Ygoex</a> - Powered by <a href="https://11ty.io">Eleventy</a> and <a href="https://www.netlify.com">Netlify</a>
-    </footer>
+    {% include 'layouts/partials/footer.njk' %}
 
     <!-- Current page: {{ page.url | url }} -->
 
