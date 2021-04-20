@@ -10,7 +10,8 @@ const CleanCSS = require("clean-css");
 const criticalCss = require("eleventy-critical-css");
 const pluginPWA = require("eleventy-plugin-pwa");
 const imageShortcode = require('./utils/shortcodes/imageProcess.js');
-const dateFilter = require("./utils/filters/date-filter.js");
+const dateFilter = require("./utils/filters/dateFilter.js");
+const tagList = require("./utils/collections/tagList.js");
 
 // Import transforms
 const htmlMinTransform = require("./utils/transforms/html-min-transform.js");
@@ -137,34 +138,7 @@ module.exports = function(eleventyConfig) {
    *
    * @link https://www.11ty.io/docs/collections
    */
-  eleventyConfig.addCollection("tagList", function(collection) {
-    let tagSet = new Set();
-    collection.getAll().forEach(function(item) {
-      if( "tags" in item.data ) {
-        let tags = item.data.tags;
-
-        tags = tags.filter(function(item) {
-          switch(item) {
-            // this list should match the `filter` list in tags.njk
-            case "all":
-            case "nav":
-            case "post":
-            case "posts":
-              return false;
-          }
-
-          return true;
-        });
-
-        for (const tag of tags) {
-          tagSet.add(tag);
-        }
-      }
-    });
-
-    // returning an array in addCollection works in Eleventy 0.5.3
-    return [...tagSet];
-  });
+  eleventyConfig.addCollection("tagList", tagList);
 
   /**
    * Passthrough file copy
