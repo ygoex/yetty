@@ -1,0 +1,15 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>{{ title or metadata.title }}</title>
+  <meta name="author" content="Yolanda Gorriz Exposito"/>
+  <meta name="description" content="{{ description or metadata.description }}">
+  <meta name="theme-color" content="#ffffff"/>
+  <link rel="manifest" href="{{ '/manifest.json' | url }}"/>
+  <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/styles/prism-base16-monokai.dark.css' | url }}">
+  <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+  <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+</head>
