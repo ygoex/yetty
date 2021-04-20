@@ -4,7 +4,7 @@ templateClass: tmpl-post
 ---
 {%- if date %}
   <p class="date-time">
-    <time class="post-date" datetime="{{ date | htmlDateString }}">{{ date | dateFilter }}</time>
+    <time class="post-date" datetime="{{ date | dateStringISO }}">{{ date | dateFilter }}</time>
     <span class="read-time">WIP</span>
   </p>
 {% endif %}
