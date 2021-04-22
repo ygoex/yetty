@@ -2,45 +2,64 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-{%- if date %}
-  <p class="date-time">
-    <time class="post-date" datetime="{{ date | dateStringISO }}">{{ date | dateFilter }}</time>
-    <span class="read-time">WIP</span>
-  </p>
-{% endif %}
+<article>
 
-<h1>{{ title }}</h1>
+  <header>
+    {%- if date %}
+      <p class="date-time">
+        <time class="post-date" datetime="{{ date | dateStringISO }}">{{ date | dateFilter }}</time>
+        <span class="read-time">WIP</span>
+      </p>
+    {% endif %}
 
-{%- if subtitle %}
-  <h2>{{ subtitle }}</h2>
-{% endif %}
+    <h1>{{ title }}</h1>
 
-{%- if tags %}
-  {# https://stackoverflow.com/questions/66261187/11ty-how-to-display-post-tags-in-my-post-njk-file #}
-  <ul class="post-categories">
-    {% for tag in tags -%}
-      {% if tag !== 'posts' %}
-        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <li>
-          <a class="post-tag" href="{{ tagUrl | url }}">#{{ tag }}</a>
+    {%- if subtitle %}
+      <h2>{{ subtitle }}</h2>
+    {% endif %}
+
+    {%- if tags %}
+      {# https://stackoverflow.com/questions/66261187/11ty-how-to-display-post-tags-in-my-post-njk-file #}
+      <ul class="post-categories">
+        {% for tag in tags -%}
+          {% if tag !== 'posts' %}
+            {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+            <li>
+              <a class="post-tag" href="{{ tagUrl | url }}">#{{ tag }}</a>
+            </li>
+          {% endif %}
+        {%- endfor %}
+      </ul>
+    {% endif %}
+  </header>
+
+  {%- if imgUrl %}
+    {% imageNjk imgUrl,
+    imgAlt,
+    imgSize,
+    pictureClass,
+    imgClass,
+    imgBorderColor %}
+  {% endif %}
+
+  <div class="content">
+    {{ content | safe }}
+  </div>
+
+  <footer>
+    <hr>
+    <ul>
+      {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+      {%- if nextPost %}
+        <li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
         </li>
       {% endif %}
-    {%- endfor %}
-  </ul>
-{% endif %}
+      {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+      {%- if previousPost %}
+        <li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
+        </li>
+      {% endif %}
+    </ul>
+  </footer>
 
-{{ content | safe }}
-
-<hr>
-<ul>
-  {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-  {%- if nextPost %}
-    <li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
-    </li>
-  {% endif %}
-  {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-  {%- if previousPost %}
-    <li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
-    </li>
-  {% endif %}
-</ul>
+</article>
