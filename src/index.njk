@@ -4,15 +4,20 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
+<section class="hero">
+  <h1>Yetty is a minimal Eleventy theme for basic blogs or websites built with accessibility and performance in mind.</h1>
+</section>
 
 {% set maxPosts = collections.posts.length | min(3) %}
-<h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}
-</h1>
+{# <h2>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}
+</h2> #}
+<h2>Latest {% if maxPosts == 1 %}post{% else %}posts{% endif %}
+</h2>
 
 {% set postslist = collections.posts | head(-3) %}
 {% set postslistCounter = collections.posts | length %}
 {% include "layouts/partials/postslist.njk" %}
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+<p>More posts can be found <a href="{{ '/posts/' | url }}">the archive</a>.</p>
 
 {# <div class="scroll-down"></div> #}
