@@ -7,8 +7,6 @@
 	//62rem * 16px = 992px
 	//64rem * 16px = 1024px
 	//80rem * 16px = 1280px
-  --red: #C5004A;
-  --darkred: #7F0036;
   --lightgray: #e0e0e0;
   --gray: #C0C0C0;
   --darkgray: #353535;
@@ -16,6 +14,8 @@
   --blue: blue;
   --white: #fff;
   --black: #000;
+  --powderblue: hsl(187, 51.9%, 79.6%);
+  --lemonchiffon: hsl(54, 100%, 90.2%);
   --background: var(--white);
   --body-font-color: var(--black);
   --serif-font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
