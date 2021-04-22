@@ -245,7 +245,6 @@ p {
 
 .hero {
   grid-column: 1 / 4;
-  margin-bottom: 3rem;
   background-image: radial-gradient(#bdbdbd 1px, #fff 1px);
   background-size: 20px 20px;
   font-size: 3rem;
@@ -271,6 +270,10 @@ a {
 
 a:visited {
   color: var(--purple);
+}
+
+.tmpl-home > :first-child {
+  margin-bottom: 3rem;
 }
 
 .tmpl-home,
