@@ -4,10 +4,14 @@ subtitle: You would have loved it
 description: This is a post on My Blog about touchpoints and circling wagons.
 date: 2018-09-30
 tags: second-tag
+imgUrl: ./src/assets/images/engin-akyurt--GVpdpShB7M-unsplash.jpg
+imgAlt: Ink in water
+imgSize: '(min-width: 30em) 50vw, 100vw'
+pictureClass: grid-column-full
+imgClass: img-full
+imgBorderColor: '#a689ab'
 layout: layouts/post.njk
 ---
-
-{% imageMd "./src/assets/images/engin-akyurt--GVpdpShB7M-unsplash.jpg", "Ink in water", "(min-width: 30em) 50vw, 100vw", "grid-column-full", "img-full", "#a689ab" %}
 
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
 
