@@ -180,8 +180,8 @@ p {
 
 .hero {
   padding: 0 1rem;
-  background-image: radial-gradient(#aaa 1.5px, #fff 1px);
-  background-size: 25px 25px;
+  background-image: radial-gradient(#ccc 1px, #fff 1px);
+  background-size: 7px 7px;
   font-family: var(--serif-font-family);
   font-size: 3rem;
   font-weight: bold;
@@ -189,7 +189,7 @@ p {
   .hero h1 {
     max-width: 60rem;
     margin: 4rem auto;
-    background: linear-gradient(270deg, #ed0000, #7817a8, #301cff);
+    background: linear-gradient(270deg, #ed0000, #7817a8, blue);
     -webkit-background-clip: text;
     line-height: 1.3;
     -webkit-text-fill-color: transparent; }
