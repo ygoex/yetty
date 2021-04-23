@@ -199,61 +199,21 @@ p {
   font-variant-caps: small-caps;
 }
 
-.scroll-down {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
-}
-
-.scroll-down:before, .scroll-down:after {
-  content: "";
-  display: block;
-  width: 12px;
-  height: 12px;
-  transform: rotate(45deg);
-  border-bottom: 1px solid blue;
-  border-right: 1px solid blue;
-}
-.scroll-down:before {
-  animation: down-arrow-before 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
-}
-.scroll-down:after {
-  animation: down-arrow-after 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
-}
-@keyframes down-arrow-before {
-	50% {
-		transform: rotate(45deg) translate(70%, 70%);
-	}
-	100% {
-		transform: rotate(45deg) translate(70%, 70%);
-	}
-}
-
-@keyframes down-arrow-after {
-	50% {
-		transform: rotate(45deg) translate(110%, 110%);
-		opacity: 0;
-	}
-	51% {
-		transform: rotate(45deg) translate(-130%, -130%);
-	}
-	100% {
-		transform: rotate(45deg) translate(-70%, -70%);
-		opacity: 1;
-	}
-}
-
 .hero {
   grid-column: 1 / 4;
-  background-image: radial-gradient(#bdbdbd 1px, #fff 1px);
-  background-size: 20px 20px;
+  background-image: radial-gradient(#aaa 1.5px, #fff 1px);
+  background-size: 25px 25px;
   font-size: 3rem;
   font-family: var(--serif-font-family);
   font-weight: bold;
   h1 {
     max-width: 60rem;
     margin: 4rem auto;
+    padding: 0 1rem;
     line-height: 1.3;
+    background: linear-gradient(90deg, #00bcd4 0%, #F79122 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
