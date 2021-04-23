@@ -1,0 +1,11 @@
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-2 {
+    margin-bottom: 2rem;
+}
+.mb-lg-3 {
+  @media only screen and (min-width: 48em) {
+    margin-bottom: 3rem;
+  }
+}
