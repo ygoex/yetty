@@ -200,6 +200,7 @@ p {
 }
 
 .hero {
+  padding: 0 1rem;
   background-image: radial-gradient(#aaa 1.5px, #fff 1px);
   background-size: 25px 25px;
   font-family: var(--serif-font-family);
@@ -209,7 +210,6 @@ p {
   h1 {
     max-width: 60rem;
     margin: 4rem auto;
-    padding: 0 1rem;
     background: linear-gradient(90deg, #00bcd4 0%, #F79122 90%);
     -webkit-background-clip: text;
     line-height: 1.3;
