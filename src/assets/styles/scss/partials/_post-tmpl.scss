@@ -7,10 +7,11 @@
   .content {
     grid-column: 2 / auto;
     max-width: 57ch;
-    margin: 0 auto;
+    //margin: 0 auto;
   }
   footer {
     grid-column: 2 / auto;
+    padding: 0;
     background-color: var(--white);
     color: var(--darkgray);
     font-size: 1.125rem;
