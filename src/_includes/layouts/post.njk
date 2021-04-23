@@ -4,7 +4,7 @@ templateClass: tmpl-post
 ---
 <article>
 
-  <header>
+  <header {%- if imgUrl %} class="mb-2 mb-lg-3"{% endif %}>
     {%- if date %}
       <p class="date-time">
         <time class="post-date" datetime="{{ date | dateStringISO }}">{{ date | dateFilter }}</time>
