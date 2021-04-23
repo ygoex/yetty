@@ -28,7 +28,7 @@ ul {
 }
 
 hr {
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 article {
@@ -210,7 +210,8 @@ p {
   h1 {
     max-width: 60rem;
     margin: 4rem auto;
-    background: linear-gradient(90deg, #00bcd4 0%, #F79122 90%);
+    //background: linear-gradient(90deg, #00a3b8 0%, #e17908 90%);
+    background: linear-gradient(270deg, #ed0000, #7817a8, #301cff);
     -webkit-background-clip: text;
     line-height: 1.3;
     -webkit-text-fill-color: transparent;
