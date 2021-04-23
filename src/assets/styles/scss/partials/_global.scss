@@ -200,19 +200,19 @@ p {
 }
 
 .hero {
-  grid-column: 1 / 4;
   background-image: radial-gradient(#aaa 1.5px, #fff 1px);
   background-size: 25px 25px;
-  font-size: 3rem;
   font-family: var(--serif-font-family);
+  font-size: 3rem;
   font-weight: bold;
+  grid-column: 1 / 4;
   h1 {
     max-width: 60rem;
     margin: 4rem auto;
     padding: 0 1rem;
-    line-height: 1.3;
     background: linear-gradient(90deg, #00bcd4 0%, #F79122 90%);
     -webkit-background-clip: text;
+    line-height: 1.3;
     -webkit-text-fill-color: transparent;
   }
 }
