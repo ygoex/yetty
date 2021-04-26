@@ -256,6 +256,10 @@ a:visited {
     grid-column: 2 / auto;
   }
 }
+
+.tmpl-home {
+  min-height: calc( 100vh - 92px - 6rem - 55px);
+}
 // main :first-child {
 //   margin-top: 0;
 // }
@@ -305,4 +309,12 @@ pre {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+}
+
+.tmpl-home p {
+  max-width: 57ch;
+}
+
+.tagslist {
+  display: flex;
 }

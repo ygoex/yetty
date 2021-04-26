@@ -229,6 +229,9 @@ a:visited {
   .tmpl-post article .post-tag {
     grid-column: 2 / auto; }
 
+.tmpl-home {
+  min-height: calc( 100vh - 92px - 6rem - 55px); }
+
 footer {
   padding: 1rem;
   background-color: var(--darkgray);
@@ -270,6 +273,12 @@ pre {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none; }
+
+.tmpl-home p {
+  max-width: 57ch; }
+
+.tagslist {
+  display: flex; }
 
 header {
   display: flex;
