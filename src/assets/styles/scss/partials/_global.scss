@@ -49,10 +49,13 @@ h1 {
   font-weight: bold;
   line-height: 1.1;
   grid-column: 2 / auto;
+  &> .direct-link {
+    display: none;
+  }
 }
 
 h2 {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   color: #353535;
   font-family: var(--serif-font-family);
   font-size: 2.35rem;
@@ -62,7 +65,7 @@ h2 {
 }
 
 h3 {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   font-family: var(--serif-font-family);
   font-size: 2rem;
   font-weight: bold;
@@ -70,7 +73,7 @@ h3 {
 }
 
 h4 {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   font-family: var(--serif-font-family);
   font-size: 1.5rem;
   font-weight: bold;
@@ -78,7 +81,7 @@ h4 {
 }
 
 h5 {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   font-family: var(--serif-font-family);
   font-size: 1.25rem;
   font-weight: bold;
@@ -86,7 +89,7 @@ h5 {
 }
 
 h6 {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   font-family: var(--serif-font-family);
   font-size: 1rem;
   font-weight: bold;
@@ -317,4 +320,10 @@ pre {
 
 .tagslist {
   display: flex;
+}
+
+.not-found {
+  h2:first-of-type{
+    margin-top: 0;
+  }
 }
