@@ -8,6 +8,7 @@
   font-size: 0.857rem;
   text-decoration: none;
   vertical-align: text-top;
+  transition: all 0.20s ease;
   &:first-of-type {
     margin-left: 0;
   }
@@ -15,4 +16,9 @@
 a[href].post-tag,
 a[href].post-tag:visited {
   color: initial;
+}
+
+a[href].post-tag:hover {
+  color: var(--blue);
+  border-color: var(--blue);
 }
