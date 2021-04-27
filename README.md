@@ -23,7 +23,9 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 - [x] Add cross-env
 - [x] PostCSS: Autoprefixer
 - [x] PostCSS: Purge CSS
-- [ ] Image processing
+- [x] Image processing
+- [ ] Cache busting
+- [ ] Dark mode
 
 ## Demo
 
