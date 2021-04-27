@@ -21,8 +21,13 @@ a.home {
   line-height: 1;
   text-decoration: none;
   font-variant-caps: small-caps;
+  transition: all 0.20s ease;
   &:visited {
     color: inherit;
+  }
+  &:hover {
+    color: var(--blue);
+    border-color: var(--blue);
   }
 }
 
@@ -48,13 +53,22 @@ a.home {
     margin-left: 0;
   }
 }
-.nav-item a[href]:not(:hover) {
+.nav-item a[href] {
   text-decoration: none;
+  transition: all 0.20s ease;
 }
 .nav-item a[href],
 .nav-item a[href]:visited {
   color: initial;
 }
+.nav-item a[href]:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+}
 .nav-item-active {
   // TBD
+  a {
+    border-bottom: 2px solid black;
+    padding-bottom: 3px;
+  }
 }
