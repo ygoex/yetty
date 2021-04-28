@@ -1,3 +1,57 @@
-<footer>&copy; {% year %}
-  <a href="https://github.com/ygoex">Ygoex</a> - Powered by <a href="https://11ty.io">Eleventy</a> and <a href="https://www.netlify.com">Netlify</a>
+<footer class="grid mb-0">
+  <div class="footer-top">
+    <div class="footer-top-left">
+      <a class="home" href="{{ '/' | url }}">{{ metadata.title }}</a>
+      <p>{{ metadata.title }} is maintained by {{ metadata.author.name }} as a quick start for some of her projects, but happy to share it for anyone that might find it useful. Check the repo on GitHub.</p>
+      <p>This page was generated on {% today %}</p>
+    </div>
+    <div class="footer-top-right">
+      <div class="footer-quick-links">
+        <p class="h6">Quick links</p>
+        <ul>
+          <li>
+            <a href="{{ '/' | url }}">Home</a>
+          </li>
+          <li>
+            <a href="{{ '/posts' | url }}">Blog</a>
+          </li>
+          <li>
+            <a href="{{ '/about' | url }}">About</a>
+          </li>
+          <li>
+            <a href="mailto:helloygoex@gmail.com">Contact</a>
+          </li>
+          <li>
+            <a href="{{ '/sitemap' | url }}">Sitemap</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-contact-follow">
+        <div class="footer-contact">
+          <p class="h6 text-bold">Contact me</p>
+          <a href="mailto:helloygoex@gmail.com">helloygoex@gmail.com</a>
+        </div>
+        <div class="footer-follow">
+          <p class="h6 text-bold">Follow me</p>
+          <ul>
+            <li>
+              <a href="">Twitter</a>
+            </li>
+            <li>
+              <a href="">Codepen</a>
+            </li>
+            <li>
+              <a href="">Dribbble</a>
+            </li>
+            <li>
+              <a href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="copyright">&copy; {% year %}
+    <a href="https://github.com/ygoex">Ygoex</a> - Powered by <a href="https://11ty.io">Eleventy</a> and <a href="https://www.netlify.com">Netlify</a>
+  </p>
 </footer>
