@@ -118,6 +118,7 @@ module.exports = function(eleventyConfig) {
 
   // Insert current year
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+  eleventyConfig.addShortcode("today", () => `${new Date()}`);
 
   // Responsive images with two shortcodes, one synchronous and another asynchronous: https://github.com/11ty/eleventy-plugin-vue/issues/12
   // Universal Shortcodes (Adds to Liquid, Nunjucks, Md, etc) are synchronous.
