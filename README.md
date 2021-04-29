@@ -26,6 +26,7 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 - [x] Image processing
 - [ ] Cache busting
 - [ ] Dark mode
+- [ ] Refactor CSS
 
 ## Demo
 
