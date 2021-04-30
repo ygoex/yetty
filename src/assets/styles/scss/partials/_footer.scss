@@ -1,7 +1,6 @@
 footer {
   padding: 1rem;
   background-color: var(--darkgray);
-  color: var(--white);
   color: #eaeaea;
   font-size: 0.85rem;
   a {
@@ -26,7 +25,7 @@ footer {
     flex: 1 100%;
   }
   a.home {
-    display: block;
+    display: inline-block;
     margin: 1rem 0;
     font-size: 1.5rem;
     color: #ccc;
@@ -46,11 +45,26 @@ footer {
       font-size: 1rem;
     }
   }
-  .footer-contact {
+
+  .footer-quick-links,
+  .footer-contact,
+  .footer-follow {
     margin-bottom: 1.5rem;
   }
-  /* medium screen */
-  @media all and (min-width: 600px) {
+
+  @media all and (min-width: 36em) {
+    .footer-top-right {
+      display: flex;
+    }
+    .footer-quick-links {
+      flex: 1 40%;
+    }
+    .footer-contact-follow {
+      flex: 1 60%;
+    }
+  }
+
+  @media all and (min-width: 48em) {
     flex-direction: row;
     /* if screen > 600px footer-top-right appears alongside footer-top-left getting 1/3rd of space */
     .footer-top-left {
@@ -62,11 +76,33 @@ footer {
       flex: 1 50%;
       padding: 1rem;
     }
-    .footer-quick-links,
-    .footer-contact-follow {
-      flex: 1 50%;
-    }
   }
 }
 
-
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  .nav-link {
+    font-size: 1.75rem;
+    //width: 2rem;
+    padding: 0 7px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    transition: all 0.20s ease;
+    svg {
+      color: #ccc;
+      fill: #ccc;
+      stroke: #ccc;
+      transition: all 0.20s ease;
+    }
+    &:hover {
+      border-color: var(--white);
+      svg {
+        color: var(--white);
+        fill: var(--white);
+        stroke: var(--white);
+      }
+    }
+  }
+}
