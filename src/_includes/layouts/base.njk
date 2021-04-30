@@ -10,6 +10,8 @@
 
     {% include 'layouts/partials/footer.njk' %}
 
+    {% include 'layouts/partials/svgs.njk' %}
+
     <!-- Current page: {{ page.url | url }} -->
 
     <script src="{% if yetty.environment === 'production' %}{{ '/assets/scripts/bundle.min.js' | url }}{% else %}{{ '/assets/scripts/index.js' | url }}{% endif %}"></script>
