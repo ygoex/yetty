@@ -292,10 +292,41 @@ pre {
 header {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  /* Nav */ }
   @media only screen and (min-width: 36em) {
     header {
       flex-direction: row; } }
+  header .nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+    padding: 0 1.5rem;
+    list-style: none; }
+    @media only screen and (min-width: 36em) {
+      header .nav {
+        margin-bottom: 0; } }
+  header .nav-item {
+    margin: 0 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase; }
+    header .nav-item:first-of-type {
+      margin-left: 0; }
+  header .nav-item a[href] {
+    text-decoration: none;
+    transition: all 0.20s ease; }
+  header .nav-item a[href],
+  header .nav-item a[href]:visited {
+    color: initial; }
+  header .nav-item a[href]:hover {
+    color: var(--blue);
+    border-color: var(--blue); }
+  header .nav-item-active a {
+    border-bottom: 2px solid black;
+    padding-bottom: 3px; }
 
 a.home {
   width: fit-content;
@@ -317,43 +348,6 @@ a.home {
   a.home:hover {
     color: var(--blue);
     border-color: var(--blue); }
-
-/* Nav */
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 1.5rem;
-  padding: 0 1.5rem;
-  list-style: none; }
-  @media only screen and (min-width: 36em) {
-    .nav {
-      margin-bottom: 0; } }
-
-.nav-item {
-  margin: 0 1rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-transform: uppercase; }
-  .nav-item:first-of-type {
-    margin-left: 0; }
-
-.nav-item a[href] {
-  text-decoration: none;
-  transition: all 0.20s ease; }
-
-.nav-item a[href],
-.nav-item a[href]:visited {
-  color: initial; }
-
-.nav-item a[href]:hover {
-  color: var(--blue);
-  border-color: var(--blue); }
-
-.nav-item-active a {
-  border-bottom: 2px solid black;
-  padding-bottom: 3px; }
 
 /* Posts list */
 .postlist {
@@ -423,7 +417,6 @@ a[href].post-tag:hover {
 footer {
   padding: 1rem;
   background-color: var(--darkgray);
-  color: var(--white);
   color: #eaeaea;
   font-size: 0.85rem; }
   footer a {
@@ -438,13 +431,12 @@ footer {
 .footer-top {
   grid-column: 2 / auto;
   display: flex;
-  flex-direction: column;
-  /* medium screen */ }
+  flex-direction: column; }
   .footer-top .footer-top-left,
   .footer-top .footer-top-right {
     flex: 1 100%; }
   .footer-top a.home {
-    display: block;
+    display: inline-block;
     margin: 1rem 0;
     font-size: 1.5rem;
     color: #ccc;
@@ -457,9 +449,18 @@ footer {
   .footer-top .footer-quick-links a,
   .footer-top .footer-contact a {
     font-size: 1rem; }
-  .footer-top .footer-contact {
+  .footer-top .footer-quick-links,
+  .footer-top .footer-contact,
+  .footer-top .footer-follow {
     margin-bottom: 1.5rem; }
-  @media all and (min-width: 600px) {
+  @media all and (min-width: 36em) {
+    .footer-top .footer-top-right {
+      display: flex; }
+    .footer-top .footer-quick-links {
+      flex: 1 40%; }
+    .footer-top .footer-contact-follow {
+      flex: 1 60%; } }
+  @media all and (min-width: 48em) {
     .footer-top {
       flex-direction: row;
       /* if screen > 600px footer-top-right appears alongside footer-top-left getting 1/3rd of space */ }
@@ -469,10 +470,29 @@ footer {
       .footer-top .footer-top-right {
         display: flex;
         flex: 1 50%;
-        padding: 1rem; }
-      .footer-top .footer-quick-links,
-      .footer-top .footer-contact-follow {
-        flex: 1 50%; } }
+        padding: 1rem; } }
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap; }
+  .social-links .nav-link {
+    font-size: 1.75rem;
+    padding: 0 7px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    transition: all 0.20s ease; }
+    .social-links .nav-link svg {
+      color: #ccc;
+      fill: #ccc;
+      stroke: #ccc;
+      transition: all 0.20s ease; }
+    .social-links .nav-link:hover {
+      border-color: var(--white); }
+      .social-links .nav-link:hover svg {
+        color: var(--white);
+        fill: var(--white);
+        stroke: var(--white); }
 
 .mb-0 {
   margin-bottom: 0; }
@@ -486,5 +506,16 @@ footer {
 @media only screen and (min-width: 48em) {
   .mb-lg-3 {
     margin-bottom: 3rem; } }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0; }
 
 /*# sourceMappingURL=main.css.map */
