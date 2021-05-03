@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   {% include 'layouts/partials/head.njk' %}
-  <body>
+  <body {% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
     {% include 'layouts/partials/header.njk' %}
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
