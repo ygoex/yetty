@@ -4,10 +4,10 @@ footer {
   color: #eaeaea;
   font-size: 0.85rem;
   a {
-    color: hsl(187, 51.9%, 79.6%);
+    color: #eaeaea;
   }
   a:visited {
-    color: hsl(54, 100%, 90.2%);
+    color: #eaeaea;
   }
   .copyright {
     padding: 1rem 0;
@@ -38,12 +38,6 @@ footer {
 
   .h6 {
     margin-bottom: 0.5rem;
-  }
-  .footer-quick-links,
-  .footer-contact {
-    a {
-      font-size: 1rem;
-    }
   }
 
   .footer-quick-links,
@@ -76,6 +70,31 @@ footer {
       flex: 1 50%;
       padding: 1rem;
     }
+  }
+}
+
+.footer-quick-links,
+.footer-contact,
+.copyright {
+  a {
+    width: 100%;
+    padding-bottom: 1px;
+    //font-size: 1rem;
+    text-decoration: none;
+    background-image: linear-gradient(transparent 95%,currentColor 1px);
+    background-repeat: no-repeat;
+    background-size: 1.35rem 100%;
+    transition: all 0.2s;
+    &:hover {
+      color: var(--white);
+      background-size: 100% 100%;
+    }
+  }
+}
+
+.footer-quick-links {
+  li {
+    margin-bottom: 0.25rem;
   }
 }
 
