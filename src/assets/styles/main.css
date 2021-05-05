@@ -288,7 +288,13 @@ pre {
   margin-top: 0; }
 
 .gradient {
-  background: radial-gradient(circle at 35% 25%, #f9c10685 0%, transparent 30%) no-repeat, radial-gradient(circle at 70% 50%, #bd88e080 0%, transparent 30%) no-repeat, radial-gradient(circle at 60% 30%, #c2768975 0%, transparent 30%) no-repeat; }
+  background-image: url("/assets/images/mesh-gradient-white-test.jpg");
+  background-image: url("/assets/images/mesh-gradient-white-test.webp");
+  background-size: contain;
+  background-repeat: no-repeat; }
+  @media all and (min-width: 75em) {
+    .gradient {
+      background-size: cover; } }
 
 header {
   display: flex;
