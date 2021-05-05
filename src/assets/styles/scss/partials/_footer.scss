@@ -1,18 +1,18 @@
 footer {
   padding: 1rem;
-  background-color: var(--darkgray);
-  color: #eaeaea;
+  background-color: #eee;
+  color: #494949;
   font-size: 0.85rem;
-  a {
-    color: #eaeaea;
-  }
-  a:visited {
-    color: #eaeaea;
-  }
+  // a {
+  //   color: #494949;
+  // }
+  // a:visited {
+  //   color: var(--darkgray);
+  // }
   .copyright {
     padding: 1rem 0;
     text-align: center;
-    border-top: 1px solid darkgrey;
+    border-top: 1px solid #eee;
   }
 }
 
@@ -28,11 +28,11 @@ footer {
     display: inline-block;
     margin: 1rem 0;
     font-size: 1.5rem;
-    color: #ccc;
-    border: 2px solid #ccc;
+    color: #494949;
+    border: 2px solid #494949;
     &:hover {
-      color: var(--white);
-      border: 2px solid var(--white);
+      color: var(--blue);
+      border: 2px solid var(--blue);
     }
   }
 
@@ -79,14 +79,16 @@ footer {
   a {
     width: 100%;
     padding-bottom: 1px;
-    //font-size: 1rem;
     text-decoration: none;
     background-image: linear-gradient(transparent 95%,currentColor 1px);
     background-repeat: no-repeat;
-    background-size: 1.35rem 100%;
+    background-size: 0 100%;
     transition: all 0.2s;
     &:hover {
-      color: var(--white);
+      // color: mediumblue;
+      // &:visited {
+      //   color: darken(purple,10%);
+      // }
       background-size: 100% 100%;
     }
   }
@@ -103,24 +105,23 @@ footer {
   flex-wrap: wrap;
   .nav-link {
     font-size: 1.75rem;
-    //width: 2rem;
     padding: 0 7px;
-    border: 2px solid #ccc;
+    border: 2px solid #494949;
     border-radius: 50%;
     margin-right: 0.5rem;
     transition: all 0.20s ease;
     svg {
-      color: #ccc;
-      fill: #ccc;
-      stroke: #ccc;
+      color: #494949;
+      fill: #494949;
+      stroke: #494949;
       transition: all 0.20s ease;
     }
     &:hover {
-      border-color: var(--white);
+      border-color: var(--blue);
       svg {
-        color: var(--white);
-        fill: var(--white);
-        stroke: var(--white);
+        color: var(--blue);
+        fill: var(--blue);
+        stroke: var(--blue);
       }
     }
   }
