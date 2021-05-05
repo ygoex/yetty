@@ -219,6 +219,7 @@ p {
   h1 {
     max-width: 60rem;
     margin: 4rem auto;
+    color: #222;
     //background: linear-gradient(90deg, #00a3b8 0%, #e17908 90%);
     //background: linear-gradient(270deg, #ed0000, #7817a8, blue);
     -webkit-background-clip: text;
@@ -330,11 +331,13 @@ pre {
 // }
 
 .gradient {
-  background-image: url("/assets/images/mesh-gradient-white-test.jpg");
-  background-image: url("/assets/images/mesh-gradient-white-test.webp");
-  background-size: contain;
-  background-repeat: no-repeat;
-  @media all and (min-width: 75em) {
-    background-size: cover;
-  }
+  // background-image: url("/assets/images/mesh-gradient-white-test.jpg");
+  // background-image: url("/assets/images/mesh-gradient-white-test.webp");
+  // background-size: contain;
+  // background-repeat: no-repeat;
+  // @media all and (min-width: 75em) {
+  //   background-size: cover;
+  // }
+//background: rgb(255,222,120);
+background: radial-gradient(circle at 35% 25%, #f9c10685 0%, transparent 30%) no-repeat, radial-gradient(circle at 70% 50%, #bd88e080 0%, transparent 30%) no-repeat, radial-gradient(circle at 60% 30%, #c2768975 0%, transparent 30%) no-repeat;
 }
