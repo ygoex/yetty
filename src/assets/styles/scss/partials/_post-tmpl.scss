@@ -2,6 +2,9 @@
   header {
     flex-direction: column;
     grid-column: 2 / auto;
+    h2 {
+      margin-top: 0;
+    }
   }
   .content {
     grid-column: 2 / auto;
