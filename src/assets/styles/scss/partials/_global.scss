@@ -219,10 +219,10 @@ p {
   h1 {
     max-width: 60rem;
     margin: 4rem auto;
-    color: #222;
     //background: linear-gradient(90deg, #00a3b8 0%, #e17908 90%);
     //background: linear-gradient(270deg, #ed0000, #7817a8, blue);
     -webkit-background-clip: text;
+    color: #222;
     line-height: 1.3;
     //-webkit-text-fill-color: transparent;
   }
@@ -257,6 +257,9 @@ a:visited {
   minmax(auto, 60rem)
   minmax(1.2rem, 1fr);
   overflow: hidden;
+  @media all and (min-width: 60em) {
+    margin: 3rem 0 5rem;
+  }
   h3,
   ul,
   hr,
@@ -271,10 +274,6 @@ a:visited {
 .tmpl-home {
   min-height: calc( 100vh - 92px - 6rem - 55px);
 }
-// main :first-child {
-//   margin-top: 0;
-// }
-
 
 table {
   margin: 1em 0;
@@ -333,8 +332,8 @@ pre {
 .gradient {
   background-image: url("/assets/images/mesh-gradient-white-test.jpg");
   background-image: url("/assets/images/mesh-gradient-white-test.webp");
-  background-size: contain;
   background-repeat: no-repeat;
+  background-size: contain;
   @media all and (min-width: 75em) {
     background-size: cover;
   }
