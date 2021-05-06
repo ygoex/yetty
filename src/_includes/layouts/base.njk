@@ -3,21 +3,13 @@
   {% include 'layouts/partials/head.njk' %}
   <body {% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
 
-    {% if page.url === '/' %}
-      <div class="gradient">
-      {% endif %}
+    {% include 'layouts/partials/header.njk' %}
 
-      {% include 'layouts/partials/header.njk' %}
+    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+      {{ content | safe }}
+    </main>
 
-      <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-        {{ content | safe }}
-      </main>
-
-      {% include 'layouts/partials/footer.njk' %}
-
-      {% if page.url === '/' %}
-      </div>
-    {% endif %}
+    {% include 'layouts/partials/footer.njk' %}
 
     {% include 'layouts/partials/svgs.njk' %}
 
