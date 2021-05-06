@@ -11,8 +11,8 @@ footer {
   // }
   .copyright {
     padding: 1rem 0;
-    text-align: center;
     border-top: 1px solid #eee;
+    text-align: center;
   }
 }
 
@@ -27,12 +27,12 @@ footer {
   a.home {
     display: inline-block;
     margin: 1rem 0;
-    font-size: 1.5rem;
-    color: #494949;
     border: 2px solid #494949;
+    color: #494949;
+    font-size: 1.5rem;
     &:hover {
-      color: var(--blue);
       border: 2px solid var(--blue);
+      color: var(--blue);
     }
   }
 
@@ -79,11 +79,11 @@ footer {
   a {
     width: 100%;
     padding-bottom: 1px;
-    text-decoration: none;
+    transition: all 0.2s;
     background-image: linear-gradient(transparent 95%,currentColor 1px);
     background-repeat: no-repeat;
     background-size: 0 100%;
-    transition: all 0.2s;
+    text-decoration: none;
     &:hover {
       // color: mediumblue;
       // &:visited {
@@ -104,23 +104,23 @@ footer {
   display: flex;
   flex-wrap: wrap;
   .nav-link {
-    font-size: 1.75rem;
+    margin-right: 0.5rem;
     padding: 0 7px;
+    transition: all 0.20s ease;
     border: 2px solid #494949;
     border-radius: 50%;
-    margin-right: 0.5rem;
-    transition: all 0.20s ease;
+    font-size: 1.75rem;
     svg {
-      color: #494949;
-      fill: #494949;
-      stroke: #494949;
       transition: all 0.20s ease;
+      fill: #494949;
+      color: #494949;
+      stroke: #494949;
     }
     &:hover {
       border-color: var(--blue);
       svg {
-        color: var(--blue);
         fill: var(--blue);
+        color: var(--blue);
         stroke: var(--blue);
       }
     }
