@@ -2,13 +2,22 @@
 <html lang="en">
   {% include 'layouts/partials/head.njk' %}
   <body {% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
-    {% include 'layouts/partials/header.njk' %}
 
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-      {{ content | safe }}
-    </main>
+    {% if page.url === '/' %}
+      <div class="gradient">
+      {% endif %}
 
-    {% include 'layouts/partials/footer.njk' %}
+      {% include 'layouts/partials/header.njk' %}
+
+      <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+        {{ content | safe }}
+      </main>
+
+      {% include 'layouts/partials/footer.njk' %}
+
+      {% if page.url === '/' %}
+      </div>
+    {% endif %}
 
     {% include 'layouts/partials/svgs.njk' %}
 
