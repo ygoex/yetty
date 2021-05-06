@@ -3,12 +3,12 @@
   display: inline-block;
   margin: 0 0.5em;
   padding: 0.05em 0.5em;
+  transition: all 0.20s ease;
   border: 1px solid black;
   border-radius: 15px;
   font-size: 0.857rem;
   text-decoration: none;
   vertical-align: text-top;
-  transition: all 0.20s ease;
   &:first-of-type {
     margin-left: 0;
   }
@@ -19,6 +19,6 @@ a[href].post-tag:visited {
 }
 
 a[href].post-tag:hover {
-  color: var(--blue);
   border-color: var(--blue);
+  color: var(--blue);
 }
