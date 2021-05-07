@@ -218,12 +218,16 @@ p {
   // background-color: #fff;
   // opacity: 0.8;
   // background-size: 15px 15px;
-  // background-image: repeating-linear-gradient(135deg, #ccc 0, #ccc 1px, #fff 0, #f9f9f9 50%);
+  // background-image: repeating-linear-gradient(135deg, #ccc 0, #ccc 1px, #fff 0, #fff 50%);
   font-family: var(--serif-font-family);
   font-size: 3rem;
   font-weight: bold;
   grid-column: 1 / 4;
   overflow: hidden;
+  picture {
+    position: absolute;
+    z-index: -1;
+  }
   // SVG Topography from http://www.heropatterns.com/
   svg {
     position: absolute;
@@ -354,16 +358,16 @@ pre {
 }
 
 .btn-link {
+  padding: 0.25em 0.9em 0.3rem;
+  transition: all 0.20s ease;
   border: 2px solid black;
   border-radius: 25px;
-  padding: 0.25em 0.9em 0.3rem;
   background-color: black;
-  transition: all 0.20s ease;
   a {
+    transition: all 0.20s ease;
     color: white !important;
     font-size: 0.75rem;
     letter-spacing: 0;
-    transition: all 0.20s ease;
   }
   &:hover {
     background-color: white !important;
