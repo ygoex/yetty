@@ -63,6 +63,7 @@
     "webpack-cli": "^4.5.0"
   },
   "dependencies": {
+    "eleventy-plugin-reading-time": "^0.0.1",
     "mermaid": "^8.9.2"
   }
 }
