@@ -205,7 +205,6 @@ p {
     max-width: 60rem;
     margin: 4rem auto;
     color: #222;
-    color: mediumblue;
     line-height: 1.3; }
 
 .tmpl-post p:not(.date-time) {
@@ -298,6 +297,15 @@ pre {
 
 .not-found h2:first-of-type {
   margin-top: 0; }
+
+.gradient {
+  background-image: url("/assets/images/mesh-gradient-white-test.jpg");
+  background-image: url("/assets/images/mesh-gradient-white-test.webp");
+  background-repeat: no-repeat;
+  background-size: contain; }
+  @media all and (min-width: 75em) {
+    .gradient {
+      background-size: cover; } }
 
 .btn-link {
   padding: 0.25em 0.9em 0.3rem;

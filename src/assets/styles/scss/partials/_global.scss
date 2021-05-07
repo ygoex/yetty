@@ -239,7 +239,7 @@ p {
     //background: linear-gradient(270deg, #ed0000, #7817a8, blue);
     //-webkit-background-clip: text;
     color: #222;
-    color: mediumblue;
+    //color: mediumblue;
     line-height: 1.3;
     //-webkit-text-fill-color: transparent;
   }
@@ -347,13 +347,13 @@ pre {
 // }
 
 .gradient {
-  // background-image: url("/assets/images/mesh-gradient-white-test.jpg");
-  // background-image: url("/assets/images/mesh-gradient-white-test.webp");
-  // background-repeat: no-repeat;
-  // background-size: contain;
-  // @media all and (min-width: 75em) {
-  //   background-size: cover;
-  // }
+  background-image: url("/assets/images/mesh-gradient-white-test.jpg");
+  background-image: url("/assets/images/mesh-gradient-white-test.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  @media all and (min-width: 75em) {
+    background-size: cover;
+  }
   //background: radial-gradient(circle at 35% 25%, #f9c10685 0%, transparent 30%) no-repeat, radial-gradient(circle at 70% 50%, #bd88e080 0%, transparent 30%) no-repeat, radial-gradient(circle at 60% 30%, #c2768975 0%, transparent 30%) no-repeat;
 }
 
