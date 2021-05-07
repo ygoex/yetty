@@ -6,7 +6,8 @@ eleventyNavigation:
   order: 1
 ---
 <section class="hero">
-  {% include "layouts/partials/bg-hero.njk" %}
+  {# {% include "layouts/partials/bg-hero.njk" %} #}
+  {% imageNjk "./src/assets/images/topography.jpg", "Ink in water", "(min-width: 30em) 50vw, 100vw", "grid-column-full", "width-100" %}
   <h1>Yetty is a minimal Eleventy theme for basic blogs & websites built with accessibility and performance in mind.</h1>
 </section>
 
