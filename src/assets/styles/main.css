@@ -195,6 +195,9 @@ p {
   font-weight: bold;
   grid-column: 1 / 4;
   overflow: hidden; }
+  .hero picture {
+    position: absolute;
+    z-index: -1; }
   .hero svg {
     position: absolute;
     z-index: -1; }
@@ -297,16 +300,16 @@ pre {
   margin-top: 0; }
 
 .btn-link {
+  padding: 0.25em 0.9em 0.3rem;
+  transition: all 0.20s ease;
   border: 2px solid black;
   border-radius: 25px;
-  padding: 0.25em 0.9em 0.3rem;
-  background-color: black;
-  transition: all 0.20s ease; }
+  background-color: black; }
   .btn-link a {
+    transition: all 0.20s ease;
     color: white !important;
     font-size: 0.75rem;
-    letter-spacing: 0;
-    transition: all 0.20s ease; }
+    letter-spacing: 0; }
   .btn-link:hover {
     background-color: white !important;
     cursor: pointer; }
@@ -554,5 +557,8 @@ footer {
   white-space: nowrap;
   overflow: hidden;
   clip: rect(0, 0, 0, 0); }
+
+.width-100 {
+  width: 100vw; }
 
 /*# sourceMappingURL=main.css.map */
