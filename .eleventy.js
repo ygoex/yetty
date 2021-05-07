@@ -12,6 +12,7 @@ const pluginPWA = require("eleventy-plugin-pwa");
 const imageShortcode = require('./utils/shortcodes/imageProcess.js');
 const dateFilter = require("./utils/filters/dateFilter.js");
 const tagList = require("./utils/collections/tagList.js");
+const readingTime = require('eleventy-plugin-reading-time');
 
 // Import transforms
 const htmlMinTransform = require("./utils/transforms/html-min-transform.js");
@@ -42,6 +43,7 @@ module.exports = function(eleventyConfig) {
   }
   // PWA
   eleventyConfig.addPlugin(pluginPWA);
+  eleventyConfig.addPlugin(readingTime);
 
   // Setup mermaid markdown highlighter
   const highlighter = eleventyConfig.markdownHighlighter;
