@@ -209,20 +209,33 @@ p {
 }
 
 .hero {
+  position: relative;
   padding: 0 1rem;
-  //background-image: radial-gradient(#ccc 1px, #fff 1px);
-  background-size: 7px 7px;
+  // polka
+  // background-image: radial-gradient(#ccc 1px, #fff 1px);
+  // background-size: 7px 7px;
+  // diagonal
+  // background-color: #fff;
+  // opacity: 0.8;
+  // background-size: 15px 15px;
+  // background-image: repeating-linear-gradient(135deg, #ccc 0, #ccc 1px, #fff 0, #f9f9f9 50%);
   font-family: var(--serif-font-family);
   font-size: 3rem;
   font-weight: bold;
   grid-column: 1 / 4;
+  overflow: hidden;
+  // SVG Topography from http://www.heropatterns.com/
+  svg {
+    position: absolute;
+    z-index: -1;
+  }
   h1 {
     max-width: 60rem;
     margin: 4rem auto;
-    //background: linear-gradient(90deg, #00a3b8 0%, #e17908 90%);
     //background: linear-gradient(270deg, #ed0000, #7817a8, blue);
-    -webkit-background-clip: text;
+    //-webkit-background-clip: text;
     color: #222;
+    color: mediumblue;
     line-height: 1.3;
     //-webkit-text-fill-color: transparent;
   }
@@ -330,12 +343,33 @@ pre {
 // }
 
 .gradient {
-  background-image: url("/assets/images/mesh-gradient-white-test.jpg");
-  background-image: url("/assets/images/mesh-gradient-white-test.webp");
-  background-repeat: no-repeat;
-  background-size: contain;
-  @media all and (min-width: 75em) {
-    background-size: cover;
+  // background-image: url("/assets/images/mesh-gradient-white-test.jpg");
+  // background-image: url("/assets/images/mesh-gradient-white-test.webp");
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  // @media all and (min-width: 75em) {
+  //   background-size: cover;
+  // }
+  //background: radial-gradient(circle at 35% 25%, #f9c10685 0%, transparent 30%) no-repeat, radial-gradient(circle at 70% 50%, #bd88e080 0%, transparent 30%) no-repeat, radial-gradient(circle at 60% 30%, #c2768975 0%, transparent 30%) no-repeat;
+}
+
+.btn-link {
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 0.25em 0.9em 0.3rem;
+  background-color: black;
+  transition: all 0.20s ease;
+  a {
+    color: white !important;
+    font-size: 0.75rem;
+    letter-spacing: 0;
+    transition: all 0.20s ease;
   }
-// background: radial-gradient(circle at 35% 25%, #f9c10685 0%, transparent 30%) no-repeat, radial-gradient(circle at 70% 50%, #bd88e080 0%, transparent 30%) no-repeat, radial-gradient(circle at 60% 30%, #c2768975 0%, transparent 30%) no-repeat;
+  &:hover {
+    background-color: white !important;
+    cursor: pointer;
+    a {
+      color: black !important;;
+    }
+  }
 }
