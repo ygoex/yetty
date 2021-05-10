@@ -186,14 +186,8 @@ p {
   color: #737373;
 }
 
-.post-date:before {
-  color: black;
-  content: "Published: ";
-}
-
-.read-time:before {
-  color: black;
-  content: " \B7  Read time: ";
+.middle-dot {
+  font-weight: bold;
 }
 
 .post-categories {
@@ -351,9 +345,9 @@ pre {
   background-image: url("/assets/images/mesh-gradient-white.webp");
   background-repeat: no-repeat;
   background-size: contain;
-  @media all and (min-width: 75em) {
-    background-size: cover;
-  }
+  // @media all and (min-width: 75em) {
+  //   background-size: cover;
+  // }
   //background: radial-gradient(circle at 35% 25%, #f9c10685 0%, transparent 30%) no-repeat, radial-gradient(circle at 70% 50%, #bd88e080 0%, transparent 30%) no-repeat, radial-gradient(circle at 60% 30%, #c2768975 0%, transparent 30%) no-repeat;
 }
 
