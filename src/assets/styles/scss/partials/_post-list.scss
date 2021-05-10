@@ -1,22 +1,43 @@
 /* Posts list */
 .postlist {
   grid-column: 2 / auto;
-  margin-bottom: 1.5rem;
+  margin: 2rem 0;
   padding: 0;
   list-style: none;
+  .post-tag {
+    font-size: 0.75rem; //12px
+  }
+  .post-title {
+    margin: 0.5rem 0;
+  }
+  .date-time {
+    padding-top: 1rem;
+    border-top: 1px solid #eaeaea;
+  }
 }
 
-.postlist-date {
-  word-spacing: -0.5px;
+.postlist-link,
+.postlist-link:hover,
+.postlist-link:visited {
+  display: block;
+  padding: 1.5rem;
+  color: var(--darkgray);
+  text-decoration: none;
 }
-.postlist-link {
-  display: inline-block;
-  padding: 0.25em 0.1875em; /* 4px 3px /16 */
+
+.postlist-item {
+  margin-bottom: 2rem;
+  //border: 1px solid #ccc;
+  border-radius: 15px;
+  max-width: 57ch;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 -3px 6px -2px rgba(0,0,0,0.05);
+  //box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+  overflow: hidden;
 }
-.postlist-item-active .postlist-link {
-  font-weight: bold;
-}
-.tmpl-home .postlist-link {
-  font-size: 1.1875em; /* 19px /16 */
-  font-weight: 700;
+
+.tmpl-home {
+  .postlist {
+    // font-size: 1.1875em; /* 19px /16 */
+    // font-weight: 700;
+  }
 }
