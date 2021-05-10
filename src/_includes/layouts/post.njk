@@ -6,10 +6,14 @@ templateClass: tmpl-post
 
   <header {%- if imgUrl %} class="mb-2 mb-lg-3"{% endif %}>
     {%- if date %}
-      <p class="date-time">
-        <time class="post-date" datetime="{{ date | dateStringISO }}">{{ date | dateFilter }}</time>
-        <span class="read-time">About {{ content | readingTime }}</span>
-      </p>
+      <div class="date-time mb-1">
+        <time class="post-date" datetime="{{ date | dateStringISO }}">
+          <span class="text-black">Published:</span>
+          {{ date | dateFilter }}</time>
+        <span class="middle-dot">&middot;</span>
+        <span class="read-time">
+          <span class="text-black">Read time:</span> About {{ content | readingTime }}</span>
+      </div>
     {% endif %}
 
     <h1>{{ title }}</h1>
