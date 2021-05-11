@@ -1,5 +1,5 @@
 footer {
-  padding: 1rem;
+  padding: 1rem 0;
   background-color: #eee;
   color: #494949;
   font-size: 0.85rem;
@@ -63,12 +63,12 @@ footer {
     /* if screen > 600px footer-top-right appears alongside footer-top-left getting 1/3rd of space */
     .footer-top-left {
       flex: 1 50%;
-      padding: 1rem;
+      padding: 1rem 1rem 1rem 0;
     }
     .footer-top-right {
       display: flex;
       flex: 1 50%;
-      padding: 1rem;
+      padding: 1rem 0 1rem 1rem;
     }
   }
 }
