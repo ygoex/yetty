@@ -265,11 +265,21 @@ a:visited {
   margin: 3rem 0;
   grid-template-columns:
   minmax(1.2rem, 1fr)
-  minmax(auto, 60rem)
+  minmax(auto, 36rem)
   minmax(1.2rem, 1fr);
   overflow: hidden;
-  @media all and (min-width: 60em) {
+  @media all and (min-width: 48em) {
+    grid-template-columns:
+  minmax(1.2rem, 1fr)
+  minmax(auto, 48rem)
+  minmax(1.2rem, 1fr);
     margin: 3rem 0 5rem;
+  }
+  @media all and (min-width: 64em) {
+    grid-template-columns:
+  minmax(1.2rem, 1fr)
+  minmax(auto, 60rem)
+  minmax(1.2rem, 1fr);
   }
   h3,
   ul,
