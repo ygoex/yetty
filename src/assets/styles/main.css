@@ -220,13 +220,19 @@ a:visited {
 .grid {
   display: grid;
   margin: 3rem 0;
-  grid-template-columns: minmax(1.2rem, 1fr) minmax(auto, 60rem) minmax(1.2rem, 1fr);
+  grid-template-columns: minmax(1.2rem, 1fr) minmax(auto, 36rem) minmax(1.2rem, 1fr);
   overflow: hidden; }
-  @media all and (min-width: 60em) {
+  @media all and (min-width: 48em) {
     .tmpl-home,
     .tmpl-post article,
     .grid {
+      grid-template-columns: minmax(1.2rem, 1fr) minmax(auto, 48rem) minmax(1.2rem, 1fr);
       margin: 3rem 0 5rem; } }
+  @media all and (min-width: 64em) {
+    .tmpl-home,
+    .tmpl-post article,
+    .grid {
+      grid-template-columns: minmax(1.2rem, 1fr) minmax(auto, 60rem) minmax(1.2rem, 1fr); } }
   .tmpl-home h3,
   .tmpl-home ul,
   .tmpl-home hr,
@@ -450,7 +456,7 @@ a[href].post-tag:hover {
   color: var(--blue); }
 
 footer {
-  padding: 1rem;
+  padding: 1rem 0;
   background-color: #eee;
   color: #494949;
   font-size: 0.85rem; }
@@ -494,11 +500,11 @@ footer {
       /* if screen > 600px footer-top-right appears alongside footer-top-left getting 1/3rd of space */ }
       .footer-top .footer-top-left {
         flex: 1 50%;
-        padding: 1rem; }
+        padding: 1rem 1rem 1rem 0; }
       .footer-top .footer-top-right {
         display: flex;
         flex: 1 50%;
-        padding: 1rem; } }
+        padding: 1rem 0 1rem 1rem; } }
 
 .footer-quick-links a,
 .footer-contact a,
