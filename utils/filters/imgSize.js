@@ -1,6 +1,6 @@
 const path = require("path");
 
-module.exports = function imgSize(src, size = '100', format = 'jpeg') {
+module.exports = function imgSize(src, size = '480', format = 'jpeg') {
   const extension = path.extname(src);
   const name = path.basename(src, extension);
   /**
