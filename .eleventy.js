@@ -11,6 +11,7 @@ const criticalCss = require("eleventy-critical-css");
 const pluginPWA = require("eleventy-plugin-pwa");
 const imageShortcode = require('./utils/shortcodes/imageProcess.js');
 const dateFilter = require("./utils/filters/dateFilter.js");
+const imgSize = require("./utils/filters/imgSize.js");
 const tagList = require("./utils/collections/tagList.js");
 const readingTime = require('eleventy-plugin-reading-time');
 
@@ -83,6 +84,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addFilter("dateFilter", dateFilter);
+  eleventyConfig.addFilter("imgSize", imgSize);
 
   // Get the first `n` elements of a collection.
   eleventyConfig.addFilter("head", (array, n) => {
