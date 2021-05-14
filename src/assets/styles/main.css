@@ -387,7 +387,18 @@ a.home {
   grid-column: 2 / auto;
   margin: 2rem 0;
   padding: 0;
-  list-style: none; }
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: 1fr;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.7rem; }
+  @media all and (min-width: 36em) {
+    .postlist {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media all and (min-width: 64em) {
+    .postlist {
+      grid-template-columns: repeat(3, 1fr); } }
   .postlist .post-tag {
     font-size: 0.75rem; }
   .postlist .post-title {
@@ -400,16 +411,36 @@ a.home {
 .postlist-link:hover,
 .postlist-link:visited {
   display: block;
-  padding: 1.5rem;
   color: var(--darkgray);
   text-decoration: none; }
 
 .postlist-item {
-  margin-bottom: 2rem;
   border-radius: 15px;
   max-width: 57ch;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 -3px 6px -2px rgba(0, 0, 0, 0.05);
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #ffffffb3;
+  transition: all 0.20s ease; }
+  .postlist-item:last-of-type {
+    margin-bottom: 1rem; }
+  .postlist-item:hover {
+    filter: invert(1) contrast(1.5); }
+
+.post-image {
+  display: flex;
+  height: 10rem;
+  filter: grayscale(1) brightness(1.5); }
+  .post-image img {
+    width: 100%;
+    object-fit: cover; }
+
+.post-content {
+  padding: 1.5rem; }
+  .post-content p:not(.post-title) {
+    font-size: 1rem; }
+
+.post-categories {
+  margin-bottom: 1rem; }
 
 .tmpl-post header {
   flex-direction: column;
