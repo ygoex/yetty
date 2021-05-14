@@ -13,7 +13,7 @@ eleventyNavigation:
 <h2>Latest {% if maxPosts == 1 %}post{% else %}posts{% endif %}
 </h2>
 
-{% set postslist = collections.posts | head(-3) %}
+{% set postslist = collections.posts | head(-4) %}
 {% set postslistCounter = collections.posts | length %}
 {% include "layouts/partials/postslist.njk" %}
 
