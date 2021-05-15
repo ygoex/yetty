@@ -2,15 +2,14 @@
   {% for post in postslist | reverse %}
     <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
       <a href="{{ post.url | url }}" class="postlist-link">
-        {% if post.data.imgUrl %}
-          <div class="post-image">
+        <div class="post-image">
+          {% if post.data.imgUrl %}
             <img src="{{ post.data.imgUrl | imgSize }}" alt="{{ post.data.imgAlt }}" loading="lazy" decoding="async">
-          </div>
-        {% else %}
-          <div class="post-image">
-            <img src="https://source.unsplash.com/collection/2216765/640x440/daily" alt="random" loading="lazy" decoding="async">
-          </div>
-        {% endif %}
+          {% else %}
+            <img src="
+            https://source.unsplash.com/collection/2195859/640x440/?sig={{ [1,2,3,4,5,6,7,8,9] | random }}/daily" alt="random" loading="lazy" decoding="async" width="640" height="440">
+          {% endif %}
+        </div>
         <div class="post-content">
           <ul class="post-categories">
             {% for tag in post.data.tags %}
