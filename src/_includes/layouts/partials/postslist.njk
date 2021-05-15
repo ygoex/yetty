@@ -7,7 +7,7 @@
             <img src="{{ post.data.imgUrl | imgSize }}" alt="{{ post.data.imgAlt }}" loading="lazy" decoding="async">
           {% else %}
             <img src="
-            https://source.unsplash.com/collection/2195859/640x440/?sig={{ [1,2,3,4,5,6,7,8,9] | random }}/daily" alt="random" loading="lazy" decoding="async" width="640" height="440">
+            https://source.unsplash.com/collection/2195859/640x440/?sig={{ range(0, 99) | random }}/daily" alt="random" loading="lazy" decoding="async" width="640" height="440">
           {% endif %}
         </div>
         <div class="post-content">
