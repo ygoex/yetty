@@ -421,15 +421,13 @@ a.home {
   overflow: hidden;
   background-color: #ffffffb3;
   transition: all 0.20s ease; }
-  .postlist-item:last-of-type {
-    margin-bottom: 1rem; }
   .postlist-item:hover {
-    filter: invert(1) contrast(1.5); }
+    filter: invert(1) contrast(1); }
 
 .post-image {
   display: flex;
   height: 10rem;
-  filter: grayscale(1) brightness(1.5); }
+  filter: grayscale(1) brightness(1); }
   .post-image img {
     width: 100%;
     object-fit: cover; }
