@@ -1,0 +1,39 @@
+
+// -----------------------------------------------------------------------------
+// This file contains CSS utility classes.
+// -----------------------------------------------------------------------------
+
+.mb-0 {
+  margin-bottom: 0;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-2 {
+    margin-bottom: 2rem;
+}
+.mb-lg-3 {
+  @media only screen and (min-width: 48em) {
+    margin-bottom: 3rem;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}
+
+.width-100 {
+  width: 100vw;
+}
+
+.text-black {
+  color: black;
+}

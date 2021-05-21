@@ -1,0 +1,128 @@
+footer {
+  padding: 1rem 0;
+  background-color: #eee;
+  color: #494949;
+  font-size: 0.85rem;
+  // a {
+  //   color: #494949;
+  // }
+  // a:visited {
+  //   color: var(--darkgray);
+  // }
+  .copyright {
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
+    text-align: center;
+  }
+}
+
+.footer-top {
+  grid-column: 2 / auto;
+  display: flex;
+  flex-direction: column;
+  .footer-top-left,
+  .footer-top-right {
+    flex: 1 100%;
+  }
+  a.home {
+    display: inline-block;
+    margin: 1rem 0;
+    border: 2px solid #494949;
+    color: #494949;
+    font-size: 1.5rem;
+    &:hover {
+      border: 2px solid var(--blue);
+      color: var(--blue);
+    }
+  }
+
+  .h6 {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-quick-links,
+  .footer-contact,
+  .footer-follow {
+    margin-bottom: 1.5rem;
+  }
+
+  @media all and (min-width: 36em) {
+    .footer-top-right {
+      display: flex;
+    }
+    .footer-quick-links {
+      flex: 1 40%;
+    }
+    .footer-contact-follow {
+      flex: 1 60%;
+    }
+  }
+
+  @media all and (min-width: 48em) {
+    flex-direction: row;
+    /* if screen > 600px footer-top-right appears alongside footer-top-left getting 1/3rd of space */
+    .footer-top-left {
+      flex: 1 50%;
+      padding: 1rem 1rem 1rem 0;
+    }
+    .footer-top-right {
+      display: flex;
+      flex: 1 50%;
+      padding: 1rem 0 1rem 1rem;
+    }
+  }
+}
+
+.footer-quick-links,
+.footer-contact,
+.copyright {
+  a {
+    width: 100%;
+    padding-bottom: 1px;
+    transition: all 0.2s;
+    background-image: linear-gradient(transparent 95%,currentColor 1px);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    text-decoration: none;
+    &:hover {
+      // color: mediumblue;
+      // &:visited {
+      //   color: darken(purple,10%);
+      // }
+      background-size: 100% 100%;
+    }
+  }
+}
+
+.footer-quick-links {
+  li {
+    margin-bottom: 0.25rem;
+  }
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  .nav-link {
+    margin-right: 0.5rem;
+    padding: 0 7px;
+    transition: all 0.20s ease;
+    border: 2px solid #494949;
+    border-radius: 50%;
+    font-size: 1.75rem;
+    svg {
+      transition: all 0.20s ease;
+      fill: #494949;
+      color: #494949;
+      stroke: #494949;
+    }
+    &:hover {
+      border-color: var(--blue);
+      svg {
+        fill: var(--blue);
+        color: var(--blue);
+        stroke: var(--blue);
+      }
+    }
+  }
+}

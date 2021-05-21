@@ -1,0 +1,22 @@
+
+// -----------------------------------------------------------------------------
+// This file contains all Sass mixins.
+// -----------------------------------------------------------------------------
+
+// Breakpoints can be found in /src/assets/styles/scss/partials/01-Abstract/_settings.scss
+// Usage:
+// @include media-query(md) {
+//   display:none;
+// }
+
+@mixin media-query($breakpoint) {
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+  // Get the breakpoint value.
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+  //Build the media query
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  }
+}
