@@ -5,7 +5,7 @@
 
     {% include 'layouts/partials/header.njk' %}
 
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+    <main{% if templateClass %} class="{{ templateClass }} {{ pageClass }}"{% endif %}>
       {{ content | safe }}
     </main>
 
