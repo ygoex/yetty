@@ -23,7 +23,7 @@
   }
   .date-time {
     padding-top: 1rem;
-    border-top: 1px solid #eaeaea;
+    border-top: 1px solid var(--grey-200);
   }
 }
 
@@ -31,16 +31,16 @@
 .postlist-link:hover,
 .postlist-link:visited {
   display: block;
-  color: var(--darkgray);
+  color: var(--grey-800);
   text-decoration: none;
 }
 
 .postlist-item {
   border-radius: 15px;
   max-width: 57ch;
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 -3px 6px -2px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 15px -3px var(--black-100-a), 0 -3px 6px -2px var(--black-50-a);
   overflow: hidden;
-  background-color: #ffffffb3;
+  background-color: var(--white-700-a);
   transition: all 0.20s ease;
   // &:last-of-type {
   //   margin-bottom: 1rem;
