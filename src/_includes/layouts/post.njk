@@ -2,16 +2,16 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-<article>
+<article class="grid">
 
   <header {%- if imgUrl %} class="mb-2 mb-lg-3"{% endif %}>
     {%- if date %}
       <div class="date-time mb-1">
-        <time class="post-date" datetime="{{ date | dateStringISO }}">
+        <time class="post-date text-muted font-small" datetime="{{ date | dateStringISO }}">
           <span class="text-black">Published:</span>
           {{ date | dateFilter }}</time>
-        <span class="middle-dot">&middot;</span>
-        <span class="read-time">
+        <span class="font-bold">&middot;</span>
+        <span class="read-time text-muted font-small">
           <span class="text-black">Read time:</span> About {{ content | readingTime }}</span>
       </div>
     {% endif %}
@@ -24,7 +24,7 @@ templateClass: tmpl-post
 
     {%- if tags %}
       {# https://stackoverflow.com/questions/66261187/11ty-how-to-display-post-tags-in-my-post-njk-file #}
-      <ul class="post-categories">
+      <ul class="post-categories display-flex">
         {% for tag in tags -%}
           {% if tag !== 'posts' %}
             {% set tagUrl %}/tags/{{ tag }}/{% endset %}
