@@ -35,5 +35,37 @@
 }
 
 .text-black {
-  color: black;
+  color: var(--black);
+}
+
+.text-muted {
+  color: var(--grey-600);
+}
+
+.text-lead {
+  font-size: 1.125rem;
+}
+
+.small-caps {
+  font-variant-caps: small-caps;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-small {
+  font-size: var(--font-size-small);
+}
+
+.grid-column-center {
+  grid-column: 2 / auto;
+}
+
+.grid-column-full {
+  grid-column: 1 / 4;
+}
+
+.display-flex {
+  display: flex;
 }
