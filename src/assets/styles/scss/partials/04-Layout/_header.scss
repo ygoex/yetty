@@ -20,7 +20,7 @@ header {
   }
   .nav-item {
     margin: 0 1rem;
-    font-size: 0.875rem;
+    font-size: var(--font-size-small);
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -44,7 +44,7 @@ header {
     // TBD
     a {
       padding-bottom: 3px;
-      border-bottom: 2px solid black;
+      border-bottom: 2px solid var(--black);
     }
   }
 }
@@ -54,7 +54,7 @@ a.home {
   margin: 1.5rem;
   padding: 3px 9px 3px 6px;
   transition: all 0.20s ease;
-  border: 3px solid black;
+  border: 3px solid var(--black);
   border-radius: 4px;
   color: var(--body-font-color);
   font-family: var(--sans-font-family);
