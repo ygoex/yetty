@@ -11,7 +11,7 @@
           {% endif %}
         </div>
         <div class="post-content">
-          <ul class="post-categories">
+          <ul class="post-categories display-flex">
             {% for tag in post.data.tags %}
               {%- if collections.tagList.indexOf(tag) != -1 -%}
                 {% set tagUrl %}/tags/{{ tag }}/{% endset %}
@@ -31,11 +31,11 @@
           {% endif %}
           {%- if post.date %}
             <div class="date-time">
-              <time class="post-date" datetime="{{ post.date | dateStringISO }}">
+              <time class="post-date text-muted font-small" datetime="{{ post.date | dateStringISO }}">
                 {{ post.date | dateFilter }}
               </time>
-              <span class="middle-dot">&middot;</span>
-              <span class="read-time">{{ post | readingTime }} read</span>
+              <span class="font-bold">&middot;</span>
+              <span class="read-time text-muted font-small">{{ post | readingTime }} read</span>
             </div>
           {% endif %}
         </div>
