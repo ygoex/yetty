@@ -8,8 +8,8 @@ body {
   width: 100vw;
   margin: 0;
   padding: 0;
-  background-color: var(--white);
-  color: var(--darkgray);
+  background-color: var(--body-background);
+  color: var(--body-font-color);
   font-family: var(--sans-font-family);
   font-size: 1.125rem;
   line-height: 1.7;
@@ -41,15 +41,18 @@ article {
   overflow: hidden;
 }
 
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin: 1rem 0;
+  font-family: var(--serif-font-family);
+  font-weight: bold;
+}
+
 h1,
 .h1 {
-  margin-bottom: 1rem;
-  color: #353535;
-  font-family: var(--serif-font-family);
+  margin-top: 0;
   font-size: 3rem;
-  font-weight: bold;
   line-height: 1.1;
-  grid-column: 2 / auto;
   &> .direct-link {
     display: none;
   }
@@ -57,67 +60,37 @@ h1,
 
 h2,
 .h2 {
-  margin: 1rem 0;
-  color: #353535;
-  font-family: var(--serif-font-family);
   font-size: 2.35rem;
-  font-weight: bold;
   line-height: 1.2;
-  grid-column: 2 / auto;
 }
 
 h3,
 .h3 {
-  margin: 1rem 0;
-  font-family: var(--serif-font-family);
   font-size: 2rem;
-  font-weight: bold;
   line-height: 1.3;
 }
 
 h4,
 .h4 {
-  margin: 1rem 0;
-  font-family: var(--serif-font-family);
   font-size: 1.5rem;
-  font-weight: bold;
   line-height: 1.4;
 }
 
 h5,
 .h5 {
-  margin: 1rem 0;
-  font-family: var(--serif-font-family);
   font-size: 1.25rem;
-  font-weight: bold;
   line-height: 1.5;
 }
 
 h6,
 .h6 {
-  margin: 1rem 0;
-  font-family: var(--serif-font-family);
   font-size: 1rem;
-  font-weight: bold;
   line-height: 1.6;
 }
 
 img, video {
   max-width: 100%;
   height: auto;
-}
-
-.categories {
-  grid-column: 2 / auto;
-  display: inline-flex;
-  list-style-type: none;
-  font-size: 0.875rem;
-  li {
-    margin-right: 0.5rem;
-    padding: 0.05rem 0.5rem;
-    border: 1px solid black;
-    border-radius: 15px;
-  }
 }
 
 p {
@@ -169,39 +142,6 @@ p {
   }
 }
 
-.grid-column-center {
-  grid-column: 2 / auto;
-}
-
-.grid-column-full {
-  grid-column: 1 / 4;
-}
-
-.date-time {
-  font-size: 0.875rem;
-}
-
-.post-date,
-.read-time {
-  color: #737373;
-}
-
-.middle-dot {
-  font-weight: bold;
-}
-
-.post-categories {
-  display: flex;
-}
-
-.lead {
-  font-size: 1.125rem;
-}
-
-.small-caps {
-  font-variant-caps: small-caps;
-}
-
 .hero {
   position: relative;
   padding: 0 1rem;
@@ -213,9 +153,6 @@ p {
   // opacity: 0.8;
   // background-size: 15px 15px;
   // background-image: repeating-linear-gradient(135deg, #ccc 0, #ccc 1px, #fff 0, #fff 50%);
-  font-family: var(--serif-font-family);
-  font-size: 3rem;
-  font-weight: bold;
   grid-column: 1 / 4;
   overflow: hidden;
   picture {
@@ -232,7 +169,7 @@ p {
     margin: 4rem auto;
     //background: linear-gradient(270deg, #ed0000, #7817a8, blue);
     //-webkit-background-clip: text;
-    color: #222;
+    color: var(--grey-900);
     //color: mediumblue;
     line-height: 1.3;
     //-webkit-text-fill-color: transparent;
@@ -258,8 +195,6 @@ a:visited {
   margin-bottom: 3rem;
 }
 
-.tmpl-home,
-.tmpl-post article,
 .grid {
   display: grid;
   margin: 3rem 0;
@@ -281,13 +216,11 @@ a:visited {
   minmax(auto, 60rem)
   minmax(1.2rem, 1fr);
   }
-  h3,
-  ul,
-  hr,
-  pre,
-  time,
-  .post-categories,
-  .post-tag {
+}
+
+.grid,
+.tmpl-post article {
+  > *:not(picture):not(.hero) {
     grid-column: 2 / auto;
   }
 }
@@ -312,7 +245,7 @@ code {
 pre {
   margin: .5em 0;
   padding: 1em;
-  background-color: #f6f6f6;
+  background-color: var(--grey-100);
   font-size: 14px;
   line-height: 1.375;
   text-align: left;
@@ -331,10 +264,6 @@ pre {
 
 .tmpl-home p {
   max-width: 57ch;
-}
-
-.tagslist {
-  display: flex;
 }
 
 .not-found {
@@ -364,20 +293,20 @@ pre {
 .btn-link {
   padding: 0.25em 0.9em 0.3rem;
   transition: all 0.20s ease;
-  border: 2px solid black;
+  border: 2px solid var(--grey-800);
   border-radius: 25px;
-  background-color: black;
+  background-color: var(--grey-800);
   a {
     transition: all 0.20s ease;
-    color: white !important;
+    color: var(--white) !important;
     font-size: 0.75rem;
     letter-spacing: 0;
   }
   &:hover {
-    background-color: white !important;
+    background-color: var(--white) !important;
     cursor: pointer;
     a {
-      color: black !important;;
+      color: var(--black) !important;
     }
   }
 }
