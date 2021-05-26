@@ -32,8 +32,8 @@
   overflow: hidden; }
   @media all and (min-width: 48em) {
     .grid {
-      grid-template-columns: minmax(1.2rem, 1fr) minmax(auto, 48rem) minmax(1.2rem, 1fr);
-      margin: 3rem 0 5rem; } }
+      margin: 3rem 0 5rem;
+      grid-template-columns: minmax(1.2rem, 1fr) minmax(auto, 48rem) minmax(1.2rem, 1fr); } }
   @media all and (min-width: 64em) {
     .grid {
       grid-template-columns: minmax(1.2rem, 1fr) minmax(auto, 60rem) minmax(1.2rem, 1fr); } }
@@ -309,12 +309,12 @@ h6,
   aspect-ratio: 2 / 1; }
 
 .postlist {
-  grid-column: 2 / auto;
+  display: grid;
   margin: 2rem 0;
   padding: 0;
-  list-style: none;
-  display: grid;
   grid-template-columns: repeat(1, 1fr);
+  list-style: none;
+  grid-column: 2 / auto;
   grid-auto-rows: 1fr;
   grid-column-gap: 1.5rem;
   grid-row-gap: 1.7rem; }
@@ -340,12 +340,12 @@ h6,
   text-decoration: none; }
 
 .postlist-item {
-  border-radius: 15px;
   max-width: 57ch;
-  box-shadow: 0 10px 15px -3px var(--black-100-a), 0 -3px 6px -2px var(--black-50-a);
-  overflow: hidden;
+  transition: all 0.20s ease;
+  border-radius: 15px;
   background-color: var(--white-700-a);
-  transition: all 0.20s ease; }
+  box-shadow: 0 10px 15px -3px var(--black-100-a), 0 -3px 6px -2px var(--black-50-a);
+  overflow: hidden; }
   .postlist-item:hover {
     filter: invert(1) contrast(1); }
 
@@ -365,7 +365,6 @@ h6,
 .post-categories {
   margin-bottom: 1rem; }
 
-/* Tags */
 .post-tag {
   display: inline-block;
   margin: 0 0.5em;
