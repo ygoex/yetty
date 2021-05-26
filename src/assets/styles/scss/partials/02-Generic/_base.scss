@@ -17,8 +17,9 @@ body {
 }
 
 p {
-  margin-bottom: 1rem;
   @extend %grid-column-center;
+
+  margin-bottom: 1rem;
   &:last-child {
     margin-bottom: 0;
   }
