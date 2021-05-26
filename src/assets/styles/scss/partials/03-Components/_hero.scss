@@ -1,0 +1,27 @@
+.hero {
+  @extend %grid-column-full;
+  position: relative;
+  padding: 0 1rem;
+  overflow: hidden;
+  // not in use: left in case we need to add an image before h1 using shortcut
+  picture {
+    position: absolute;
+    z-index: -1;
+  }
+  // SVG Topography from http://www.heropatterns.com/
+  // not in use: left in case we need to add an svg before h1
+  svg {
+    position: absolute;
+    z-index: -1;
+  }
+  h1 {
+    max-width: 60rem;
+    margin: 4rem auto;
+    color: var(--grey-900);
+    line-height: 1.3;
+    //Style for gradient text
+    //background: linear-gradient(270deg, #ed0000, #7817a8, blue);
+    //-webkit-background-clip: text;
+    //-webkit-text-fill-color: transparent;
+  }
+}
