@@ -1,0 +1,61 @@
+%img {
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+%grid {
+  display: grid;
+  margin: 3rem 0;
+  grid-template-columns:
+  minmax(1.2rem, 1fr)
+  minmax(auto, 36rem)
+  minmax(1.2rem, 1fr);
+  overflow: hidden;
+  @media all and (min-width: 48em) {
+    grid-template-columns:
+  minmax(1.2rem, 1fr)
+  minmax(auto, 48rem)
+  minmax(1.2rem, 1fr);
+    margin: 3rem 0 5rem;
+  }
+  @media all and (min-width: 64em) {
+    grid-template-columns:
+  minmax(1.2rem, 1fr)
+  minmax(auto, 60rem)
+  minmax(1.2rem, 1fr);
+  }
+}
+
+%grid-column-center {
+  grid-column: 2 / auto;
+}
+
+%grid-column-full {
+  grid-column: 1 / 4;
+}
+
+%gradient-polka {
+  background-color: var(--white);
+  opacity: 0.8;
+  background-image: radial-gradient(var(--grey-300) 1px, var(--white) 1px);
+  background-size: 7px 7px;
+}
+
+%gradient-diagonal {
+  background-color: var(--white);
+  opacity: 0.8;
+  background-size: 15px 15px;
+  background-image: repeating-linear-gradient(135deg, var(--grey-300) 0, var(--grey-300) 1px, var(--white) 0, var(--white) 50%);
+}
+
+%gradient-topography {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0)), url("/assets/images/topography.svg"), url("/assets/images/mesh-gradient-white.jpg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0)), url("/assets/images/topography.svg"), url("/assets/images/mesh-gradient-white.webp");
+  background-size: cover, 700px 700px;
+  background-repeat: no-repeat, repeat;
+}
+
+%gradient-abstract {
+  background: radial-gradient(circle at 35% 25%, #f9c10685 0%, transparent 30%) no-repeat, radial-gradient(circle at 70% 50%, #bd88e080 0%, transparent 30%) no-repeat, radial-gradient(circle at 60% 30%, #c2768975 0%, transparent 30%) no-repeat;
+}
