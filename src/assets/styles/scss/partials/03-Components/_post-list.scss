@@ -1,4 +1,3 @@
-/* Posts list */
 .postlist {
   grid-column: 2 / auto;
   margin: 2rem 0;
@@ -42,9 +41,6 @@
   overflow: hidden;
   background-color: var(--white-700-a);
   transition: all 0.20s ease;
-  // &:last-of-type {
-  //   margin-bottom: 1rem;
-  // }
   &:hover {
     filter: invert(1) contrast(1);
   }
@@ -66,6 +62,7 @@
     font-size: 1rem;
   }
 }
+
 .post-categories {
   margin-bottom: 1rem;
 }
