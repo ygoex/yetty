@@ -1,13 +1,15 @@
 .tmpl-post {
   header {
     flex-direction: column;
-    grid-column: 2 / auto;
     h2 {
       margin-top: 0;
     }
   }
+  // Center all elements under article
+  article > *:not(picture):not(.hero) {
+    @extend %grid-column-center;
+  }
   .content {
-    grid-column: 2 / auto;
     max-width: 57ch;
   }
 }
