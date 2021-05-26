@@ -1,0 +1,25 @@
+.btn {
+  padding: 0.25em 0.9em 0.3rem;
+  transition: all 0.20s ease;
+  border: 2px solid var(--grey-800);
+  border-radius: 25px;
+  background-color: var(--grey-800);
+  &:hover {
+    background-color: var(--white);
+    cursor: pointer;
+  }
+}
+
+.btn-link {
+  a {
+    transition: all 0.20s ease;
+    color: var(--white);
+    font-size: 0.75rem;
+    letter-spacing: 0;
+  }
+  &:hover {
+    a {
+      color: var(--black);
+    }
+  }
+}
