@@ -5,10 +5,19 @@
 
 @import "partials/01-Abstract/settings";
 @import "partials/01-Abstract/mixins";
+@import "partials/01-Abstract/extends";
 @import "partials/02-Generic/_base";
+@import "partials/02-Generic/_typography";
+@import "partials/02-Generic/_grid";
 @import "partials/02-Generic/_utilities";
+@import "partials/03-Components/_navigation";
+@import "partials/03-Components/_buttons";
+@import "partials/03-Components/_hero";
+@import "partials/03-Components/_images";
 @import "partials/03-Components/_post-list";
 @import "partials/03-Components/_tags";
 @import "partials/04-Layout/_header";
 @import "partials/04-Layout/_footer";
-@import "partials/05-Pages/_post-tmpl";
+@import "partials/05-Templates/_home-tmpl";
+@import "partials/05-Templates/_post-tmpl";
+@import "partials/06-Pages/_not-found";
