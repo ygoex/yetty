@@ -18,6 +18,7 @@ body {
 
 p {
   margin-bottom: 1rem;
+  @extend %grid-column-center;
   &:last-child {
     margin-bottom: 0;
   }
@@ -41,146 +42,9 @@ article {
   overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  margin: 1rem 0;
-  font-family: var(--serif-font-family);
-  font-weight: bold;
-}
-
-h1,
-.h1 {
-  margin-top: 0;
-  font-size: 3rem;
-  line-height: 1.1;
-  &> .direct-link {
-    display: none;
-  }
-}
-
-h2,
-.h2 {
-  font-size: 2.35rem;
-  line-height: 1.2;
-}
-
-h3,
-.h3 {
-  font-size: 2rem;
-  line-height: 1.3;
-}
-
-h4,
-.h4 {
-  font-size: 1.5rem;
-  line-height: 1.4;
-}
-
-h5,
-.h5 {
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-h6,
-.h6 {
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
 img, video {
   max-width: 100%;
   height: auto;
-}
-
-p {
-  grid-column: 2 / auto;
-}
-
-%img {
-  height: auto;
-  object-fit: cover;
-  object-position: center;
-}
-
-.img {
-  &-responsive {
-    @extend %img;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-  }
-  &-post {
-    @extend %img;
-    width: 90%;
-    margin: 5%;
-    aspect-ratio: 16 / 9;
-  }
-  &-accent {
-    @extend %img;
-    width: 90vw;
-    max-height: 70vh;
-    margin-bottom: 4rem;
-    margin-left: 10vw;
-    aspect-ratio: 3 / 1;
-    box-shadow: -1.5rem 1.5rem var(--banner-border-color);
-  }
-  &-full {
-    @extend %img;
-    width: 100vw;
-    max-height: 70vh;
-    margin-bottom: 4rem;
-    aspect-ratio: 2 / 1;
-  }
-  &-restricted {
-    @extend %img;
-    display: flex;
-    align-self: center;
-    width: 60rem;
-    max-height: 70vh;
-    margin: 0 auto 4rem;
-    aspect-ratio: 2 / 1;
-  }
-}
-
-.hero {
-  position: relative;
-  padding: 0 1rem;
-  // polka
-  // background-image: radial-gradient(#ccc 1px, #fff 1px);
-  // background-size: 7px 7px;
-  // diagonal
-  // background-color: #fff;
-  // opacity: 0.8;
-  // background-size: 15px 15px;
-  // background-image: repeating-linear-gradient(135deg, #ccc 0, #ccc 1px, #fff 0, #fff 50%);
-  grid-column: 1 / 4;
-  overflow: hidden;
-  picture {
-    position: absolute;
-    z-index: -1;
-  }
-  // SVG Topography from http://www.heropatterns.com/
-  svg {
-    position: absolute;
-    z-index: -1;
-  }
-  h1 {
-    max-width: 60rem;
-    margin: 4rem auto;
-    //background: linear-gradient(270deg, #ed0000, #7817a8, blue);
-    //-webkit-background-clip: text;
-    color: var(--grey-900);
-    //color: mediumblue;
-    line-height: 1.3;
-    //-webkit-text-fill-color: transparent;
-  }
-}
-
-// =====
-
-.tmpl-post p:not(.date-time) {
-  max-width: 57ch;
-  margin: 0 auto 1rem;
 }
 
 a {
@@ -189,44 +53,6 @@ a {
 
 a:visited {
   color: var(--purple);
-}
-
-.tmpl-home > :first-child {
-  margin-bottom: 3rem;
-}
-
-.grid {
-  display: grid;
-  margin: 3rem 0;
-  grid-template-columns:
-  minmax(1.2rem, 1fr)
-  minmax(auto, 36rem)
-  minmax(1.2rem, 1fr);
-  overflow: hidden;
-  @media all and (min-width: 48em) {
-    grid-template-columns:
-  minmax(1.2rem, 1fr)
-  minmax(auto, 48rem)
-  minmax(1.2rem, 1fr);
-    margin: 3rem 0 5rem;
-  }
-  @media all and (min-width: 64em) {
-    grid-template-columns:
-  minmax(1.2rem, 1fr)
-  minmax(auto, 60rem)
-  minmax(1.2rem, 1fr);
-  }
-}
-
-.grid,
-.tmpl-post article {
-  > *:not(picture):not(.hero) {
-    grid-column: 2 / auto;
-  }
-}
-
-.tmpl-home {
-  min-height: calc( 100vh - 92px - 6rem - 55px);
 }
 
 table {
@@ -239,13 +65,13 @@ table th {
 
 pre,
 code {
-  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  font-family: var(--mono-font-family);
   line-height: 1.5;
 }
 pre {
   margin: .5em 0;
   padding: 1em;
-  background-color: var(--grey-100);
+  background-color: var(--body-background); //For a better integration of Mermaid charts with body background.
   font-size: 14px;
   line-height: 1.375;
   text-align: left;
@@ -260,53 +86,4 @@ pre {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-}
-
-.tmpl-home p {
-  max-width: 57ch;
-}
-
-.not-found {
-  h2:first-of-type{
-    margin-top: 0;
-  }
-}
-
-// .gradient {
-//   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0)), url("/assets/images/topography.svg"), url("/assets/images/mesh-gradient-white.jpg");
-//   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0)), url("/assets/images/topography.svg"), url("/assets/images/mesh-gradient-white.webp");
-//   background-size: cover, 700px 700px;
-//   background-repeat: no-repeat, repeat;
-// }
-
-.gradient {
-  background-image: url("/assets/images/mesh-gradient-white.jpg");
-  background-image: url("/assets/images/mesh-gradient-white.webp");
-  background-repeat: no-repeat;
-  background-size: contain;
-  // @media all and (min-width: 75em) {
-  //   background-size: cover;
-  // }
-  //background: radial-gradient(circle at 35% 25%, #f9c10685 0%, transparent 30%) no-repeat, radial-gradient(circle at 70% 50%, #bd88e080 0%, transparent 30%) no-repeat, radial-gradient(circle at 60% 30%, #c2768975 0%, transparent 30%) no-repeat;
-}
-
-.btn-link {
-  padding: 0.25em 0.9em 0.3rem;
-  transition: all 0.20s ease;
-  border: 2px solid var(--grey-800);
-  border-radius: 25px;
-  background-color: var(--grey-800);
-  a {
-    transition: all 0.20s ease;
-    color: var(--white) !important;
-    font-size: 0.75rem;
-    letter-spacing: 0;
-  }
-  &:hover {
-    background-color: var(--white) !important;
-    cursor: pointer;
-    a {
-      color: var(--black) !important;
-    }
-  }
 }
