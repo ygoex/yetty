@@ -1,0 +1,46 @@
+  //Needs to be imported before buttons to keep specificity low
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+    padding: 0 1.5rem;
+    list-style: none;
+    @media only screen and (min-width: 36em) {
+      margin-bottom: 0;
+    }
+  }
+
+  .nav-item {
+    margin: 0 1rem;
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    &:first-of-type{
+      margin-left: 0;
+    }
+  }
+
+  .nav-item a {
+    transition: all 0.20s ease;
+    text-decoration: none;
+  }
+
+  .nav-item a,
+  .nav-item a:visited {
+    color: initial;
+  }
+
+  .nav-item a:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+  }
+
+  .nav-item-active {
+    // TBD
+    a {
+      padding-bottom: 3px;
+      border-bottom: 2px solid var(--black);
+    }
+  }
