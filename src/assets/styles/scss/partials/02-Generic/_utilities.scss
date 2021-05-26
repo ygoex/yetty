@@ -6,12 +6,15 @@
 .mb-0 {
   margin-bottom: 0;
 }
+
 .mb-1 {
   margin-bottom: 1rem;
 }
+
 .mb-2 {
     margin-bottom: 2rem;
 }
+
 .mb-lg-3 {
   @media only screen and (min-width: 48em) {
     margin-bottom: 3rem;
@@ -59,11 +62,11 @@
 }
 
 .grid-column-center {
-  grid-column: 2 / auto;
+  @extend %grid-column-center;
 }
 
 .grid-column-full {
-  grid-column: 1 / 4;
+  @extend %grid-column-full;
 }
 
 .display-flex {
