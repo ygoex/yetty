@@ -1,4 +1,3 @@
-/* Tags */
 .post-tag {
   display: inline-block;
   margin: 0 0.5em;
@@ -13,12 +12,12 @@
     margin-left: 0;
   }
 }
-a[href].post-tag,
-a[href].post-tag:visited {
+a.post-tag,
+a.post-tag:visited {
   color: initial;
 }
 
-a[href].post-tag:hover {
+a.post-tag:hover {
   border-color: var(--blue);
   color: var(--blue);
 }
