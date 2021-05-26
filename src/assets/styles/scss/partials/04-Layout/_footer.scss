@@ -3,17 +3,6 @@
   background-color: var(--grey-200);
   color: var(--grey-700);
   font-size: 0.85rem;
-  // a {
-  //   color: #494949;
-  // }
-  // a:visited {
-  //   color: var(--grey-800);
-  // }
-  .copyright {
-    padding: 1rem 0;
-    border-top: 1px solid var(--grey-200);
-    text-align: center;
-  }
 }
 
 .footer-top {
@@ -24,6 +13,7 @@
   .footer-top-right {
     flex: 1 100%;
   }
+
   a.home {
     display: inline-block;
     margin: 1rem 0;
@@ -73,6 +63,12 @@
   }
 }
 
+.copyright {
+  padding: 1rem 0;
+  border-top: 1px solid var(--grey-200);
+  text-align: center;
+}
+
 .footer-quick-links,
 .footer-contact,
 .copyright {
@@ -85,10 +81,6 @@
     background-size: 0 100%;
     text-decoration: none;
     &:hover {
-      // color: mediumblue;
-      // &:visited {
-      //   color: darken(purple,10%);
-      // }
       background-size: 100% 100%;
     }
   }
