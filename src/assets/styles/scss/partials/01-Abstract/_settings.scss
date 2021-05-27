@@ -14,29 +14,29 @@
 /// 64rem * 16px = 1024px;
 /// 80rem * 16px = 1280px;
 $breakpoints: (
-  'xs': 36em,
-  'sm': 48em,
-  'md': 60em,
-  'lg': 64em,
-  'xl': 80em,
+  "xs": 36em,
+  "sm": 48em,
+  "md": 60em,
+  "lg": 64em,
+  "xl": 80em,
 ) !default;
 
 // https://toolness.github.io/accessible-color-matrix/
 $colours: (
-  'white': hsl(0, 0%, 100%), //#fff
-  'grey-100': hsl(0, 0%, 96%), //#f5f5f5 //base,pre background
-  'grey-200': hsl(0, 0%, 92%), //#eaeaea //footer background
-  'grey-300': hsl(0, 0%, 80%), //ccc //used in pattern gradients
-  'grey-600': hsl(0, 0%, 45%), //#737373 //muted text
-  'grey-700': hsl(0, 0%, 29%), //#494949 //footer text minimum contrast over grey-200
-  'grey-800': hsl(0, 0%, 21%), //#353535 //body text
-  'grey-900': hsl(0, 0%, 13%), //#222 //hero text
-  'black': hsl(0, 0%, 0%), //#000
-  'black-50-a': hsla(0, 0%, 0%, 0.05), //card shadow 1
-  'black-100-a': hsla(0, 0%, 0%, 0.1), //card shadow 2
-  'white-700-a': hsla(0, 0%, 100%, 0.7), //card background
-  'purple': hsl(300, 100%, 25%),
-  'blue': hsl(240, 100%, 50%)
+  "white": hsl(0, 0%, 100%), 
+  "grey-100": hsl(0, 0%, 96%), 
+  "grey-200": hsl(0, 0%, 92%), 
+  "grey-300": hsl(0, 0%, 80%), 
+  "grey-600": hsl(0, 0%, 45%), 
+  "grey-700": hsl(0, 0%, 29%), 
+  "grey-800": hsl(0, 0%, 21%), 
+  "grey-900": hsl(0, 0%, 13%), 
+  "black": hsl(0, 0%, 0%), 
+  "black-50-a": hsla(0, 0%, 0%, 0.05), 
+  "black-100-a": hsla(0, 0%, 0%, 0.1), 
+  "white-700-a": hsla(0, 0%, 100%, 0.7), 
+  "purple": hsl(300, 100%, 25%),
+  "blue": hsl(240, 100%, 50%)
 );
 
 :root {
