@@ -1,71 +1,75 @@
----
-layout: layouts/base.njk
-templateClass: tmpl-post
----
-<article class="grid">
+{% extends 'layouts/base.njk' %}
 
-  <header {%- if imgUrl %} class="mb-2 mb-lg-3"{% endif %}>
-    {%- if date %}
-      <div class="date-time mb-1">
-        <time class="post-date text-muted font-small" datetime="{{ date | dateStringISO }}">
-          <span class="text-black">Published:</span>
-          {{ date | dateFilter }}</time>
-        <span class="font-bold">&middot;</span>
-        <span class="read-time text-muted font-small">
-          <span class="text-black">Read time:</span> About {{ content | readingTime }}</span>
-      </div>
+{% if templateClass is not defined %}
+  {% set templateClass = 'tmpl-post' %}
+{% endif %}
+
+{% block content %}
+  <article class="grid">
+
+    <header {%- if imgUrl %} class="mb-2 mb-lg-3"{% endif %}>
+      {%- if date %}
+        <div class="date-time mb-1">
+          <time class="post-date text-muted font-small" datetime="{{ date | dateStringISO }}">
+            <span class="text-black">Published:</span>
+            {{ date | dateFilter }}</time>
+          <span class="font-bold">&middot;</span>
+          <span class="read-time text-muted font-small">
+            <span class="text-black">Read time:</span> About {{ content | readingTime }}</span>
+        </div>
+      {% endif %}
+
+      <h1>{{ title }}</h1>
+
+      {%- if subtitle %}
+        <h2>{{ subtitle }}</h2>
+      {% endif %}
+
+      {%- if tags %}
+        {# https://stackoverflow.com/questions/66261187/11ty-how-to-display-post-tags-in-my-post-njk-file #}
+        <ul class="post-categories display-flex">
+          {% for tag in tags -%}
+            {% if tag !== 'posts' %}
+              {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+              <li>
+                <a class="post-tag" href="{{ tagUrl | url }}">#{{ tag }}</a>
+              </li>
+            {% endif %}
+          {%- endfor %}
+        </ul>
+      {% endif %}
+    </header>
+
+    {%- if imgUrl %}
+      {% imageNjk imgUrl,
+      imgAlt,
+      imgSize,
+      pictureClass,
+      imgClass,
+      imgBorderColor %}
+    {% else %}
+      <hr>
     {% endif %}
 
-    <h1>{{ title }}</h1>
+    <div class="content">
+      {{ content | safe }}
+    </div>
 
-    {%- if subtitle %}
-      <h2>{{ subtitle }}</h2>
-    {% endif %}
-
-    {%- if tags %}
-      {# https://stackoverflow.com/questions/66261187/11ty-how-to-display-post-tags-in-my-post-njk-file #}
-      <ul class="post-categories display-flex">
-        {% for tag in tags -%}
-          {% if tag !== 'posts' %}
-            {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-            <li>
-              <a class="post-tag" href="{{ tagUrl | url }}">#{{ tag }}</a>
-            </li>
-          {% endif %}
-        {%- endfor %}
+    <footer>
+      <hr>
+      <ul>
+        {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+        {%- if nextPost %}
+          <li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
+          </li>
+        {% endif %}
+        {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+        {%- if previousPost %}
+          <li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
+          </li>
+        {% endif %}
       </ul>
-    {% endif %}
-  </header>
+    </footer>
 
-  {%- if imgUrl %}
-    {% imageNjk imgUrl,
-    imgAlt,
-    imgSize,
-    pictureClass,
-    imgClass,
-    imgBorderColor %}
-  {% else %}
-    <hr>
-  {% endif %}
-
-  <div class="content">
-    {{ content | safe }}
-  </div>
-
-  <footer>
-    <hr>
-    <ul>
-      {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-      {%- if nextPost %}
-        <li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
-        </li>
-      {% endif %}
-      {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-      {%- if previousPost %}
-        <li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
-        </li>
-      {% endif %}
-    </ul>
-  </footer>
-
-</article>
+  </article>
+{% endblock %}
