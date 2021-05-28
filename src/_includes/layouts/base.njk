@@ -6,7 +6,10 @@
     {% include 'layouts/partials/header.njk' %}
 
     <main{% if templateClass %} class="{{ templateClass }} {{ pageClass }}"{% endif %}>
-      {{ content | safe }}
+      {# {{ content | safe }} #}
+      {% block content %}
+        Content comes here!
+      {% endblock %}
     </main>
 
     {% include 'layouts/partials/footer.njk' %}
