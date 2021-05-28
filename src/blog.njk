@@ -1,22 +1,26 @@
 ---
-layout: layouts/home.njk
 permalink: /posts/
 eleventyNavigation:
   key: Blog
   order: 2
 ---
-<div class="blog-heading-tags">
-  <h1>Blog</h1>
-  {% include "layouts/partials/tagslist.njk" %}
-</div>
 
-{% imageNjk "https://source.unsplash.com/-K6JMRMj4x4/",
-"Ink in water", "(min-width: 30em) 50vw, 100vw", "grid-column-full", "img-full", "#3f51b5" %}
+{% extends 'layouts/home.njk' %}
 
-{% set postslist = collections.posts %}
-{% include "layouts/partials/postslist.njk" %}
+{% block content %}
+  <div class="blog-heading-tags">
+    <h1>Blog</h1>
+    {% include "layouts/partials/tagslist.njk" %}
+  </div>
 
-{# <div class="blog-posts-tags">
+  {% imageNjk "https://source.unsplash.com/-K6JMRMj4x4/",
+  "Ink in water", "(min-width: 30em) 50vw, 100vw", "grid-column-full", "img-full", "#3f51b5" %}
+
+  {% set postslist = collections.posts %}
   {% include "layouts/partials/postslist.njk" %}
-  {% include "layouts/partials/tagslist.njk" %}
-</div> #}
+
+  {# <div class="blog-posts-tags">
+    {% include "layouts/partials/postslist.njk" %}
+    {% include "layouts/partials/tagslist.njk" %}
+  </div> #}
+{% endblock %}
