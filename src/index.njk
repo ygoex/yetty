@@ -1,20 +1,27 @@
 ---
-layout: layouts/home.njk
-bodyClass: gradient-home
 eleventyNavigation:
   key: Home
   order: 1
 ---
-<section class="hero">
-  <h1>Yetty is a minimal Eleventy theme for basic blogs & websites built with accessibility and performance in mind.</h1>
-</section>
 
-{% set maxPosts = collections.posts.length | min(3) %}
-<h2>Latest {% if maxPosts == 1 %}post{% else %}posts{% endif %}
-</h2>
+{% extends 'layouts/home.njk' %}
 
-{% set postslist = collections.posts | head(-3) %}
-{% set postslistCounter = collections.posts | length %}
-{% include "layouts/partials/postslist.njk" %}
+{% if bodyClass is not defined %}
+  {% set bodyClass = 'gradient-home' %}
+{% endif %}
 
-<p>More posts can be found in the <a href="{{ '/posts/' | url }}">blog</a>.</p>
+{% block content %}
+  <section class="hero">
+    <h1>Yetty is a minimal Eleventy theme for basic blogs & websites built with accessibility and performance in mind.</h1>
+  </section>
+
+  {% set maxPosts = collections.posts.length | min(3) %}
+  <h2>Latest {% if maxPosts == 1 %}post{% else %}posts{% endif %}
+  </h2>
+
+  {% set postslist = collections.posts | head(-3) %}
+  {% set postslistCounter = collections.posts | length %}
+  {% include "layouts/partials/postslist.njk" %}
+
+  <p>More posts can be found in the <a href="{{ '/posts/' | url }}">blog</a>.</p>
+{% endblock %}
