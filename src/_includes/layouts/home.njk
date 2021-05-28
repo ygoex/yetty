@@ -1,10 +1,13 @@
----
-layout: layouts/base.njk
-templateClass: "tmpl-home grid"
----
+{% extends 'layouts/base.njk' %}
+
+{% if templateClass is not defined %}
+  {% set templateClass = 'tmpl-home grid' %}
+{% endif %}
 
 {%- if title %}
   <h1>{{ title }}</h1>
 {% endif %}
 
-{{ content | safe }}
+{% block content %}
+  {{ content | safe }}
+{% endblock %}
