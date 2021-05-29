@@ -1,8 +1,13 @@
 ---
-permalink: /posts/
+permalink: /posts/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}/{% endif %}
 eleventyNavigation:
   key: Blog
   order: 2
+pagination:
+  data: collections.posts
+  size: 3
+  alias: posts
+  reverse: true
 ---
 
 {% extends 'layouts/home.njk' %}
@@ -16,11 +21,16 @@ eleventyNavigation:
   {% imageNjk "https://source.unsplash.com/-K6JMRMj4x4/",
   "Ink in water", "(min-width: 30em) 50vw, 100vw", "grid-column-full", "img-full", "#3f51b5" %}
 
-  {% set postslist = collections.posts %}
-  {% include "layouts/partials/postslist.njk" %}
+  {% set allPosts = collections.posts %}
+  {% set postslist = posts %}
 
-  {# <div class="blog-posts-tags">
-    {% include "layouts/partials/postslist.njk" %}
-    {% include "layouts/partials/tagslist.njk" %}
-  </div> #}
+  {% if postslist.length < allPosts.length %}
+    {% set paginationNextText = 'Older posts' %}
+    {% set paginationNextUrl = pagination.nextPageHref %}
+    {% set paginationPrevUrl = pagination.previousPageHref %}
+  {% endif %}
+
+  {% include "layouts/partials/postslist.njk" %}
+  {% include "layouts/partials/pagination.njk" %}
+
 {% endblock %}
