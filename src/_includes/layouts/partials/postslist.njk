@@ -1,5 +1,5 @@
 <ul class="postlist">
-  {% for post in postslist | reverse %}
+  {% for post in postslist %}
     <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
       <a href="{{ post.url | url }}" class="postlist-link">
         <div class="post-image">
