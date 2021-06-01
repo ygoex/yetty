@@ -1,4 +1,6 @@
-{% from "layouts/partials/cards.njk" import postCard %}
+{# Note how we’ve added with context to our import statement, which allows us to use the global data collections.tagList inside our macro. This is necessary because macros are totally encapsulated from the page variable scope. #}
+
+{% from "layouts/partials/cards.njk" import postCard with context %}
 
 <ul class="postlist">
   {% for post in postslist %}
