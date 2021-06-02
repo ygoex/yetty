@@ -2,6 +2,8 @@
 permalink: /tags/
 layout: layouts/home.njk
 ---
+{% from "layouts/partials/tagslist.njk" import tagsList with context %}
+
 <h1>Tags</h1>
 
-{% include "layouts/partials/tagslist.njk" %}
+{{ tagsList() }}
