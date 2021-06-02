@@ -9,13 +9,14 @@ pagination:
   alias: posts
   reverse: true
 ---
+{% from "layouts/partials/tagslist.njk" import tagsList with context %}
 
 {% extends 'layouts/home.njk' %}
 
 {% block content %}
   <div class="blog-heading-tags">
     <h1>Blog</h1>
-    {% include "layouts/partials/tagslist.njk" %}
+    {{ tagsList() }}
   </div>
 
   {% imageNjk "https://source.unsplash.com/-K6JMRMj4x4/",
