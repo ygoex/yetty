@@ -1,0 +1,10 @@
+{%- macro tagsList(tags = collections.tagList) -%}
+  <ul class="display-flex">
+    {% for tag in tags.sort() %}
+      {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+      <li>
+        <a href="{{ tagUrl | url }}" class="post-tag">#{{ tag }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
