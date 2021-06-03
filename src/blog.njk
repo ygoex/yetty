@@ -9,7 +9,7 @@ pagination:
   alias: posts
   reverse: true
 ---
-{% from "layouts/partials/tagslist.njk" import tagsList with context %}
+{% from "layouts/partials/components/tags-list/tags-list.njk" import tagsList with context %}
 
 {% extends 'layouts/home.njk' %}
 
@@ -31,7 +31,7 @@ pagination:
     {% set paginationPrevUrl = pagination.previousPageHref %}
   {% endif %}
 
-  {% include "layouts/partials/postslist.njk" %}
+  {% include "layouts/partials/posts-list.njk" %}
   {% include "layouts/partials/pagination.njk" %}
 
 {% endblock %}
