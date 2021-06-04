@@ -32,6 +32,15 @@
   display: block;
   color: var(--grey-800);
   text-decoration: none;
+  &:hover {
+    color: var(--black);
+    .text-muted {
+      color: var(--black);
+    }
+    .date-time {
+      border-top: 1px solid var(--grey-800);
+    }
+  }
 }
 
 .postlist-item {
