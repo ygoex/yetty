@@ -338,6 +338,18 @@ h6,
   display: block;
   color: var(--grey-800);
   text-decoration: none; }
+  .postlist-link:hover,
+  .postlist-link:hover:hover,
+  .postlist-link:visited:hover {
+    color: var(--black); }
+    .postlist-link:hover .text-muted,
+    .postlist-link:hover:hover .text-muted,
+    .postlist-link:visited:hover .text-muted {
+      color: var(--black); }
+    .postlist-link:hover .date-time,
+    .postlist-link:hover:hover .date-time,
+    .postlist-link:visited:hover .date-time {
+      border-top: 1px solid var(--grey-800); }
 
 .postlist-item {
   max-width: 57ch;
