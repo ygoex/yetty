@@ -4,10 +4,9 @@
   {% set templateClass = 'tmpl-home grid' %}
 {% endif %}
 
-{%- if title %}
-  <h1>{{ title }}</h1>
-{% endif %}
-
 {% block content %}
+  {% if title %}
+    <h1>{{ title }}</h1>
+  {% endif %}
   {{ content | safe }}
 {% endblock %}
