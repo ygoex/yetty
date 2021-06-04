@@ -9,7 +9,7 @@ pagination:
   alias: posts
   reverse: true
 ---
-{% from "layouts/partials/components/tags-list/tags-list.njk" import tagsList with context %}
+{% from "layouts/partials/components/tags-list/macro.njk" import tagsList with context %}
 
 {% extends 'layouts/home.njk' %}
 
