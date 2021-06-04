@@ -1,45 +1,43 @@
-{% macro postCard(post, tagList = collections.tagList) %}
-  {# collections.tagList returns only the tags added in markdown files. #}
-  <a href="{{ post.url | url }}" class="postlist-link">
-    <div class="post-image">
-      {% if post.data.imgUrl %}
-        <img src="{{ post.data.imgUrl | imgSize }}" alt="{{ post.data.imgAlt }}" loading="lazy" decoding="async">
-      {% else %}
-        <img src="
+{# collections.tagList returns only the tags added in markdown files. #}
+<a href="{{ post.url | url }}" class="postlist-link">
+  <div class="post-image">
+    {% if post.data.imgUrl %}
+      <img src="{{ post.data.imgUrl | imgSize }}" alt="{{ post.data.imgAlt }}" loading="lazy" decoding="async">
+    {% else %}
+      <img src="
         https://source.unsplash.com/collection/2195859/640x440/?sig={{ range(0, 99) | random }}/daily" alt="Random abstract image to fill the card." loading="lazy" decoding="async" width="640" height="440">
-      {% endif %}
-    </div>
-    <div class="post-content">
-      {% if post.data.tags %}
-        <ul class="post-categories display-flex">
-          {% for tag in post.data.tags %}
-            {# Check if tag exists in tagList. If indexOf is -1 means that the tag is 'posts', the one added to all posts from posts.json #}
-            {# An alternative way to filter the generic tags from posts.json can be seen here https://stackoverflow.com/questions/66261187/11ty-how-to-display-post-tags-in-my-post-njk-file #}
-            {%- if tagList.indexOf(tag) != -1 -%}
-              <li>
-                <span class="post-tag">#{{ tag }}</span>
-              </li>
-            {% endif %}
-          {%- endfor %}
-        </ul>
-      {% endif %}
-      {% if post.data.title %}
-        <p class="post-title h5">{{ post.data.title }}</p>
-      {% else %}
-        <code>{{ post.url }}</code>
-      {% endif %}
-      {% if post.data.description %}
-        <p>{{ post.data.description }}</p>
-      {% endif %}
-      {%- if post.date %}
-        <div class="date-time">
-          <time class="post-date text-muted font-small" datetime="{{ post.date | dateStringISO }}">
-            {{ post.date | dateFilter }}
-          </time>
-          <span class="font-bold">&middot;</span>
-          <span class="read-time text-muted font-small">{{ post | readingTime }} read</span>
-        </div>
-      {% endif %}
-    </div>
-  </a>
-{% endmacro %}
+    {% endif %}
+  </div>
+  <div class="post-content">
+    {% if post.data.tags %}
+      <ul class="post-categories display-flex">
+        {% for tag in post.data.tags %}
+          {# Check if tag exists in tagList. If indexOf is -1 means that the tag is 'posts', the one added to all posts from posts.json #}
+          {# An alternative way to filter the generic tags from posts.json can be seen here https://stackoverflow.com/questions/66261187/11ty-how-to-display-post-tags-in-my-post-njk-file #}
+          {%- if tagList.indexOf(tag) != -1 -%}
+            <li>
+              <span class="post-tag">#{{ tag }}</span>
+            </li>
+          {% endif %}
+        {%- endfor %}
+      </ul>
+    {% endif %}
+    {% if post.data.title %}
+      <p class="post-title h5">{{ post.data.title }}</p>
+    {% else %}
+      <code>{{ post.url }}</code>
+    {% endif %}
+    {% if post.data.description %}
+      <p>{{ post.data.description }}</p>
+    {% endif %}
+    {%- if post.date %}
+      <div class="date-time">
+        <time class="post-date text-muted font-small" datetime="{{ post.date | dateStringISO }}">
+          {{ post.date | dateFilter }}
+        </time>
+        <span class="font-bold">&middot;</span>
+        <span class="read-time text-muted font-small">{{ post | readingTime }} read</span>
+      </div>
+    {% endif %}
+  </div>
+</a>
