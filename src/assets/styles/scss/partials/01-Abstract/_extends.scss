@@ -12,14 +12,14 @@
   minmax(auto, 36rem)
   minmax(1.2rem, 1fr);
   overflow: hidden;
-  @media all and (min-width: 48em) {
+  @include media-query(sm) {
     margin: 3rem 0 5rem;
     grid-template-columns:
   minmax(1.2rem, 1fr)
   minmax(auto, 48rem)
   minmax(1.2rem, 1fr);
   }
-  @media all and (min-width: 64em) {
+  @include media-query(lg) {
     grid-template-columns:
   minmax(1.2rem, 1fr)
   minmax(auto, 60rem)
