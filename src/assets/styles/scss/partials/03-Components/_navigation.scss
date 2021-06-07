@@ -6,19 +6,22 @@
     margin-bottom: 1.5rem;
     padding: 0 1.5rem;
     list-style: none;
-    @media only screen and (min-width: 36em) {
+    @include media-query(xs) {
       margin-bottom: 0;
     }
   }
 
   .nav-item {
-    margin: 0 1rem;
+    margin: 0 1rem 0 0;
     font-size: var(--font-size-small);
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
     &:first-of-type{
       margin-left: 0;
+    }
+    @include media-query(md) {
+      margin: 0 1rem;
     }
   }
 
