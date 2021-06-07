@@ -36,7 +36,7 @@
     margin-bottom: 1.5rem;
   }
 
-  @media all and (min-width: 36em) {
+  @include media-query(xs) {
     .footer-top-right {
       display: flex;
     }
@@ -48,7 +48,7 @@
     }
   }
 
-  @media all and (min-width: 48em) {
+  @include media-query(sm) {
     flex-direction: row;
     /* if screen > 600px footer-top-right appears alongside footer-top-left getting 1/3rd of space */
     .footer-top-left {
