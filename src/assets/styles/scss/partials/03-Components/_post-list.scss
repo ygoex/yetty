@@ -8,10 +8,10 @@
   grid-auto-rows: 1fr;
   grid-column-gap: 1.5rem;
   grid-row-gap: 1.7rem;
-  @media all and (min-width: 36em) {
+  @include media-query(xs) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media all and (min-width: 64em) {
+  @include media-query(lg) {
     grid-template-columns: repeat(3, 1fr);
   }
   .post-tag {
