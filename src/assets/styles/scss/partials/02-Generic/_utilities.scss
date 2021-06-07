@@ -7,6 +7,10 @@
   margin-bottom: 0;
 }
 
+.mt-1 {
+  margin-top: 1rem;
+}
+
 .mb-1 {
   margin-bottom: 1rem;
 }
@@ -16,7 +20,7 @@
 }
 
 .mb-lg-3 {
-  @media only screen and (min-width: 48em) {
+  @include media-query(sm) {
     margin-bottom: 3rem;
   }
 }
@@ -71,4 +75,8 @@
 
 .display-flex {
   display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
