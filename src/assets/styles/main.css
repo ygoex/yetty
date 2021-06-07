@@ -161,13 +161,16 @@ h6,
 .mb-0 {
   margin-bottom: 0; }
 
+.mt-1 {
+  margin-top: 1rem; }
+
 .mb-1 {
   margin-bottom: 1rem; }
 
 .mb-2 {
   margin-bottom: 2rem; }
 
-@media only screen and (min-width: 48em) {
+@media all and (min-width: 48em) {
   .mb-lg-3 {
     margin-bottom: 3rem; } }
 
@@ -206,6 +209,9 @@ h6,
 .display-flex {
   display: flex; }
 
+.flex-wrap {
+  flex-wrap: wrap; }
+
 .nav {
   display: flex;
   align-items: center;
@@ -213,18 +219,21 @@ h6,
   margin-bottom: 1.5rem;
   padding: 0 1.5rem;
   list-style: none; }
-  @media only screen and (min-width: 36em) {
+  @media all and (min-width: 36em) {
     .nav {
       margin-bottom: 0; } }
 
 .nav-item {
-  margin: 0 1rem;
+  margin: 0 1rem 0 0;
   font-size: var(--font-size-small);
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase; }
   .nav-item:first-of-type {
     margin-left: 0; }
+  @media all and (min-width: 60em) {
+    .nav-item {
+      margin: 0 1rem; } }
 
 .nav-item a {
   transition: all 0.20s ease;
@@ -241,6 +250,31 @@ h6,
 .nav-item-active a {
   padding-bottom: 3px;
   border-bottom: 2px solid var(--black); }
+
+.pager {
+  text-align: center; }
+  .pager li {
+    display: inline-block;
+    margin-bottom: 0.35em;
+    border: 1px solid var(--black);
+    border-radius: 20px;
+    list-style-type: none;
+    transition: all 0.20s ease;
+    font-size: 1rem; }
+    .pager li:before {
+      content: "\200B"; }
+  .pager a {
+    color: var(--black);
+    text-decoration: none; }
+  .pager span {
+    display: inline-block;
+    min-width: 1.85em;
+    padding: 0.15em 0.6em 0;
+    color: inherit; }
+  .pager .current-page {
+    background: var(--grey-800);
+    color: var(--white);
+    border: 1px solid var(--grey-800); }
 
 .btn {
   padding: 0.25em 0.9em 0.3rem;
@@ -379,7 +413,7 @@ h6,
 
 .post-tag {
   display: inline-block;
-  margin: 0 0.5em;
+  margin: 0 0.5em 0.35em;
   padding: 0.05em 0.5em;
   transition: all 0.20s ease;
   border: 1px solid var(--black);
@@ -402,7 +436,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  @media only screen and (min-width: 60em) {
+  @media all and (min-width: 60em) {
     header {
       flex-direction: row; } }
 
