@@ -2,7 +2,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media only screen and (min-width: 60em) {
+  @include media-query(md) {
     flex-direction: row;
 	}
 }
