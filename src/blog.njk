@@ -1,11 +1,12 @@
 ---
+title: Blog
 permalink: /posts/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}/{% endif %}
 eleventyNavigation:
   key: Blog
   order: 2
 pagination:
   data: collections.posts
-  size: 3
+  size: 2
   alias: posts
   reverse: true
 ---
@@ -15,7 +16,7 @@ pagination:
 
 {% block content %}
   <div class="blog-heading-tags">
-    <h1>Blog</h1>
+    <h1>{{ title }}</h1>
     {{ tagsList() }}
   </div>
 
@@ -24,12 +25,6 @@ pagination:
 
   {% set allPosts = collections.posts %}
   {% set postslist = posts %}
-
-  {% if postslist.length < allPosts.length %}
-    {% set paginationNextText = 'Older posts' %}
-    {% set paginationNextUrl = pagination.nextPageHref %}
-    {% set paginationPrevUrl = pagination.previousPageHref %}
-  {% endif %}
 
   {% include "layouts/partials/posts-list.njk" %}
   {% include "layouts/partials/pagination.njk" %}
