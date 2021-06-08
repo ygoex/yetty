@@ -253,28 +253,43 @@ h6,
 
 .pager {
   text-align: center; }
-  .pager li {
-    display: inline-block;
-    margin-bottom: 0.35em;
-    border: 1px solid var(--black);
-    border-radius: 20px;
-    list-style-type: none;
-    transition: all 0.20s ease;
-    font-size: 1rem; }
-    .pager li:before {
-      content: "\200B"; }
-  .pager a {
-    color: var(--black);
-    text-decoration: none; }
-  .pager span {
-    display: inline-block;
-    min-width: 1.85em;
-    padding: 0.15em 0.6em 0;
-    color: inherit; }
-  .pager .current-page {
-    background: var(--grey-800);
-    color: var(--white);
-    border: 1px solid var(--grey-800); }
+
+.pager__numbers > * + *,
+.pager__items > * + * {
+  margin-left: 0.15em; }
+
+.pager__numbers {
+  display: inline-block;
+  margin: 0 0.5em; }
+
+.pager__item {
+  display: inline-block;
+  margin-bottom: 0.35em;
+  list-style-type: none;
+  transition: all 0.20s ease;
+  font-size: 1rem; }
+
+.pager__link {
+  display: flex;
+  color: var(--black);
+  border: 1px solid var(--black);
+  border-radius: 20px;
+  text-decoration: none; }
+  .pager__link:hover {
+    color: var(--blue);
+    border-color: var(--blue); }
+
+.pager__content {
+  display: inline-block;
+  min-width: 1.85em;
+  padding: 0.15em 0.6em 0;
+  color: inherit; }
+
+.pager__current {
+  background: var(--grey-800);
+  color: var(--white);
+  border: 1px solid var(--grey-800);
+  border-radius: 20px; }
 
 .btn {
   padding: 0.25em 0.9em 0.3rem;

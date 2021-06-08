@@ -1,32 +1,52 @@
 .pager {
   text-align: center;
+}
+
+.pager__numbers > * + *,
+.pager__items > * + * {
+  margin-left: 0.15em;
+}
+
+.pager__numbers {
+  display: inline-block;
+  margin: 0 0.5em;
+}
+
+.pager__item {
+  display: inline-block;
+  margin-bottom: 0.35em;
+  list-style-type: none;
+  transition: all 0.20s ease;
+  font-size: 1rem;
   // See: https://www.tempertemper.net/blog/accessibility-issues-when-removing-list-markers
-  li {
-    display: inline-block;
-    margin-bottom: 0.35em;
-    border: 1px solid var(--black);
-    border-radius: 20px;
-    list-style-type: none;
-    transition: all 0.20s ease;
-    font-size: 1rem;
-    &:before {
-      content: "\200B";
-    }
+  // &:before {
+  //   content: "\200B";
+  // }
+}
+
+.pager__link {
+  display: flex;
+  color: var(--black);
+  border: 1px solid var(--black);
+  border-radius: 20px;
+  text-decoration: none;
+  &:hover {
+    color: var(--blue);
+    border-color: var(--blue);
   }
-  a {
-    color: var(--black);
-    text-decoration: none;
-  }
-  span {
-    display: inline-block;
-    min-width: 1.85em;
-    padding: 0.15em 0.6em 0;
-    //inherit from anchor or text-muted class added to current page
-    color: inherit;
-  }
-  .current-page {
-    background: var(--grey-800);
-    color: var(--white);
-    border: 1px solid var(--grey-800);
-  }
+}
+
+.pager__content {
+  display: inline-block;
+  min-width: 1.85em;
+  padding: 0.15em 0.6em 0;
+  //inherit from anchor or text-muted class added to current page
+  color: inherit;
+}
+
+.pager__current {
+  background: var(--grey-800);
+  color: var(--white);
+  border: 1px solid var(--grey-800);
+  border-radius: 20px;
 }
