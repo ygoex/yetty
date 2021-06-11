@@ -10,13 +10,13 @@
   </div>
   <div class="post-content">
     {% if post.data.tags %}
-      <ul class="post-categories display-flex">
+      <ul class="post-card__tags display-flex">
         {% for tag in post.data.tags %}
           {# Check if tag exists in tagList. If indexOf is -1 means that the tag is 'posts', the one added to all posts from posts.json #}
           {# An alternative way to filter the generic tags from posts.json can be seen here https://stackoverflow.com/questions/66261187/11ty-how-to-display-post-tags-in-my-post-njk-file #}
           {%- if tagList.indexOf(tag) != -1 -%}
             <li>
-              <span class="post-tag">#{{ tag }}</span>
+              <span class="post-card__tag">#{{ tag }}</span>
             </li>
           {% endif %}
         {%- endfor %}
