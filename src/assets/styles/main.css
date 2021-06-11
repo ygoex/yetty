@@ -222,12 +222,14 @@ h6,
   margin-bottom: 1.5rem;
   padding: 0 1.5rem;
   list-style: none; }
+  .menu__items > * + * {
+    margin-left: 1rem; }
+    @media all and (min-width: 60em) {
+      .menu__items > * + * {
+        margin-left: 2rem; } }
   @media all and (min-width: 36em) {
     .menu__items {
       margin-bottom: 0; } }
-  @media all and (min-width: 60em) {
-    .menu__items > * + * {
-      margin-left: 2rem; } }
 
 .menu__item {
   font-size: var(--font-size-small);
@@ -421,29 +423,34 @@ h6,
   .post-content p:not(.post-title) {
     font-size: 1rem; }
 
-.post-categories {
+.post-card__tags {
   margin-bottom: 1rem; }
 
-.post-tag {
+.tag__items > * + *,
+.post-card__tags > * + * {
+  margin-left: 0.35em; }
+
+.tag__item {
+  margin-bottom: 0.35em; }
+
+.tag__link,
+.post-card__tag {
   display: inline-block;
-  margin: 0 0.5em 0.35em;
   padding: 0.05em 0.5em;
   transition: all 0.20s ease;
   border: 1px solid var(--black);
   border-radius: 15px;
   font-size: 0.857rem;
+  color: initial;
   text-decoration: none;
   vertical-align: text-top; }
-  .post-tag:first-of-type {
-    margin-left: 0; }
-
-a.post-tag,
-a.post-tag:visited {
-  color: initial; }
-
-a.post-tag:hover {
-  border-color: var(--blue);
-  color: var(--blue); }
+  .tag__link:visited,
+  .post-card__tag:visited {
+    color: initial; }
+  .tag__link:hover,
+  .post-card__tag:hover {
+    border-color: var(--blue);
+    color: var(--blue); }
 
 header {
   display: flex;
@@ -453,7 +460,7 @@ header {
     header {
       flex-direction: row; } }
 
-a.home {
+.home {
   width: fit-content;
   margin: 1.5rem;
   padding: 3px 9px 3px 6px;
@@ -468,9 +475,9 @@ a.home {
   line-height: 1;
   text-decoration: none;
   font-variant-caps: small-caps; }
-  a.home:visited {
+  .home:visited {
     color: inherit; }
-  a.home:hover {
+  .home:hover {
     border-color: var(--blue);
     color: var(--blue); }
 
@@ -487,13 +494,13 @@ a.home {
   .footer-top .footer-top-left,
   .footer-top .footer-top-right {
     flex: 1 100%; }
-  .footer-top a.home {
+  .footer-top .home {
     display: inline-block;
     margin: 1rem 0;
     border: 2px solid var(--grey-700);
     color: var(--grey-700);
     font-size: 1.5rem; }
-    .footer-top a.home:hover {
+    .footer-top .home:hover {
       border: 2px solid var(--blue);
       color: var(--blue); }
   .footer-top .h6 {
