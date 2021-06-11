@@ -32,7 +32,7 @@
             {% if tag !== 'posts' %}
               {% set tagUrl %}/tags/{{ tag }}/{% endset %}
               <li>
-                <a class="post-tag" href="{{ tagUrl | url }}">#{{ tag }}</a>
+                <a class="tag__link" href="{{ tagUrl | url }}">#{{ tag }}</a>
               </li>
             {% endif %}
           {%- endfor %}
