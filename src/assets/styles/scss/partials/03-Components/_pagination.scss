@@ -19,10 +19,6 @@
   list-style-type: none;
   transition: all 0.20s ease;
   font-size: 1rem;
-  // See: https://www.tempertemper.net/blog/accessibility-issues-when-removing-list-markers
-  // &:before {
-  //   content: "\200B";
-  // }
 }
 
 .pager__link {
