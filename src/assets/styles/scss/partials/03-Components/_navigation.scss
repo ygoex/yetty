@@ -6,14 +6,15 @@
   margin-bottom: 1.5rem;
   padding: 0 1.5rem;
   list-style: none;
+  // https://pineco.de/get-to-know-the-lobotomized-owl-selector/
+  & > * + * {
+    margin-left: 1rem;
+    @include media-query(md) {
+        margin-left: 2rem;
+    }
+  }
   @include media-query(xs) {
     margin-bottom: 0;
-  }
-  @include media-query(md) {
-    // https://pineco.de/get-to-know-the-lobotomized-owl-selector/
-    & > * + * {
-      margin-left: 2rem;
-    }
   }
 }
 
