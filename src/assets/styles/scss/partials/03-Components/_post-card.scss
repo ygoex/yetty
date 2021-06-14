@@ -1,0 +1,46 @@
+.post-card__link,
+.post-card__link:hover,
+.post-card__link:visited {
+  display: block;
+  color: var(--grey-800);
+  text-decoration: none;
+  &:hover {
+    color: var(--black);
+    .text-muted {
+      color: var(--black);
+    }
+    .post-card__date-time {
+      border-top: 1px solid var(--grey-800);
+    }
+  }
+}
+
+.post-card__image {
+  display: flex;
+  height: 10rem;
+  filter: grayscale(1) brightness(1);
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.post-card__content {
+  padding: 1.5rem;
+  p:not(.post-card__title) {
+    font-size: 1rem;
+  }
+}
+
+.post-card__tags {
+  margin-bottom: 1rem;
+}
+
+.post-card__title {
+  margin: 0.5rem 0;
+}
+
+.post-card__date-time {
+  padding-top: 1rem;
+  border-top: 1px solid var(--grey-200);
+}
