@@ -14,36 +14,9 @@
   @include media-query(lg) {
     grid-template-columns: repeat(3, 1fr);
   }
-  .post-tag {
-    font-size: 0.75rem; //12px
-  }
-  .post-title {
-    margin: 0.5rem 0;
-  }
-  .date-time {
-    padding-top: 1rem;
-    border-top: 1px solid var(--grey-200);
-  }
 }
 
-.postlist-link,
-.postlist-link:hover,
-.postlist-link:visited {
-  display: block;
-  color: var(--grey-800);
-  text-decoration: none;
-  &:hover {
-    color: var(--black);
-    .text-muted {
-      color: var(--black);
-    }
-    .date-time {
-      border-top: 1px solid var(--grey-800);
-    }
-  }
-}
-
-.postlist-item {
+.postlist__item {
   max-width: 57ch;
   transition: all 0.20s ease;
   border-radius: 15px;
@@ -53,25 +26,4 @@
   &:hover {
     filter: invert(1) contrast(1);
   }
-}
-
-.post-image {
-  display: flex;
-  height: 10rem;
-  filter: grayscale(1) brightness(1);
-  img {
-    width: 100%;
-    object-fit: cover;
-  }
-}
-
-.post-content {
-  padding: 1.5rem;
-  p:not(.post-title) {
-    font-size: 1rem;
-  }
-}
-
-.post-card__tags {
-  margin-bottom: 1rem;
 }
