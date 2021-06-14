@@ -9,7 +9,7 @@
   article > *:not(picture):not(.hero) {
     @extend %grid-column-center;
   }
-  .content {
+  .post__content {
     max-width: 57ch;
   }
 }
