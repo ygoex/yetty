@@ -60,12 +60,16 @@
       <ul class="post__next-prev">
         {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
         {%- if nextPost %}
-          <li class="post__next">Next: <a class="post__next--link" href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
+          <li class="post__next">
+            <span class="post__next--label">Next</span>
+            <a class="post__next--link" href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
           </li>
         {% endif %}
         {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
         {%- if previousPost %}
-          <li class="post__prev">Previous: <a class="post__prev--link" href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
+          <li class="post__prev">
+            <span class="post__prev--label">Previous</span>
+            <a class="post__prev--link" href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
           </li>
         {% endif %}
       </ul>
