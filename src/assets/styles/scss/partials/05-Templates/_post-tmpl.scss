@@ -12,4 +12,45 @@
   .post__content {
     max-width: 57ch;
   }
+  .post__next-prev {
+    display: flex;
+    flex-direction: column;
+    @include media-query(md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  .post__next,
+  .post__prev {
+    @include media-query(md) {
+      width: 50%;
+    }
+  }
+  .post__prev {
+    @include media-query(md) {
+      text-align: right;
+    }
+  }
+  .post__prev--label,
+  .post__next--label {
+      font-size: var(--font-size-small);
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      &::after {
+        content: ":";
+      }
+      @include media-query(md) {
+        &::after {
+          content: "";
+        }
+      }
+  }
+  .post__prev--link,
+  .post__next--link {
+    text-decoration: none;
+    @include media-query(md) {
+      display: block;
+    }
+  }
 }

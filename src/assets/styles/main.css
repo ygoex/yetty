@@ -597,6 +597,45 @@ header {
 .tmpl-post .post__content {
   max-width: 57ch; }
 
+.tmpl-post .post__next-prev {
+  display: flex;
+  flex-direction: column; }
+  @media all and (min-width: 60em) {
+    .tmpl-post .post__next-prev {
+      flex-direction: row;
+      justify-content: space-between; } }
+
+@media all and (min-width: 60em) {
+  .tmpl-post .post__next,
+  .tmpl-post .post__prev {
+    width: 50%; } }
+
+@media all and (min-width: 60em) {
+  .tmpl-post .post__prev {
+    text-align: right; } }
+
+.tmpl-post .post__prev--label,
+.tmpl-post .post__next--label {
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+  .tmpl-post .post__prev--label::after,
+  .tmpl-post .post__next--label::after {
+    content: ":"; }
+  @media all and (min-width: 60em) {
+    .tmpl-post .post__prev--label::after,
+    .tmpl-post .post__next--label::after {
+      content: ""; } }
+
+.tmpl-post .post__prev--link,
+.tmpl-post .post__next--link {
+  text-decoration: none; }
+  @media all and (min-width: 60em) {
+    .tmpl-post .post__prev--link,
+    .tmpl-post .post__next--link {
+      display: block; } }
+
 .not-found h2:first-of-type {
   margin-top: 0; }
 
