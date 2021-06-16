@@ -7,7 +7,7 @@
 {% block content %}
   <article class="post grid">
 
-    <header {%- if imgUrl %} class="post__header mb-2 mb-lg-3"{% endif %}>
+    <header class="post__header {%- if imgUrl %} mb-2 mb-lg-3{% endif %}">
       {%- if date %}
         <div class="post__date-time mb-1">
           <time class="post__date text-muted font-small" datetime="{{ date | dateStringISO }}">
@@ -61,15 +61,31 @@
         {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
         {%- if nextPost %}
           <li class="post__next">
-            <span class="post__next--label">Next</span>
-            <a class="post__next--link" href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
+            <span class="post__next--label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="post__next--icon" aria-label="icon-chevron-left">
+                <use href="#icon-chevron-left" class="icon-chevron-left"></use>
+                <span class="sr-only">Chevron left</span>
+              </svg>
+              Next
+            </span>
+            <a class="post__next--link" href="{{ nextPost.url | url }}">
+              <span>{{ nextPost.data.title }}</span>
+            </a>
           </li>
         {% endif %}
         {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
         {%- if previousPost %}
-          <li class="post__prev">
-            <span class="post__prev--label">Previous</span>
-            <a class="post__prev--link" href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
+          <li class="post__prev{%- if not nextPost %} ml-md-auto{% endif %}">
+            <span class="post__prev--label">
+              Previous
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="post__prev--icon" aria-label="icon-chevron-right">
+                <use href="#icon-chevron-right" class="icon-chevron-right"></use>
+                <span class="sr-only">Chevron right</span>
+              </svg>
+            </span>
+            <a class="post__prev--link" href="{{ previousPost.url | url }}">
+              <span>{{ previousPost.data.title }}</span>
+            </a>
           </li>
         {% endif %}
       </ul>
