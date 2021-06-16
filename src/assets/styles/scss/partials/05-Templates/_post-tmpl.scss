@@ -1,56 +1,100 @@
 .tmpl-post {
-  header {
-    flex-direction: column;
-    h2 {
-      margin-top: 0;
-    }
-  }
-  // Center all elements under article
+  // Center all elements under article except picture and hero
   article > *:not(picture):not(.hero) {
     @extend %grid-column-center;
   }
-  .post__content {
-    max-width: 57ch;
+}
+
+.post__header {
+  flex-direction: column;
+  h2 {
+    margin-top: 0;
   }
-  .post__next-prev {
-    display: flex;
-    flex-direction: column;
-    @include media-query(md) {
-      flex-direction: row;
-      justify-content: space-between;
+}
+
+.post__content {
+  max-width: 57ch;
+}
+
+.post__next-prev {
+  display: flex;
+  flex-direction: column;
+  @include media-query(md) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.post__next,
+.post__prev {
+  @include media-query(md) {
+    width: 50%;
+  }
+}
+.post__prev {
+  @include media-query(md) {
+    text-align: right;
+  }
+}
+
+.post__prev--label,
+.post__next--label {
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    &::after {
+      content: ":";
     }
-  }
-  .post__next,
-  .post__prev {
     @include media-query(md) {
-      width: 50%;
-    }
-  }
-  .post__prev {
-    @include media-query(md) {
-      text-align: right;
-    }
-  }
-  .post__prev--label,
-  .post__next--label {
-      font-size: var(--font-size-small);
-      font-weight: 500;
-      letter-spacing: 1px;
-      text-transform: uppercase;
       &::after {
-        content: ":";
+        content: "";
       }
-      @include media-query(md) {
-        &::after {
-          content: "";
-        }
-      }
+    }
+}
+.post__next--label {
+  @include media-query(md) {
+    margin-left: -0.5em;
   }
-  .post__prev--link,
-  .post__next--link {
+}
+.post__prev--label {
+  @include media-query(md) {
+    margin-right: -0.5em;
+  }
+}
+
+.post__prev--icon,
+.post__next--icon {
+  display: none;
+  @include media-query(md) {
+    display: inline;
+    position: relative;
+    top: 7px;
+  }
+}
+.post__prev--icon {
+  left: -3px;
+}
+.post__next--icon {
+  right: -3px;
+}
+
+.post__prev--link,
+.post__next--link {
+  text-decoration: none;
+  @include media-query(md) {
+    display: block;
+  }
+  span {
+    width: 100%;
+    padding-bottom: 1px;
+    transition: all 0.2s;
+    background-image: linear-gradient(transparent 95%, currentColor 1px);
+    background-repeat: no-repeat;
+    background-size: 1rem 100%;
     text-decoration: none;
-    @include media-query(md) {
-      display: block;
+    &:hover {
+      background-size: 100% 100%;
     }
   }
 }
