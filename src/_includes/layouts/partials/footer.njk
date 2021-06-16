@@ -1,82 +1,82 @@
 <footer class="footer grid mb-0">
-  <div class="footer-top">
-    <div class="footer-top-left mb-1">
-      <a class="home" href="{{ '/' | url }}">{{ metadata.title }}</a>
+  <div class="footer__top">
+    <div class="footer__top-left mb-1">
+      <a class="footer__logo home" href="{{ '/' | url }}">{{ metadata.title }}</a>
       <p>{{ metadata.title }} is maintained by {{ metadata.author.name }} as a quick start for some of her projects, but happy to share it for anyone that might find it useful. Check the repo on GitHub.</p>
       <p>This page was generated on {% today %}</p>
     </div>
-    <div class="footer-top-right">
-      <div class="footer-quick-links">
-        <p class="h6">Quick links</p>
-        <ul>
-          <li>
+    <div class="footer__top-right">
+      <div class="footer__quick-links-wrapper">
+        <p class="h6 mb-0-5">Quick links</p>
+        <ul class="footer__quick-link-items">
+          <li class="footer__quick-link-item">
             <a href="{{ '/' | url }}">Home</a>
           </li>
-          <li>
+          <li class="footer__quick-link-item">
             <a href="{{ '/posts' | url }}">Blog</a>
           </li>
-          <li>
+          <li class="footer__quick-link-item">
             <a href="{{ '/about' | url }}">About</a>
           </li>
-          <li>
+          <li class="footer__quick-link-item">
             <a href="mailto:helloygoex@gmail.com">Contact</a>
           </li>
-          <li>
+          <li class="footer__quick-link-item">
             <a href="{{ '/sitemap' | url }}">Sitemap</a>
           </li>
         </ul>
       </div>
-      <div class="footer-contact-follow">
-        <div class="footer-contact">
-          <p class="h6 text-bold">Contact me</p>
+      <div class="footer__contact-follow-wrapper">
+        <div class="footer__contact">
+          <p class="h6 text-bold mb-0-5">Contact me</p>
           <a href="mailto:helloygoex@gmail.com">helloygoex@gmail.com</a>
         </div>
-        <div class="footer-follow">
-          <p class="h6 text-bold">Follow me</p>
+        <div class="footer__follow">
+          <p class="h6 text-bold mb-0-5">Follow me</p>
           <nav>
-            <ul class="social-links">
-              <li>
-                <a class="nav-link" href="https://twitter.com/ygoex">
+            <ul class="footer__social-items">
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="https://twitter.com/ygoex">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="icon " aria-label="Twitter">
                     <use href="#icon-social-twitter" class="icon-social-twitter"></use>
                   </svg>
                   <span class="sr-only">Follow us on Twitter</span>
                 </a>
               </li>
-              <li>
-                <a class="nav-link" href="https://codepen.io/ygoex">
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="https://codepen.io/ygoex">
                   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" class="icon " aria-label="Codepen">
                     <use href="#icon-social-codepen" class="icon-social-codepen"></use>
                   </svg>
                   <span class="sr-only">Follow me on Codepen</span>
                 </a>
               </li>
-              <li>
-                <a class="nav-link" href="https://dribbble.com/ygoex">
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="https://dribbble.com/ygoex">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="icon " aria-label="Dribbble">
                     <use href="#icon-social-dribbble" class="icon-social-dribbble"></use>
                   </svg>
                   <span class="sr-only">Follow me on Dribbble</span>
                 </a>
               </li>
-              {# <li>
-                <a class="nav-link" href="https://www.behance.net/ygoex">
+              {# <li class="footer__social-item">
+                <a class="footer__social-link" href="https://www.behance.net/ygoex">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="icon " aria-label="Behance">
                     <use href="#icon-social-behance" class="icon-social-behance"></use>
                   </svg>
                   <span class="sr-only">Follow me on Behance</span>
                 </a>
               </li> #}
-              <li>
-                <a class="nav-link" href="https://www.linkedin.com/in/ygoex/">
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="https://www.linkedin.com/in/ygoex/">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="icon " aria-label="LinkedIn">
                     <use href="#icon-social-linkedin" class="icon-social-linkedin"></use>
                   </svg>
                   <span class="sr-only">Follow me on LinkedIn</span>
                 </a>
               </li>
-              <li>
-                <a class="nav-link" href="{{ metadata.feed.path | url }}">
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="{{ metadata.feed.path | url }}">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 2 18 22" class="icon " aria-label="LinkedIn">
                     <use href="#icon-social-rss" class="icon-social-rss"></use>
                   </svg>
@@ -89,7 +89,7 @@
       </div>
     </div>
   </div>
-  <p class="copyright">&copy; {% year %}
+  <p class="footer__copyright">&copy; {% year %}
     <a href="https://github.com/ygoex">Ygoex</a> - Powered by <a href="https://11ty.io">Eleventy</a> and <a href="https://www.netlify.com">Netlify</a>
   </p>
 </footer>
