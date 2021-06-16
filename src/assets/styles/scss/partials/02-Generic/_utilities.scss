@@ -7,6 +7,10 @@
   margin-bottom: 0;
 }
 
+.mb-0-5 {
+  margin-bottom: 0.5rem;
+}
+
 .mt-1 {
   margin-top: 1rem;
 }
@@ -26,6 +30,12 @@
 .mb-lg-3 {
   @include media-query(sm) {
     margin-bottom: 3rem;
+  }
+}
+
+.ml-md-auto {
+  @include media-query(md) {
+    margin-left: auto;
   }
 }
 
