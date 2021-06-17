@@ -10,26 +10,32 @@
         <p class="h6 mb-0-5">Quick links</p>
         <ul class="footer__quick-link-items">
           <li class="footer__quick-link-item">
-            <a href="{{ '/' | url }}">Home</a>
+            <a class="footer__link" href="{{ '/' | url }}">
+              <span>Home</span></a>
           </li>
           <li class="footer__quick-link-item">
-            <a href="{{ '/posts' | url }}">Blog</a>
+            <a class="footer__link" href="{{ '/posts' | url }}">
+              <span>Blog</span></a>
           </li>
           <li class="footer__quick-link-item">
-            <a href="{{ '/about' | url }}">About</a>
+            <a class="footer__link" href="{{ '/about' | url }}">
+              <span>About</span></a>
           </li>
           <li class="footer__quick-link-item">
-            <a href="mailto:helloygoex@gmail.com">Contact</a>
+            <a class="footer__link" href="mailto:helloygoex@gmail.com">
+              <span>Contact</span></a>
           </li>
           <li class="footer__quick-link-item">
-            <a href="{{ '/sitemap' | url }}">Sitemap</a>
+            <a class="footer__link" href="{{ '/sitemap' | url }}">
+              <span>Sitemap</span></a>
           </li>
         </ul>
       </div>
       <div class="footer__contact-follow-wrapper">
         <div class="footer__contact">
           <p class="h6 text-bold mb-0-5">Contact me</p>
-          <a href="mailto:helloygoex@gmail.com">helloygoex@gmail.com</a>
+          <a class="footer__link" href="mailto:helloygoex@gmail.com">
+            <span>helloygoex@gmail.com</span></a>
         </div>
         <div class="footer__follow">
           <p class="h6 text-bold mb-0-5">Follow me</p>
@@ -90,6 +96,9 @@
     </div>
   </div>
   <p class="footer__copyright">&copy; {% year %}
-    <a href="https://github.com/ygoex">Ygoex</a> - Powered by <a href="https://11ty.io">Eleventy</a> and <a href="https://www.netlify.com">Netlify</a>
+    <a class="footer__link" href="https://github.com/ygoex">
+      <span>Ygoex</span></a> - Powered by <a class="footer__link" href="https://11ty.io">
+      <span>Eleventy</span></a> and <a class="footer__link" href="https://www.netlify.com">
+      <span>Netlify</span></a>
   </p>
 </footer>
