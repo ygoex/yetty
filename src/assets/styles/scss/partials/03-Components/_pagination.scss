@@ -5,17 +5,17 @@
 // https://pineco.de/get-to-know-the-lobotomized-owl-selector/
 .pager__numbers > * + *,
 .pager__items > * + * {
-  margin-left: 0.35em;
+  margin-left: 0.35rem;
 }
 
 .pager__numbers {
   display: inline-block;
-  margin: 0 0.35em 0 0.7em;
+  margin: 0 0.35rem 0 0.7rem;
 }
 
 .pager__item {
   display: inline-block;
-  margin-bottom: 0.35em;
+  margin-bottom: 0.35rem;
   list-style-type: none;
   transition: all 0.20s ease;
   font-size: 1rem;
@@ -35,8 +35,8 @@
 
 .pager__content {
   display: inline-block;
-  min-width: 1.85em;
-  padding: 0.15em 0.6em 0;
+  min-width: 1.85rem;
+  padding: 0.15rem 0.6rem 0;
   //inherit from anchor
   color: inherit;
 }
