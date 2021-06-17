@@ -54,12 +54,12 @@
 }
 .post__next--label {
   @include media-query(md) {
-    margin-left: -0.5em;
+    margin-left: -0.5rem;
   }
 }
 .post__prev--label {
   @include media-query(md) {
-    margin-right: -0.5em;
+    margin-right: -0.5rem;
   }
 }
 
