@@ -64,7 +64,7 @@
 
 //li under .footer__quick-links
 .footer__quick-link-item {
-  margin-bottom: 0.25rem;
+  display: flex;
 }
 
 .footer__contact-follow-wrapper {
@@ -79,17 +79,16 @@
   text-align: center;
 }
 
-.footer__quick-link-items,
-.footer__contact,
-.footer__copyright {
-  a {
+.footer__link {
+  text-decoration: none;
+  padding: 0.35rem 0.5rem 0.35rem 0;
+  span {
     width: 100%;
     padding-bottom: 1px;
     transition: all 0.2s;
     background-image: linear-gradient(transparent 95%,currentColor 1px);
     background-repeat: no-repeat;
     background-size: 1rem 100%;
-    text-decoration: none;
     &:hover {
       background-size: 100% 100%;
     }
