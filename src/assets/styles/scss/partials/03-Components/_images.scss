@@ -14,7 +14,7 @@
     @extend %img;
     width: 90vw;
     max-height: 70vh;
-    margin-bottom: 4rem;
+    margin-bottom: unquote("clamp(2rem, 16.7vw - 6rem, 4rem)");
     margin-left: 10vw;
     aspect-ratio: 3 / 1;
     box-shadow: -1.5rem 1.5rem var(--banner-border-color);
@@ -23,7 +23,7 @@
     @extend %img;
     width: 100vw;
     max-height: 70vh;
-    margin-bottom: 4rem;
+    margin-bottom: unquote("clamp(2rem, 16.7vw - 6rem, 4rem)");
     aspect-ratio: 2 / 1;
   }
   &-restricted {
@@ -32,7 +32,7 @@
     align-self: center;
     width: 60rem;
     max-height: 70vh;
-    margin: 0 auto 4rem;
+    margin: 0 auto unquote("clamp(2rem, 16.7vw - 6rem, 4rem)");;
     aspect-ratio: 2 / 1;
   }
 }
