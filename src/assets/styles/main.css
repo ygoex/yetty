@@ -130,7 +130,7 @@ h1,
 h2,
 .h2 {
   font-size: 2.35rem;
-  font-size: clamp(1.85rem, 8.3vw - 2rem, 2.35rem);
+  font-size: clamp(1.65rem, 8.3vw - 2rem, 2.35rem);
   line-height: 1.2; }
 
 h3,
@@ -241,8 +241,8 @@ h6,
 
 .menu__link {
   transition: all 0.20s ease;
-  text-decoration: none;
-  color: initial; }
+  color: initial;
+  text-decoration: none; }
   .menu__link:visited {
     color: initial; }
   .menu__link:hover {
@@ -273,13 +273,13 @@ h6,
 
 .pager__link {
   display: flex;
-  color: var(--black);
   border: 1px solid var(--black);
   border-radius: 20px;
+  color: var(--black);
   text-decoration: none; }
   .pager__link:hover {
-    color: var(--blue);
-    border-color: var(--blue); }
+    border-color: var(--blue);
+    color: var(--blue); }
 
 .pager__content {
   display: inline-block;
@@ -288,10 +288,10 @@ h6,
   color: inherit; }
 
 .pager__current {
-  background: var(--grey-800);
-  color: var(--white);
   border: 1px solid var(--grey-800);
-  border-radius: 20px; }
+  border-radius: 20px;
+  background: var(--grey-800);
+  color: var(--white); }
 
 .btn {
   padding: 0.25rem 0.9rem 0.3rem;
@@ -341,7 +341,7 @@ h6,
 .img-accent {
   width: 90vw;
   max-height: 70vh;
-  margin-bottom: 4rem;
+  margin-bottom: clamp(2rem, 16.7vw - 6rem, 4rem);
   margin-left: 10vw;
   aspect-ratio: 3 / 1;
   box-shadow: -1.5rem 1.5rem var(--banner-border-color); }
@@ -349,7 +349,7 @@ h6,
 .img-full {
   width: 100vw;
   max-height: 70vh;
-  margin-bottom: 4rem;
+  margin-bottom: clamp(2rem, 16.7vw - 6rem, 4rem);
   aspect-ratio: 2 / 1; }
 
 .img-restricted {
@@ -357,7 +357,7 @@ h6,
   align-self: center;
   width: 60rem;
   max-height: 70vh;
-  margin: 0 auto 4rem;
+  margin: 0 auto clamp(2rem, 16.7vw - 6rem, 4rem);
   aspect-ratio: 2 / 1; }
 
 .postlist {
@@ -443,8 +443,8 @@ h6,
   transition: all 0.20s ease;
   border: 1px solid var(--black);
   border-radius: 15px;
-  font-size: 0.857rem;
   color: initial;
+  font-size: 0.857rem;
   text-decoration: none;
   vertical-align: text-top; }
   .tag__link:visited,
@@ -554,8 +554,8 @@ header {
   text-align: center; }
 
 .footer__link {
-  text-decoration: none;
-  padding: 0.35rem 0.5rem 0.35rem 0; }
+  padding: 0.35rem 0.5rem 0.35rem 0;
+  text-decoration: none; }
   .footer__link span {
     width: 100%;
     padding-bottom: 1px;
