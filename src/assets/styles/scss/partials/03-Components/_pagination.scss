@@ -23,13 +23,13 @@
 
 .pager__link {
   display: flex;
-  color: var(--black);
   border: 1px solid var(--black);
   border-radius: 20px;
+  color: var(--black);
   text-decoration: none;
   &:hover {
-    color: var(--blue);
     border-color: var(--blue);
+    color: var(--blue);
   }
 }
 
@@ -42,8 +42,8 @@
 }
 
 .pager__current {
-  background: var(--grey-800);
-  color: var(--white);
   border: 1px solid var(--grey-800);
   border-radius: 20px;
+  background: var(--grey-800);
+  color: var(--white);
 }
