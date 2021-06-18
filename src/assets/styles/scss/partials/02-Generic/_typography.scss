@@ -9,6 +9,11 @@ h1,
 .h1 {
   margin-top: 0;
   font-size: 3rem;
+  // Explanation about the magic numbers:
+  // https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+  // See also: https://fluid-typography.netlify.app/
+  // The unquote function is necessary to about the following error on Sass compilation --> "Incompatible units: 'rem' and 'vw'."
+  font-size: unquote("clamp(2rem, 8.3vw - 2rem, 3rem)");
   line-height: 1.1;
   &> .direct-link {
     display: none;
@@ -18,6 +23,11 @@ h1,
 h2,
 .h2 {
   font-size: 2.35rem;
+  // Explanation about the magic numbers:
+  // https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+  // See also: https://fluid-typography.netlify.app/
+  // The unquote function is necessary to about the following error on Sass compilation --> "Incompatible units: 'rem' and 'vw'."
+  font-size: unquote("clamp(1.85rem, 8.3vw - 2rem, 2.35rem)");
   line-height: 1.2;
 }
 
