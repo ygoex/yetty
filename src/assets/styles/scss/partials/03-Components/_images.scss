@@ -14,6 +14,10 @@
     @extend %img;
     width: 90vw;
     max-height: 70vh;
+    // Explanation about the magic numbers:
+    // https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+    // See also: https://fluid-typography.netlify.app/
+    // The unquote function is necessary to about the following error on Sass compilation --> "Incompatible units: 'rem' and 'vw'."
     margin-bottom: unquote("clamp(2rem, 16.7vw - 6rem, 4rem)");
     margin-left: 10vw;
     aspect-ratio: 3 / 1;
