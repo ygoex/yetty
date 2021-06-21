@@ -10,14 +10,17 @@ pagination:
   alias: posts
   reverse: true
 ---
-{% from "layouts/partials/components/tags-list/macro.njk" import tagsList with context %}
+{% from "layouts/partials/components/tags-list/macro.njk" import tagsList %}
 
 {% extends 'layouts/home.njk' %}
 
 {% block content %}
   <div class="blog-heading-tags">
     <h1>{{ title }}</h1>
-    {{ tagsList() }}
+    {{ tagsList({
+        tags: collections.tagList
+      })
+    }}
   </div>
 
   {% imageNjk "https://source.unsplash.com/-K6JMRMj4x4/",
