@@ -1,3 +1,5 @@
+{% from "layouts/partials/components/svg-icon/macro.njk" import svgIcon %}
+
 {% extends 'layouts/base.njk' %}
 
 {% if templateClass is not defined %}
@@ -62,10 +64,15 @@
         {%- if nextPost %}
           <li class="post__next">
             <span class="post__next--label">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="post__next--icon" aria-label="icon-chevron-left">
-                <use href="#icon-chevron-left" class="icon-chevron-left"></use>
-                <span class="sr-only">Chevron left</span>
-              </svg>
+              {{ svgIcon({
+                svgWidth: 24,
+                svgHeight: 24,
+                svgClass: "post__next--icon",
+                ariaLabel: "Chevron left icon",
+                symbolId: "icon-chevron-left",
+                screenReader: "Chevron left"
+                })
+              }}
               Next
             </span>
             <a class="post__next--link" href="{{ nextPost.url | url }}">
@@ -78,10 +85,15 @@
           <li class="post__prev{%- if not nextPost %} ml-md-auto{% endif %}">
             <span class="post__prev--label">
               Previous
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="post__prev--icon" aria-label="icon-chevron-right">
-                <use href="#icon-chevron-right" class="icon-chevron-right"></use>
-                <span class="sr-only">Chevron right</span>
-              </svg>
+              {{ svgIcon({
+                svgWidth: 24,
+                svgHeight: 24,
+                svgClass: "post__prev--icon",
+                ariaLabel: "Chevron right icon",
+                symbolId: "icon-chevron-right",
+                screenReader: "Chevron right"
+                })
+              }}
             </span>
             <a class="post__prev--link" href="{{ previousPost.url | url }}">
               <span>{{ previousPost.data.title }}</span>
