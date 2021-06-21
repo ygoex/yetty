@@ -1,5 +1,7 @@
 <ul class="display-flex flex-wrap tag__items">
-  {% for tag in tags.sort() %}
+  {% for tag in params
+    .tags
+    .sort() %}
     {% set tagUrl %}/tags/{{ tag }}/{% endset %}
     <li class="tag__item">
       <a class="tag__link" href="{{ tagUrl | url }}">#{{ tag }}</a>
