@@ -1,11 +1,13 @@
-{# Note how we’ve added with context to our import statement, which allows us to use the global data collections.tagList inside our macro. This is necessary because macros are totally encapsulated from the page variable scope. #}
-
-{% from "layouts/partials/components/post-card/macro.njk" import postCard with context %}
+{% from "layouts/partials/components/post-card/macro.njk" import postCard %}
 
 <ul class="postlist">
   {% for post in postslist %}
     <li class="postlist__item">
-      {{ postCard(post) }}
+      {{ postCard({
+        post: post,
+        tagList: collections.tagList
+        })
+      }}
     </li>
   {% endfor %}
 </ul>
