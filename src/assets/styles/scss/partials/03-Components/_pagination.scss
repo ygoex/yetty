@@ -23,8 +23,8 @@
 
 .pager__link {
   display: flex;
-  border: 1px solid var(--black);
-  border-radius: 20px;
+  border: 0.07rem solid var(--black);
+  border-radius: 1.15rem;
   color: var(--black);
   text-decoration: none;
   &:hover {
@@ -42,8 +42,8 @@
 }
 
 .pager__current {
-  border: 1px solid var(--grey-800);
-  border-radius: 20px;
+  border: 0.07rem solid var(--grey-800);
+  border-radius: 1.15rem;
   background: var(--grey-800);
   color: var(--white);
 }

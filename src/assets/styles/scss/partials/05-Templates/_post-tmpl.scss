@@ -41,7 +41,7 @@
 .post__next--label {
     font-size: var(--font-size-small);
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 0.07rem;
     text-transform: uppercase;
     &::after {
       content: ":";
@@ -69,14 +69,14 @@
   @include media-query(md) {
     display: inline;
     position: relative;
-    top: 7px;
+    top: 0.45rem;
   }
 }
 .post__prev--icon {
-  left: -3px;
+  left: -0.15rem;
 }
 .post__next--icon {
-  right: -3px;
+  right: -0.15rem;
 }
 
 .post__prev--link,
@@ -87,9 +87,9 @@
   }
   span {
     width: 100%;
-    padding-bottom: 1px;
+    padding-bottom: 0.07rem;
     transition: all 0.2s;
-    background-image: linear-gradient(transparent 95%, currentColor 1px);
+    background-image: linear-gradient(transparent 95%, currentColor 0.07rem);
     background-repeat: no-repeat;
     background-size: 1rem 100%;
     text-decoration: none;

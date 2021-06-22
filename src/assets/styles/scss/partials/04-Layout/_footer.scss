@@ -41,11 +41,11 @@
 .footer__logo {
   display: inline-block;
   margin: 1rem 0;
-  border: 2px solid var(--grey-700);
+  border: 0.15rem solid var(--grey-700);
   color: var(--grey-700);
   font-size: 1.5rem;
   &:hover {
-    border: 2px solid var(--blue);
+    border: 0.15rem solid var(--blue);
     color: var(--blue);
   }
 }
@@ -75,7 +75,7 @@
 
 .footer__copyright {
   padding: 1rem 0;
-  border-top: 1px solid var(--grey-200);
+  border-top: 0.07rem solid var(--grey-200);
   text-align: center;
 }
 
@@ -84,14 +84,17 @@
   text-decoration: none;
   span {
     width: 100%;
-    padding-bottom: 1px;
+    padding-bottom: 0.07rem;
     transition: all 0.2s;
-    background-image: linear-gradient(transparent 95%,currentColor 1px);
+    background-image: linear-gradient(transparent 95%,currentColor 0.07rem);
     background-repeat: no-repeat;
     background-size: 1rem 100%;
     &:hover {
       background-size: 100% 100%;
     }
+  }
+  @include media-query(md) {
+    padding: 0.15rem 0.5rem 0.15rem 0;
   }
 }
 
@@ -101,10 +104,10 @@
 }
 
 .footer__social-link {
-  margin-right: 0.5rem;
-  padding: 0 7px;
+  margin-right: 0.45rem;
+  padding: 0 0.45rem; //same as tags
   transition: all 0.20s ease;
-  border: 2px solid var(--grey-700);
+  border: 0.15rem solid var(--grey-700);
   border-radius: 50%;
   font-size: 1.75rem;
   svg {

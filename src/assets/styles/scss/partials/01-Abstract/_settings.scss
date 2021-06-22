@@ -23,18 +23,18 @@ $breakpoints: (
 
 // https://toolness.github.io/accessible-color-matrix/
 $colours: (
-  "white": hsl(0, 0%, 100%), 
-  "grey-100": hsl(0, 0%, 96%), 
-  "grey-200": hsl(0, 0%, 92%), 
-  "grey-300": hsl(0, 0%, 80%), 
-  "grey-600": hsl(0, 0%, 45%), 
-  "grey-700": hsl(0, 0%, 29%), 
-  "grey-800": hsl(0, 0%, 21%), 
-  "grey-900": hsl(0, 0%, 13%), 
-  "black": hsl(0, 0%, 0%), 
-  "black-50-a": hsla(0, 0%, 0%, 0.05), 
-  "black-100-a": hsla(0, 0%, 0%, 0.1), 
-  "white-700-a": hsla(0, 0%, 100%, 0.7), 
+  "white": hsl(0, 0%, 100%),
+  "grey-100": hsl(0, 0%, 96%),
+  "grey-200": hsl(0, 0%, 92%),
+  "grey-300": hsl(0, 0%, 80%),
+  "grey-600": hsl(0, 0%, 45%),
+  "grey-700": hsl(0, 0%, 29%),
+  "grey-800": hsl(0, 0%, 21%),
+  "grey-900": hsl(0, 0%, 13%),
+  "black": hsl(0, 0%, 0%),
+  "black-50-a": hsla(0, 0%, 0%, 0.05),
+  "black-100-a": hsla(0, 0%, 0%, 0.1),
+  "white-700-a": hsla(0, 0%, 100%, 0.7),
   "purple": hsl(300, 100%, 25%),
   "blue": hsl(240, 100%, 50%)
 );
@@ -71,4 +71,11 @@ $colours: (
   --sans-font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, cursive;
   --serif-font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
   --mono-font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --border-width-thin: 0.07rem; //1px
+  --border-width-medium: 0.14rem; //2px
+  --border-width-thick: 0.21rem; //3px
+  --border-radius-default: 1.15rem; //20px
+  --border-radius-circle: 50%;
+  --border-radius-logo: 0.28rem; //4px
 }

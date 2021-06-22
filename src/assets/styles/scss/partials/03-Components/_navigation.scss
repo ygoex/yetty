@@ -21,7 +21,7 @@
 .menu__item {
   font-size: var(--font-size-small);
   font-weight: 500;
-  letter-spacing: 1px;
+  letter-spacing: 0.07rem;
   text-transform: uppercase;
 }
 
@@ -40,7 +40,7 @@
 
 .menu__item--active {
   a {
-    padding-bottom: 3px;
-    border-bottom: 2px solid var(--black);
+    padding-bottom: 0.15rem;
+    border-bottom: 0.15rem solid var(--black);
   }
 }

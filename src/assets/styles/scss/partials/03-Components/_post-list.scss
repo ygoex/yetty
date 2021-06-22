@@ -19,9 +19,9 @@
 .postlist__item {
   max-width: 57ch;
   transition: all 0.20s ease;
-  border-radius: 15px;
+  border-radius: 1.15rem;
   background-color: var(--white-700-a);
-  box-shadow: 0 10px 15px -3px var(--black-100-a), 0 -3px 6px -2px var(--black-50-a);
+  box-shadow: 0 0.7rem 1rem -0.20rem var(--black-100-a), 0 -0.20rem 0.40rem -0.15rem var(--black-50-a);
   overflow: hidden;
   &:hover {
     filter: invert(1) contrast(1);
