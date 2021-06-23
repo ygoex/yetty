@@ -10,7 +10,7 @@
       color: var(--black);
     }
     .post-card__date-time {
-      border-top: 0.07rem solid var(--grey-800);
+      border-top: var(--border-width-thin) solid var(--grey-800);
     }
   }
 }
@@ -26,21 +26,21 @@
 }
 
 .post-card__content {
-  padding: 1.5rem;
+  padding: var(--space-medium);
   p:not(.post-card__title) {
-    font-size: 1rem;
+    font-size: var(--font-size-md);
   }
 }
 
 .post-card__tags {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-simple);
 }
 
 .post-card__title {
-  margin: 0.5rem 0;
+  margin: var(--space-8) var(--space-0);
 }
 
 .post-card__date-time {
-  padding-top: 1rem;
-  border-top: 0.07rem solid var(--grey-200);
+  padding-top: var(--space-simple);
+  border-top: var(--border-width-thin) solid var(--grey-200);
 }
