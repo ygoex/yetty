@@ -1,12 +1,12 @@
 .postlist {
   display: grid;
-  margin: 2rem 0;
-  padding: 0;
+  margin: var(--space-double) var(--space-0);
+  padding: var(--space-0);
   grid-template-columns: repeat(1, 1fr);
   list-style: none;
   grid-column: 2 / auto;
   grid-auto-rows: 1fr;
-  grid-column-gap: 1.5rem;
+  grid-column-gap: var(--space-medium);
   grid-row-gap: 1.7rem;
   @include media-query(xs) {
     grid-template-columns: repeat(2, 1fr);
@@ -18,10 +18,10 @@
 
 .postlist__item {
   max-width: 57ch;
-  transition: all 0.20s ease;
-  border-radius: 1.15rem;
+  transition: var(--transition-default);
+  border-radius: var(--border-radius-default);
   background-color: var(--white-700-a);
-  box-shadow: 0 0.7rem 1rem -0.20rem var(--black-100-a), 0 -0.20rem 0.40rem -0.15rem var(--black-50-a);
+  box-shadow: 0 10px 15px -3px var(--black-100-a), 0 -3px 6px -2px var(--black-50-a);
   overflow: hidden;
   &:hover {
     filter: invert(1) contrast(1);
