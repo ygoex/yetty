@@ -4,32 +4,32 @@
 // -----------------------------------------------------------------------------
 
 .mb-0 {
-  margin-bottom: 0;
+  margin-bottom: var(--space-0);
 }
 
 .mb-0-5 {
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space);
 }
 
 .mt-1 {
-  margin-top: 1rem;
+  margin-top: var(--space-simple);
 }
 
 .mb-1 {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-simple);
 }
 
 .mr-1 {
-  margin-right: 1rem;
+  margin-right: var(--space-simple);
 }
 
 .mb-2 {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-double);
 }
 
 .mb-lg-3 {
   @include media-query(sm) {
-    margin-bottom: 3rem;
+    margin-bottom: var(--space-large);
   }
 }
 
@@ -41,9 +41,9 @@
 
 .sr-only {
   position: absolute;
-  width: 0.07rem;
-  height: 0.07rem;
-  margin: -0.07rem;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
   padding: 0;
   border: 0;
   white-space: nowrap;
@@ -63,10 +63,6 @@
   color: var(--grey-600);
 }
 
-.text-lead {
-  font-size: 1.125rem;
-}
-
 .small-caps {
   font-variant-caps: small-caps;
 }
@@ -76,7 +72,7 @@
 }
 
 .font-small {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-sm);
 }
 
 .grid-column-center {
