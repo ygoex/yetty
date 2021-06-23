@@ -45,9 +45,20 @@ $colours: (
     --#{$name}: #{$color};
   }
 
+  // Font size
+  --font-size-xs: 0.75rem; //12px
+  --font-size-sm: 0.875rem; //14px
+  --font-size-md: 1rem; //16px
+  --font-size-lg: 1.125rem; //18px
+  --font-size-xl: 1.25rem;
+  --font-size-xxl: 1.5rem;
+  --font-size-xxxl: 1.75rem;
+  --font-size-logo: 2rem;
+
+  // Body
   --body-background: var(--white);
   --body-font-color: var(--grey-900);
-  --font-size-small: 0.875rem;
+  --body-font-size: var(--font-size-lg);
 
   // Sans System fonts explanation:
   // The browser looks for each successive font, preferring the first one if // possible, and falls back to the next if it cannot find the font (on the // system or defined in CSS).
@@ -72,10 +83,39 @@ $colours: (
   --serif-font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
   --mono-font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-  --border-width-thin: 0.07rem; //1px
-  --border-width-medium: 0.14rem; //2px
-  --border-width-thick: 0.21rem; //3px
-  --border-radius-default: 1.15rem; //20px
+  // Border
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 3px;
+
+  --border-radius-sm: 0.25rem;
+  --border-radius-default: 1.25rem;
   --border-radius-circle: 50%;
-  --border-radius-logo: 0.28rem; //4px
+
+  // Spacing: small
+  --space-8n: -0.5rem; //-8px
+  --space-4n: -0.25rem; //-4px
+  --space-0: 0;
+  --space: 0.025rem; //~0.5px
+  --space-1: 0.06rem; //1px
+  --space-2: 0.125rem; //2px
+  --space-4: 0.25rem; //4px
+  --space-6: 0.375rem; //6px
+  --space-8: 0.5rem; //8px
+  --space-10: 0.625rem; //10px
+  --space-12: 0.75rem; //12px
+  --space-14: 0.875rem; //14px
+
+  // Spacing: medium
+  --space-simple: 1rem; //16px
+  --space-medium: 1.5rem; //24px
+  --space-double: 2rem; //32px
+
+  // Spacing: large
+  --space-large: 3rem; //48px
+  --space-larger: 4rem; //64px
+  --space-largest: 5rem; //80px
+
+  --transition-default: all 0.20s ease;
+
 }
