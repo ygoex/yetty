@@ -8,7 +8,7 @@
 .post__header {
   flex-direction: column;
   h2 {
-    margin-top: 0;
+    margin-top: var(--space-0);
   }
 }
 
@@ -39,9 +39,9 @@
 
 .post__prev--label,
 .post__next--label {
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-sm);
     font-weight: 500;
-    letter-spacing: 0.07rem;
+    letter-spacing: var(--space-1);
     text-transform: uppercase;
     &::after {
       content: ":";
@@ -59,7 +59,7 @@
 }
 .post__prev--label {
   @include media-query(md) {
-    margin-right: -0.5rem;
+    margin-right: var(--space-8n);
   }
 }
 
@@ -69,14 +69,14 @@
   @include media-query(md) {
     display: inline;
     position: relative;
-    top: 0.45rem;
+    top: var(--space-8);
   }
 }
 .post__prev--icon {
-  left: -0.15rem;
+  left: var(--space-4n);
 }
 .post__next--icon {
-  right: -0.15rem;
+  right: var(--space-4n);
 }
 
 .post__prev--link,
@@ -87,8 +87,8 @@
   }
   span {
     width: 100%;
-    padding-bottom: 0.07rem;
-    transition: all 0.2s;
+    padding-bottom: var(--space-1);
+    transition: var(--transition-default);
     background-image: linear-gradient(transparent 95%, currentColor 0.07rem);
     background-repeat: no-repeat;
     background-size: 1rem 100%;
