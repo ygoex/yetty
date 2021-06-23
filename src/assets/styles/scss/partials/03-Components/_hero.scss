@@ -1,7 +1,7 @@
 .hero {
   @extend %grid-column-full;
   position: relative;
-  padding: 0 1rem;
+  padding: var(--space-0) var(--space-medium);
   overflow: hidden;
   // not in use: left in case we need to add an image before h1 using shortcut
   picture {
@@ -16,7 +16,7 @@
   }
   h1 {
     max-width: 60rem;
-    margin: 4rem auto;
+    margin: var(--space-larger) auto;
     // Explanation about the magic numbers:
     // https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
     // See also: https://fluid-typography.netlify.app/
