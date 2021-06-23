@@ -5,26 +5,26 @@
 // https://pineco.de/get-to-know-the-lobotomized-owl-selector/
 .pager__numbers > * + *,
 .pager__items > * + * {
-  margin-left: 0.35rem;
+  margin-left: var(--space-6);
 }
 
 .pager__numbers {
   display: inline-block;
-  margin: 0 0.35rem 0 0.7rem;
+  margin: var(--space-0) var(--space-6) var(--space-0) var(--space-12);
 }
 
 .pager__item {
   display: inline-block;
-  margin-bottom: 0.35rem;
+  margin-bottom: var(--space-6);
   list-style-type: none;
-  transition: all 0.20s ease;
-  font-size: 1rem;
+  transition: var(--transition-default);
+  font-size: var(--font-size-md);
 }
 
 .pager__link {
   display: flex;
-  border: 0.07rem solid var(--black);
-  border-radius: 1.15rem;
+  border: var(--border-width-thin) solid var(--black);
+  border-radius: var(--border-radius-default);
   color: var(--black);
   text-decoration: none;
   &:hover {
@@ -36,14 +36,14 @@
 .pager__content {
   display: inline-block;
   min-width: 1.85rem;
-  padding: 0.15rem 0.6rem 0;
+  padding: var(--space-2) var(--space-1) 0;
   //inherit from anchor
   color: inherit;
 }
 
 .pager__current {
-  border: 0.07rem solid var(--grey-800);
-  border-radius: 1.15rem;
+  border: var(--border-width-thin) solid var(--grey-800);
+  border-radius: var(--border-radius-default);
   background: var(--grey-800);
   color: var(--white);
 }
