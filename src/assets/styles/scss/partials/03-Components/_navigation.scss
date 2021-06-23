@@ -3,30 +3,30 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 1.5rem;
-  padding: 0 1.5rem;
+  margin-bottom: var(--space-medium);
+  padding: var(--space-0) var(--space-medium);
   list-style: none;
   // https://pineco.de/get-to-know-the-lobotomized-owl-selector/
   & > * + * {
-    margin-left: 1rem;
+    margin-left: var(--space-simple);
     @include media-query(md) {
-        margin-left: 2rem;
+        margin-left: var(--space-double);
     }
   }
   @include media-query(xs) {
-    margin-bottom: 0;
+    margin-bottom: var(--space-0);
   }
 }
 
 .menu__item {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-sm);
   font-weight: 500;
-  letter-spacing: 0.07rem;
+  letter-spacing: var(--space-1);
   text-transform: uppercase;
 }
 
 .menu__link {
-  transition: all 0.20s ease;
+  transition: var(--transition-default);
   color: initial;
   text-decoration: none;
   &:visited {
@@ -40,7 +40,7 @@
 
 .menu__item--active {
   a {
-    padding-bottom: 0.15rem;
-    border-bottom: 0.15rem solid var(--black);
+    padding-bottom: var(--space-2);
+    border-bottom: var(--border-width-medium) solid var(--black);
   }
 }
