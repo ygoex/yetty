@@ -6,24 +6,24 @@
 
 %grid {
   display: grid;
-  margin: 3rem 0;
+  margin: var(--space-large) var(--space-0);
   grid-template-columns:
-  minmax(1.2rem, 1fr)
+  minmax(var(--space-medium), 1fr)
   minmax(auto, 36rem)
-  minmax(1.2rem, 1fr);
+  minmax(var(--space-medium), 1fr);
   overflow: hidden;
   @include media-query(sm) {
-    margin: 3rem 0 5rem;
+    margin: var(--space-large) var(--space-0) var(--space-largest);
     grid-template-columns:
-  minmax(1.2rem, 1fr)
+  minmax(var(--space-medium), 1fr)
   minmax(auto, 48rem)
-  minmax(1.2rem, 1fr);
+  minmax(var(--space-medium), 1fr);
   }
   @include media-query(lg) {
     grid-template-columns:
-  minmax(1.2rem, 1fr)
+  minmax(var(--space-medium), 1fr)
   minmax(auto, 60rem)
-  minmax(1.2rem, 1fr);
+  minmax(var(--space-medium), 1fr);
   }
 }
 
