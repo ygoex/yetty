@@ -109,9 +109,9 @@
   transition: var(--transition-default);
   border: var(--border-width-medium) solid var(--grey-700);
   border-radius: var(--border-radius-circle);
-  font-size: 1.5rem;
+  font-size: var(--font-size-xl);
   svg {
-    transition: all 0.20s ease;
+    transition: var(--transition-default);
     fill: var(--grey-700);
     color: var(--grey-700);
     stroke: var(--grey-700);
