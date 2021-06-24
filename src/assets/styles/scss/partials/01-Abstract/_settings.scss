@@ -45,20 +45,21 @@ $colours: (
     --#{$name}: #{$color};
   }
 
-  // Font size
+  // Font size: Major third scale --> https://www.modularscale.com/?1&em&1.25
   --font-size-xs: 0.75rem; //12px
-  --font-size-sm: 0.875rem; //14px
-  --font-size-md: 1rem; //16px
-  --font-size-lg: 1.125rem; //18px
-  --font-size-xl: 1.25rem;
-  --font-size-xxl: 1.5rem;
-  --font-size-xxxl: 1.75rem;
-  --font-size-logo: 2rem;
+  --font-size-sm: 0.8rem; //14px
+  --font-size-base: 1rem; //16px
+  --font-size-md: 1.125rem; //18px
+  --font-size-lg: 1.25rem; //20px
+  --font-size-xl: 1.563rem; //25px
+  --font-size-2xl: 1.953rem; //31px
+  --font-size-h2: 2.441rem; //39px
+  --font-size-h1: 3.052rem; //48px
 
   // Body
   --body-background: var(--white);
   --body-font-color: var(--grey-900);
-  --body-font-size: var(--font-size-lg);
+  --body-font-size: var(--font-size-md);
 
   // Sans System fonts explanation:
   // The browser looks for each successive font, preferring the first one if // possible, and falls back to the next if it cannot find the font (on the // system or defined in CSS).
