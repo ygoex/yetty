@@ -4,7 +4,7 @@
     margin-bottom: var(--space-large);
   }
   p {
-    max-width: 57ch;
+    max-width: var(--line-length);
   }
 }
 
