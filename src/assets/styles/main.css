@@ -52,7 +52,11 @@
   --space-large: 3rem;
   --space-larger: 4rem;
   --space-largest: 5rem;
-  --transition-default: all 0.20s ease; }
+  --transition-default: all 0.20s ease;
+  --line-length: 57ch;
+  --w-breakpoint-xs: 36rem;
+  --w-breakpoint-sm: 48rem;
+  --w-breakpoint-md: 60rem; }
 
 .img-responsive, .img-post, .img-accent, .img-full, .img-restricted {
   height: auto;
@@ -106,7 +110,7 @@ hr {
 article {
   display: grid;
   margin: var(--space-large) var(--space-0);
-  grid-template-columns: minmax(var(--space-simple), 1fr) minmax(auto, 57ch) minmax(var(--space-simple), 1fr);
+  grid-template-columns: minmax(var(--space-simple), 1fr) minmax(auto, var(--line-length)) minmax(var(--space-simple), 1fr);
   overflow: hidden; }
 
 img, video {
@@ -222,9 +226,6 @@ h6,
   overflow: hidden;
   clip: rect(0, 0, 0, 0); }
 
-.width-100 {
-  width: 100vw; }
-
 .text-black {
   color: var(--black); }
 
@@ -313,7 +314,7 @@ h6,
 .pager__content {
   display: inline-block;
   min-width: 1.85rem;
-  padding: var(--space-2) var(--space-1) 0;
+  padding: var(--space-2) var(--space-10) var(--space-0);
   color: inherit; }
 
 .pager__current {
@@ -407,7 +408,7 @@ h6,
       grid-template-columns: repeat(3, 1fr); } }
 
 .postlist__item {
-  max-width: 57ch;
+  max-width: var(--line-length);
   transition: var(--transition-default);
   border-radius: var(--border-radius-default);
   background-color: var(--white-700-a);
@@ -608,9 +609,9 @@ header {
   transition: var(--transition-default);
   border: var(--border-width-medium) solid var(--grey-700);
   border-radius: var(--border-radius-circle);
-  font-size: 1.5rem; }
+  font-size: var(--font-size-xl); }
   .footer__social-link svg {
-    transition: all 0.20s ease;
+    transition: var(--transition-default);
     fill: var(--grey-700);
     color: var(--grey-700);
     stroke: var(--grey-700); }
@@ -626,7 +627,7 @@ header {
   .tmpl-home > :first-child {
     margin-bottom: var(--space-large); }
   .tmpl-home p {
-    max-width: 57ch; }
+    max-width: var(--line-length); }
 
 .gradient-home {
   background-image: url("/assets/images/mesh-gradient-white.jpg");
@@ -640,7 +641,7 @@ header {
     margin-top: var(--space-0); }
 
 .post__content {
-  max-width: 57ch; }
+  max-width: var(--line-length); }
 
 .post__next-prev {
   display: flex;
