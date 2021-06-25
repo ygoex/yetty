@@ -119,4 +119,11 @@ $colours: (
 
   --transition-default: all 0.20s ease;
 
+  // Width
+  // More about ch unit --> https://drafts.csswg.org/css-values-3/#ch
+  // More about line-length --> https://kickpoint.ca/the-readability-formula-making-your-website-easy-to-read/
+  --line-length: 57ch;
+  --w-breakpoint-xs: 36rem;
+  --w-breakpoint-sm: 48rem;
+  --w-breakpoint-md: 60rem;
 }
