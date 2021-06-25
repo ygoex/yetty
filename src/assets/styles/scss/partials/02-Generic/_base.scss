@@ -36,7 +36,7 @@ article {
   margin: var(--space-large) var(--space-0);
   grid-template-columns:
     minmax(var(--space-simple), 1fr)
-    minmax(auto, 57ch)
+    minmax(auto, var(--line-length))
     minmax(var(--space-simple), 1fr);
   overflow: hidden;
 }
