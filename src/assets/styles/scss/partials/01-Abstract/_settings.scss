@@ -21,16 +21,20 @@ $breakpoints: (
   "xl": 80em,
 ) !default;
 
+// Palette generated with -->
+// https://www.tailwindshades.com/#color=919191&step-up=10&step-down=10&name=silver
 // https://toolness.github.io/accessible-color-matrix/
 $colours: (
   "white": hsl(0, 0%, 100%),
-  "grey-100": hsl(0, 0%, 96%),
-  "grey-200": hsl(0, 0%, 92%),
-  "grey-300": hsl(0, 0%, 80%),
-  "grey-600": hsl(0, 0%, 45%),
-  "grey-700": hsl(0, 0%, 29%),
-  "grey-800": hsl(0, 0%, 21%),
-  "grey-900": hsl(0, 0%, 13%),
+  "grey-100": hsl(0, 0%, 97%),
+  "grey-200": hsl(0, 0%, 87%),
+  "grey-300": hsl(0, 0%, 77%),
+  "grey-400": hsl(0, 0%, 67%),
+  "grey-500": hsl(0, 0%, 57%),
+  "grey-600": hsl(0, 0%, 47%),
+  "grey-700": hsl(0, 0%, 37%),
+  "grey-800": hsl(0, 0%, 27%),
+  "grey-900": hsl(0, 0%, 17%),
   "black": hsl(0, 0%, 0%),
   "black-50-a": hsla(0, 0%, 0%, 0.05),
   "black-100-a": hsla(0, 0%, 0%, 0.1),
@@ -47,7 +51,7 @@ $colours: (
 
   // Font size: Major third scale --> https://www.modularscale.com/?1&em&1.25
   --font-size-xs: 0.75rem; //12px
-  --font-size-sm: 0.8rem; //14px
+  --font-size-sm: 0.875rem; //14px
   --font-size-base: 1rem; //16px
   --font-size-md: 1.125rem; //18px
   --font-size-lg: 1.25rem; //20px
