@@ -1,7 +1,7 @@
 .footer {
   padding: var(--space-simple) var(--space-0);
   background-color: var(--grey-200);
-  color: var(--grey-700);
+  color: var(--grey-800);
   font-size: var(--font-size-sm);
 }
 
@@ -41,8 +41,8 @@
 .footer__logo {
   display: inline-block;
   margin: var(--space-simple) var(--space-0);
-  border: var(--border-width-medium) solid var(--grey-700);
-  color: var(--grey-700);
+  border: var(--border-width-medium) solid var(--grey-800);
+  color: var(--grey-800);
   font-size: var(--font-size-xl);
   &:hover {
     border: var(--border-width-medium) solid var(--blue);
