@@ -34,7 +34,7 @@
     @extend %img;
     display: flex;
     align-self: center;
-    width: 60rem;
+    width: var(--w-breakpoint-md);
     max-height: 70vh;
     margin: var(--space-0) auto unquote("clamp(2rem, 16.7vw - 6rem, 4rem)");
     aspect-ratio: 2 / 1;
