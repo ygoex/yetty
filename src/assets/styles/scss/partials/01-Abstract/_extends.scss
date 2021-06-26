@@ -9,20 +9,20 @@
   margin: var(--space-large) var(--space-0);
   grid-template-columns:
   minmax(var(--space-medium), 1fr)
-  minmax(auto, 36rem)
+  minmax(auto, var(--w-breakpoint-xs))
   minmax(var(--space-medium), 1fr);
   overflow: hidden;
   @include media-query(sm) {
     margin: var(--space-large) var(--space-0) var(--space-largest);
     grid-template-columns:
   minmax(var(--space-medium), 1fr)
-  minmax(auto, 48rem)
+  minmax(auto, var(--w-breakpoint-sm))
   minmax(var(--space-medium), 1fr);
   }
   @include media-query(lg) {
     grid-template-columns:
   minmax(var(--space-medium), 1fr)
-  minmax(auto, 60rem)
+  minmax(auto, var(--w-breakpoint-md))
   minmax(var(--space-medium), 1fr);
   }
 }
