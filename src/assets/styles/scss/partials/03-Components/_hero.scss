@@ -15,7 +15,7 @@
     z-index: -1;
   }
   h1 {
-    max-width: 60rem;
+    max-width: var(--w-breakpoint-md);
     margin: var(--space-larger) auto;
     // Explanation about the magic numbers:
     // https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
