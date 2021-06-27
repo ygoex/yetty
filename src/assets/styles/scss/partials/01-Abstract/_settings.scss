@@ -98,25 +98,23 @@ $colours: (
   --border-radius-circle: 50%;
 
   // Spacing: small
-  --space-8n: -0.5rem; //-8px
-  --space-4n: -0.25rem; //-4px
+  --space-sm-8n: -0.5rem; //-8px
+  --space-sm-4n: -0.25rem; //-4px
   --space-0: 0;
   --space: 0.025rem; //~0.5px
-  --space-1: 0.06rem; //1px
-  --space-2: 0.125rem; //2px
-  --space-4: 0.25rem; //4px
-  --space-6: 0.375rem; //6px
-  --space-8: 0.5rem; //8px
-  --space-10: 0.625rem; //10px
-  --space-12: 0.75rem; //12px
-  --space-14: 0.875rem; //14px
+  --space-sm-1: 0.06rem; //1px
+  --space-sm-2: 0.125rem; //2px
+  --space-sm-4: 0.25rem; //4px
+  --space-sm-6: 0.375rem; //6px
+  --space-sm-8: 0.5rem; //8px
+  --space-sm-10: 0.625rem; //10px
+  --space-sm-12: 0.75rem; //12px
+  --space-sm-14: 0.875rem; //14px
 
-  // Spacing: medium
+  // Spacing: large
   --space-simple: 1rem; //16px
   --space-medium: 1.5rem; //24px
   --space-double: 2rem; //32px
-
-  // Spacing: large
   --space-large: 3rem; //48px
   --space-larger: 4rem; //64px
   --space-largest: 5rem; //80px
