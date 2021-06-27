@@ -41,7 +41,7 @@
 .post__next--label {
     font-size: var(--font-size-sm);
     font-weight: 500;
-    letter-spacing: var(--space-1);
+    letter-spacing: var(--space-sm-1);
     text-transform: uppercase;
     &::after {
       content: ":";
@@ -59,7 +59,7 @@
 }
 .post__prev--label {
   @include media-query(md) {
-    margin-right: var(--space-8n);
+    margin-right: var(--space-sm-8n);
   }
 }
 
@@ -69,14 +69,14 @@
   @include media-query(md) {
     display: inline;
     position: relative;
-    top: var(--space-8);
+    top: var(--space-sm-8);
   }
 }
 .post__prev--icon {
-  left: var(--space-4n);
+  left: var(--space-sm-4n);
 }
 .post__next--icon {
-  right: var(--space-4n);
+  right: var(--space-sm-4n);
 }
 
 .post__prev--link,
@@ -87,7 +87,7 @@
   }
   span {
     width: 100%;
-    padding-bottom: var(--space-1);
+    padding-bottom: var(--space-sm-1);
     transition: var(--transition-default);
     background-image: linear-gradient(transparent 95%, currentColor 0.07rem);
     background-repeat: no-repeat;
