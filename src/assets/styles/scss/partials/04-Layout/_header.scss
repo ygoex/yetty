@@ -10,7 +10,7 @@ header {
 .home {
   width: fit-content;
   margin: var(--space-medium);
-  padding: var(--space-2) var(--space-8) var(--space-4) var(--space-6);
+  padding: var(--space-sm-2) var(--space-sm-8) var(--space-sm-4) var(--space-sm-6);
   transition: var(--transition-default);
   border: var(--border-width-thick) solid var(--black);
   border-radius: var(--border-radius-sm);
