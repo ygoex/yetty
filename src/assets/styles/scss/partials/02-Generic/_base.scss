@@ -17,7 +17,7 @@ body {
 p {
   @extend %grid-column-center;
 
-  margin-bottom: var(--space-simple);
+  margin-bottom: var(--space-lg-1);
   &:last-child {
     margin-bottom: var(--space-0);
   }
@@ -28,16 +28,16 @@ ul {
 }
 
 hr {
-  margin: var(--space-double) var(--space-0);
+  margin: var(--space-lg-2) var(--space-0);
 }
 
 article {
   display: grid;
-  margin: var(--space-large) var(--space-0);
+  margin: var(--space-lg-3) var(--space-0);
   grid-template-columns:
-    minmax(var(--space-simple), 1fr)
+    minmax(var(--space-lg-1), 1fr)
     minmax(auto, var(--line-length))
-    minmax(var(--space-simple), 1fr);
+    minmax(var(--space-lg-1), 1fr);
   overflow: hidden;
 }
 
@@ -61,7 +61,7 @@ code {
 }
 pre {
   margin: var(--space) var(--space-0);
-  padding: var(--space-simple);
+  padding: var(--space-lg-1);
   background-color: var(--body-background); //For a better integration of Mermaid charts with body background.
   font-size: var(--font-size-sm);
   line-height: 1.375;

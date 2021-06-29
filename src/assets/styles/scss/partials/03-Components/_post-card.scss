@@ -26,14 +26,14 @@
 }
 
 .post-card__content {
-  padding: var(--space-medium);
+  padding: var(--space-lg-1h);
   p:not(.post-card__title) {
     font-size: var(--font-size-base);
   }
 }
 
 .post-card__tags {
-  margin-bottom: var(--space-simple);
+  margin-bottom: var(--space-lg-1);
 }
 
 .post-card__title {
@@ -41,6 +41,6 @@
 }
 
 .post-card__date-time {
-  padding-top: var(--space-simple);
+  padding-top: var(--space-lg-1);
   border-top: var(--border-width-thin) solid var(--grey-200);
 }

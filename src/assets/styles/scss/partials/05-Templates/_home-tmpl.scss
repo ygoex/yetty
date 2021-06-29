@@ -1,7 +1,7 @@
 .tmpl-home {
   min-height: calc( 100vh - 92px - 6rem - 55px);
   > :first-child {
-    margin-bottom: var(--space-large);
+    margin-bottom: var(--space-lg-3);
   }
   p {
     max-width: var(--line-length);

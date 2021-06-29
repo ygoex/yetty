@@ -6,24 +6,24 @@
 
 %grid {
   display: grid;
-  margin: var(--space-large) var(--space-0);
+  margin: var(--space-lg-3) var(--space-0);
   grid-template-columns:
-  minmax(var(--space-medium), 1fr)
+  minmax(var(--space-lg-1h), 1fr)
   minmax(auto, var(--w-breakpoint-xs))
-  minmax(var(--space-medium), 1fr);
+  minmax(var(--space-lg-1h), 1fr);
   overflow: hidden;
   @include media-query(sm) {
-    margin: var(--space-large) var(--space-0) var(--space-largest);
+    margin: var(--space-lg-3) var(--space-0) var(--space-lg-5);
     grid-template-columns:
-  minmax(var(--space-medium), 1fr)
+  minmax(var(--space-lg-1h), 1fr)
   minmax(auto, var(--w-breakpoint-sm))
-  minmax(var(--space-medium), 1fr);
+  minmax(var(--space-lg-1h), 1fr);
   }
   @include media-query(lg) {
     grid-template-columns:
-  minmax(var(--space-medium), 1fr)
+  minmax(var(--space-lg-1h), 1fr)
   minmax(auto, var(--w-breakpoint-md))
-  minmax(var(--space-medium), 1fr);
+  minmax(var(--space-lg-1h), 1fr);
   }
 }
 

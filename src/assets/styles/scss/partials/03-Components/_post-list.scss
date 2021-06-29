@@ -1,12 +1,12 @@
 .postlist {
   display: grid;
-  margin: var(--space-double) var(--space-0);
+  margin: var(--space-lg-2) var(--space-0);
   padding: var(--space-0);
   grid-template-columns: repeat(1, 1fr);
   list-style: none;
   grid-column: 2 / auto;
   grid-auto-rows: 1fr;
-  grid-column-gap: var(--space-medium);
+  grid-column-gap: var(--space-lg-1h);
   grid-row-gap: 1.7rem;
   @include media-query(xs) {
     grid-template-columns: repeat(2, 1fr);

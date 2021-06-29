@@ -12,24 +12,24 @@
 }
 
 .mt-1 {
-  margin-top: var(--space-simple);
+  margin-top: var(--space-lg-1);
 }
 
 .mb-1 {
-  margin-bottom: var(--space-simple);
+  margin-bottom: var(--space-lg-1);
 }
 
 .mr-1 {
-  margin-right: var(--space-simple);
+  margin-right: var(--space-lg-1);
 }
 
 .mb-2 {
-    margin-bottom: var(--space-double);
+    margin-bottom: var(--space-lg-2);
 }
 
 .mb-lg-3 {
   @include media-query(sm) {
-    margin-bottom: var(--space-large);
+    margin-bottom: var(--space-lg-3);
   }
 }
 
