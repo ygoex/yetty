@@ -8,8 +8,8 @@
       </li>
     {%- endfor %}
     {% if params.hasButton %}
-      <li class="menu__item btn btn-link mr-1">
-        <a class="menu__link" href="{{ params.buttonHref | url }}">{{ params.buttonText }}</a>
+      <li class="menu__item mr-1">
+        <a class="menu__link btn font-xs" href="{{ params.buttonHref | url }}">{{ params.buttonText }}</a>
       </li>
     {% endif %}
   </ul>
