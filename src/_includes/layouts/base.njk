@@ -3,9 +3,11 @@
   {% include 'layouts/partials/head.njk' %}
   <body {% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
 
+    <a class="skip-link btn btn-lg font-sm" href="#main-content">Skip to content</a>
+
     {% include 'layouts/partials/header.njk' %}
 
-    <main{% if templateClass %} class="{{ templateClass }} {{ pageClass }}"{% endif %}>
+    <main id="main-content" {% if templateClass %} class="{{ templateClass }} {{ pageClass }}"{% endif %}>
       {# {{ content | safe }} #}
       {% block content %}
         Content comes here!
