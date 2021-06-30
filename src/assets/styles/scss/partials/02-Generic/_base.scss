@@ -4,6 +4,10 @@
 	padding: var(--space-0);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100vw;
   background-color: var(--body-background);
