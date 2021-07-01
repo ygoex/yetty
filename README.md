@@ -19,14 +19,16 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 - [x] Remove inline CSS and leave only resources and documentation for doing it.
 - [x] Refact scripts in package.json
 - [x] Critical CSS
-- [ ] Add custom style
+- [x] Add custom style
 - [x] Add cross-env
 - [x] PostCSS: Autoprefixer
 - [x] PostCSS: Purge CSS
 - [x] Image processing
 - [ ] Cache busting
 - [ ] Dark mode
-- [ ] Refactor CSS
+- [x] Refactor CSS
+- [ ] Improve documentation
+- [ ] Testing with Cypress
 
 ## Demo
 
