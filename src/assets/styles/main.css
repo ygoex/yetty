@@ -124,9 +124,16 @@ img, video {
 
 a {
   color: var(--blue); }
-
-a:visited {
-  color: var(--purple); }
+  a:visited {
+    color: var(--purple); }
+  a:focus {
+    outline: var(--border-width-medium) dashed var(--purple);
+    outline-offset: var(--space-sm-4); }
+  a:focus:not(:focus-visible) {
+    outline: none; }
+  a:focus-visible {
+    outline: var(--border-width-medium) dashed var(--purple);
+    outline-offset: var(--space-sm-4); }
 
 pre,
 code {
