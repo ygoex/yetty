@@ -16,6 +16,10 @@
   max-width: var(--line-length);
 }
 
+.post__footer {
+  padding-bottom: var(--space-lg-1);
+}
+
 .post__next-prev {
   display: flex;
   flex-direction: column;
