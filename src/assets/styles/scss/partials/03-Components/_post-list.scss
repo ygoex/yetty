@@ -21,9 +21,10 @@
   transition: var(--transition-default);
   border-radius: var(--border-radius-default);
   background-color: var(--white-700-a);
-  box-shadow: 0 10px 15px -3px var(--black-100-a), 0 -3px 6px -2px var(--black-50-a);
+  box-shadow: -1rem 0 2rem var(--black-100-a);
   overflow: hidden;
   &:hover {
-    filter: invert(1) contrast(1);
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px var(--black-100-a), 0 -3px 6px -2px var(--black-50-a);
   }
 }
