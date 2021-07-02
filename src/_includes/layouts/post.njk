@@ -12,11 +12,11 @@
     <header class="post__header {%- if imgUrl %} mb-2 mb-lg-3{% endif %}">
       {%- if date %}
         <div class="post__date-time mb-1">
-          <time class="post__date text-muted font-small" datetime="{{ date | dateStringISO }}">
+          <time class="post__date text-muted font-sm" datetime="{{ date | dateStringISO }}">
             <span class="text-black">Published:</span>
             {{ date | dateFilter }}</time>
-          <span class="font-bold">&middot;</span>
-          <span class="post__time text-muted font-small">
+          <span class="font-bold" aria-hidden="true">&middot;</span>
+          <span class="post__time text-muted font-sm">
             <span class="text-black">Read time:</span> About {{ content | readingTime }}</span>
         </div>
       {% endif %}
