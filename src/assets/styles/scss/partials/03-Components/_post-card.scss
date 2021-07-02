@@ -1,16 +1,35 @@
+.post-card {
+  position: relative;
+  &:hover {
+    .post-card__link,
+    .post-card__link:visited {
+      color: var(--blue);
+      text-decoration: none;
+    }
+  }
+}
+
 .post-card__link,
-.post-card__link:hover,
 .post-card__link:visited {
-  display: block;
   color: var(--grey-800);
   text-decoration: none;
-  &:hover {
-    color: var(--black);
-    .text-muted {
-      color: var(--black);
-    }
-    .post-card__date-time {
-      border-top: var(--border-width-thin) solid var(--grey-800);
+}
+
+.post-card__link {
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &:focus-visible {
+    outline: none;
+    &:after {
+      border: var(--border-width-medium) dashed var(--purple);
+      border-radius: var(--border-radius-default);
     }
   }
 }
