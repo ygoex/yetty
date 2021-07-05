@@ -94,3 +94,11 @@ pre {
   -ms-hyphens: none;
   hyphens: none;
 }
+
+pre[class*="language-"] {
+  //Fix issue with prism
+  padding: var(--space-lg-1);
+  //Fix issue with pre inside columns breaking incorrectly
+  display: block;
+  margin: var(--space-lg-1) var(--space-0);
+}
