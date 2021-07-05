@@ -48,6 +48,7 @@
   --space-sm-10: 0.625rem;
   --space-sm-12: 0.75rem;
   --space-sm-14: 0.875rem;
+  --space-lg-1n: -1rem;
   --space-lg-1: 1rem;
   --space-lg-1h: 1.5rem;
   --space-lg-2: 2rem;
@@ -158,6 +159,11 @@ pre {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none; }
+
+pre[class*="language-"] {
+  padding: var(--space-lg-1);
+  display: block;
+  margin: var(--space-lg-1) var(--space-0); }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -390,7 +396,7 @@ h6,
 
 .img-post {
   width: 90%;
-  margin: 5%;
+  margin: 0 5%;
   aspect-ratio: 16 / 9; }
 
 .img-accent {
@@ -676,6 +682,20 @@ header {
 
 .post__content {
   max-width: var(--line-length); }
+  @media all and (min-width: 48em) {
+    .post__content {
+      max-width: none;
+      columns: 2;
+      column-gap: var(--space-lg-2);
+      orphans: 3; } }
+  .post__content picture {
+    display: block; }
+  .post__content > *:not(h3) {
+    margin-bottom: var(--space-lg-2); }
+  .post__content > p + p {
+    margin-top: var(--space-lg-1n); }
+  .post__content > p:last-child {
+    margin-bottom: var(--space-0); }
 
 .post__footer {
   padding-bottom: var(--space-lg-1); }
