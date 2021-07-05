@@ -14,6 +14,28 @@
 
 .post__content {
   max-width: var(--line-length);
+  @include media-query(sm) {
+    max-width: none;
+    columns: 2;
+    column-gap: var(--space-lg-2);
+    orphans: 3;
+  }
+  picture {
+    display: block;
+  }
+  //All direct paragraphs that are descendant of .post-content:
+  > *:not(h3) {
+    margin-bottom: var(--space-lg-2);
+  }
+  //But, if the paragraph is preceded by another paragraph then
+  //we reduce the space between both paragraphs to 1rem only
+  > p + p {
+    margin-top: var(--space-lg-1n);
+  }
+  //No margin bottom for the last child
+  > p:last-child {
+    margin-bottom: var(--space-0);
+  }
 }
 
 .post__footer {
