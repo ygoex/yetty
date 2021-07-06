@@ -1,6 +1,6 @@
 .grid {
   @extend %grid;
-  > *:not(picture):not(.hero) {
+  > *:not(figure):not(.hero) {
     @extend %grid-column-center;
   }
 }
