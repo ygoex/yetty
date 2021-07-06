@@ -50,6 +50,10 @@ img, video {
   height: auto;
 }
 
+picture {
+  display: inline-block;
+}
+
 // Focus state as seen in: https://moderncss.dev/modern-css-upgrades-to-improve-accessibility/
 
 a {
