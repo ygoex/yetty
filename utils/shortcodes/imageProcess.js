@@ -3,7 +3,7 @@ const Image = require("@11ty/eleventy-img");
 const developmentFormats = ["jpeg"];
 const productionFormats = ["avif", "webp", "jpeg"];
 
-async function imageShortcode(src, alt, sizes = '100vw', pictureClass, cssClass, bannerBorderColor = 'transparent') {
+async function imageShortcode(src, alt, sizes = '100vw', pictureClass, cssClass, bannerBorderColor = 'transparent', caption) {
   if(alt === undefined) {
     // We throw an error on missing alt (alt="" works okay for decorative images)
     throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`)
@@ -43,7 +43,7 @@ async function imageShortcode(src, alt, sizes = '100vw', pictureClass, cssClass,
   //Take the smaller image to be used in the img tag
   let lowsrc = metadata.jpeg[0];
 
-  return `<picture class="${pictureClass}" style="--banner-border-color: ${bannerBorderColor}">
+  return `<figure class="${pictureClass}" style="--banner-border-color: ${bannerBorderColor}"><picture>
   ${Object.values(metadata).map(imageFormat => {
     return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
   }).join("\n")}
@@ -55,7 +55,8 @@ async function imageShortcode(src, alt, sizes = '100vw', pictureClass, cssClass,
       alt="${alt}"
       loading="lazy"
       decoding="async">
-  </picture>`;
+    ${(caption && cssClass === 'img-post') ? `<figcaption>${caption}</figcaption>` : ''}
+  </picture></figure>`;
 }
 
 module.exports = imageShortcode;
