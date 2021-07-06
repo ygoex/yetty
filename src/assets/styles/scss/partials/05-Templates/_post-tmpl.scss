@@ -1,6 +1,6 @@
 .tmpl-post {
   // Center all elements under article except picture and hero
-  article > *:not(picture):not(.hero) {
+  article > *:not(figure):not(.hero) {
     @extend %grid-column-center;
   }
 }
@@ -19,9 +19,6 @@
     columns: 2;
     column-gap: var(--space-lg-2);
     orphans: 3;
-  }
-  picture {
-    display: block;
   }
   //All direct paragraphs that are descendant of .post-content:
   > *:not(h3) {
