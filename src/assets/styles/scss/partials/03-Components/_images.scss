@@ -40,3 +40,10 @@
     aspect-ratio: 2 / 1;
   }
 }
+
+//Figcaption is intended to be used with img-post only.
+//Hence the same margin on both elements.
+figcaption {
+  margin: 0 5%;
+  font-size: var(--font-size-sm);
+}
