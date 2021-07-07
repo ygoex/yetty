@@ -14,20 +14,25 @@
 
 .post__content {
   max-width: var(--line-length);
-  @include media-query(sm) {
-    max-width: none;
-    columns: 2;
-    column-gap: var(--space-lg-2);
-    orphans: 3;
+  > p:first-child::first-letter {
+    font-size: 300%;
+    font-weight: bold;
+    line-height: 1;
+    padding: var(--space-sm-2);
+    margin-right: var(--space-sm-6);
+    float: left;
   }
-  //All direct paragraphs that are descendant of .post-content:
-  > *:not(h3) {
-    margin-bottom: var(--space-lg-2);
+  // Add margin bottom to all direct paragraphs that are descendant of .post-content:
+  > p {
+    margin-bottom: var(--space-lg-1);
   }
-  //But, if the paragraph is preceded by another paragraph then
-  //we reduce the space between both paragraphs to 1rem only
-  > p + p {
-    margin-top: var(--space-lg-1n);
+  // Add margin top to all elements, except paragraph, that are preceded by a paragraph
+  > p + *:not(p) {
+    margin-top: var(--space-lg-2);
+  }
+  // Add margin top to all paragraphs, preceded by elements that are not another paragraph or a h3
+  > *:not(p):not(h3) + p {
+    margin-top: var(--space-lg-2);
   }
   //No margin bottom for the last child
   > p:last-child {
