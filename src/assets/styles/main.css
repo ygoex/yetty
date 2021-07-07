@@ -79,10 +79,10 @@
     .grid {
       grid-template-columns: minmax(var(--space-lg-1h), 1fr) minmax(auto, var(--w-breakpoint-md)) minmax(var(--space-lg-1h), 1fr); } }
 
-p, .grid > *:not(figure):not(.hero), .grid-column-center, .tmpl-post article > *:not(figure):not(.hero) {
+p, .grid > *:not(figure):not(.hero), .tmpl-post article > *:not(figure):not(.hero), .grid-column-center {
   grid-column: 2 / auto; }
 
-.grid-column-full, .hero {
+.hero, .grid-column-full {
   grid-column: 1 / 4; }
 
 * {
@@ -92,6 +92,10 @@ p, .grid > *:not(figure):not(.hero), .grid-column-center, .tmpl-post article > *
 
 html {
   scroll-behavior: smooth; }
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto; } }
 
 body {
   width: 100vw;
@@ -210,35 +214,7 @@ h6,
   font-size: var(--font-size-base);
   line-height: 1.6; }
 
-.mb-0 {
-  margin-bottom: var(--space-0); }
-
-.mb-0-5 {
-  margin-bottom: var(--space); }
-
-.mt-1 {
-  margin-top: var(--space-lg-1); }
-
-.mb-1 {
-  margin-bottom: var(--space-lg-1); }
-
-.mr-1 {
-  margin-right: var(--space-lg-1); }
-
-.mb-2 {
-  margin-bottom: var(--space-lg-2); }
-
-@media all and (min-width: 48em) {
-  .mb-lg-3 {
-    margin-bottom: var(--space-lg-3); } }
-
-@media all and (min-width: 60em) {
-  .ml-md-auto {
-    margin-left: auto; } }
-
-.sr-only,
-.skip-link:not(:focus),
-.visually-hidden {
+.skip-link:not(:focus) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -254,30 +230,6 @@ h6,
   top: var(--space-lg-1h);
   left: var(--space-lg-1h);
   z-index: 99; }
-
-.text-black {
-  color: var(--black); }
-
-.text-muted {
-  color: var(--grey-600); }
-
-.small-caps {
-  font-variant-caps: small-caps; }
-
-.font-bold {
-  font-weight: bold; }
-
-.font-xs {
-  font-size: var(--font-size-xs); }
-
-.font-sm {
-  font-size: var(--font-size-sm); }
-
-.display-flex {
-  display: flex; }
-
-.flex-wrap {
-  flex-wrap: wrap; }
 
 .menu__items {
   display: flex;
@@ -689,16 +641,19 @@ header {
 
 .post__content {
   max-width: var(--line-length); }
-  @media all and (min-width: 48em) {
-    .post__content {
-      max-width: none;
-      columns: 2;
-      column-gap: var(--space-lg-2);
-      orphans: 3; } }
-  .post__content > *:not(h3) {
-    margin-bottom: var(--space-lg-2); }
-  .post__content > p + p {
-    margin-top: var(--space-lg-1n); }
+  .post__content > p:first-child::first-letter {
+    font-size: 300%;
+    font-weight: bold;
+    line-height: 1;
+    padding: var(--space-sm-2);
+    margin-right: var(--space-sm-6);
+    float: left; }
+  .post__content > p {
+    margin-bottom: var(--space-lg-1); }
+  .post__content > p + *:not(p) {
+    margin-top: var(--space-lg-2); }
+  .post__content > *:not(p):not(h3) + p {
+    margin-top: var(--space-lg-2); }
   .post__content > p:last-child {
     margin-bottom: var(--space-0); }
 
@@ -782,5 +737,74 @@ header {
 
 .not-found h2:first-of-type {
   margin-top: var(--space-0); }
+
+.mb-0 {
+  margin-bottom: var(--space-0); }
+
+.mb-0-5 {
+  margin-bottom: var(--space); }
+
+.mt-1 {
+  margin-top: var(--space-lg-1); }
+
+.mb-1 {
+  margin-bottom: var(--space-lg-1); }
+
+.mr-1 {
+  margin-right: var(--space-lg-1); }
+
+.mb-2 {
+  margin-bottom: var(--space-lg-2); }
+
+@media all and (min-width: 48em) {
+  .mb-lg-3 {
+    margin-bottom: var(--space-lg-3); } }
+
+@media all and (min-width: 60em) {
+  .ml-md-auto {
+    margin-left: auto; } }
+
+@media all and (min-width: 48em) {
+  .columns-2 {
+    max-width: none;
+    columns: 2;
+    column-gap: var(--space-lg-2);
+    orphans: 3; } }
+
+.sr-only,
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0); }
+
+.text-black {
+  color: var(--black); }
+
+.text-muted {
+  color: var(--grey-600); }
+
+.small-caps {
+  font-variant-caps: small-caps; }
+
+.font-bold {
+  font-weight: bold; }
+
+.font-xs {
+  font-size: var(--font-size-xs); }
+
+.font-sm {
+  font-size: var(--font-size-sm); }
+
+.display-flex {
+  display: flex; }
+
+.flex-wrap {
+  flex-wrap: wrap; }
 
 /*# sourceMappingURL=main.css.map */
