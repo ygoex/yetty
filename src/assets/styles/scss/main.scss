@@ -9,7 +9,7 @@
 @import "partials/02-Generic/_base";
 @import "partials/02-Generic/_typography";
 @import "partials/02-Generic/_grid";
-@import "partials/02-Generic/_utilities";
+@import "partials/02-Generic/_common";
 @import "partials/03-Components/_navigation";
 @import "partials/03-Components/_pagination";
 @import "partials/03-Components/_buttons";
@@ -23,3 +23,4 @@
 @import "partials/05-Templates/_home-tmpl";
 @import "partials/05-Templates/_post-tmpl";
 @import "partials/06-Pages/_not-found";
+@import "partials/07-Utilities/_utilities";
