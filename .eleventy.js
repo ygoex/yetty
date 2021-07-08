@@ -37,7 +37,6 @@ module.exports = function(eleventyConfig) {
   // CriticalCSS
   if (env === 'production') {
     eleventyConfig.addPlugin(criticalCss, {
-      minify: true,
       height: 900,
       width: 1300,
     });
