@@ -15,12 +15,12 @@
 .post__content {
   max-width: var(--line-length);
   > p:first-child::first-letter {
+    margin-right: var(--space-sm-6);
+    padding: var(--space-sm-2);
+    float: left;
     font-size: 300%;
     font-weight: bold;
     line-height: 1;
-    padding: var(--space-sm-2);
-    margin-right: var(--space-sm-6);
-    float: left;
   }
   // Add margin bottom to all direct paragraphs that are descendant of .post-content:
   > p {

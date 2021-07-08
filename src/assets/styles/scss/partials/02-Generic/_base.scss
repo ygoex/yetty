@@ -104,11 +104,11 @@ pre {
 }
 
 pre[class*="language-"] {
-  //Fix issue with prism
-  padding: var(--space-lg-1);
   //Fix issue with pre inside columns breaking incorrectly
   display: block;
-  margin: var(--space-lg-1) var(--space-0);
   //To avoid overflow in small devices
   max-width: calc(100vw - var(--space-lg-3));
+  margin: var(--space-lg-1) var(--space-0);
+  //Fix issue with prism
+  padding: var(--space-lg-1);
 }

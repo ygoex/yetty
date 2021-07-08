@@ -5,8 +5,8 @@
   border-radius: var(--border-radius-default);
   background-color: var(--grey-800);
   color: var(--white);
-  text-decoration: none;
   letter-spacing: var(--space);
+  text-decoration: none;
   &:hover {
     border: var(--border-width-medium) solid var(--grey-800);
     background-color: var(--white);
