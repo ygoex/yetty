@@ -237,7 +237,8 @@ h6,
   z-index: 99; }
 
 .direct-link {
-  position: relative; }
+  position: relative;
+  text-decoration: none; }
   .direct-link:after {
     position: relative;
     display: inline-block;
