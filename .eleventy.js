@@ -171,8 +171,18 @@ module.exports = function(eleventyConfig) {
     linkify: true
   })
   .use(markdownItAnchor, {
-    permalinkClass: "direct-link",
-    permalinkSymbol: "#",
+    // Options before 8.1
+    // permalink: true,
+    // permalinkClass: "direct-link",
+    // permalinkSymbol: "#",
+    // Options with v8.1 for accessibility
+    permalink: markdownItAnchor.permalink.linkAfterHeader({
+      class: "direct-link",
+      symbol: "",
+      style: 'visually-hidden',
+      assistiveText: title => `Permalink to “${title}”`,
+      visuallyHiddenClass: 'visually-hidden'
+    }),
     slugify: (s) =>
       s
         .trim()
