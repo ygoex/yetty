@@ -22,16 +22,24 @@
     font-weight: bold;
     line-height: 1;
   }
+  h2, h3, h4, h5, h6 {
+    display: inline-block;
+    &:hover {
+      + .direct-link {
+        filter: brightness(0%);
+      }
+    }
+  }
   // Add margin bottom to all direct paragraphs that are descendant of .post-content:
   > p {
     margin-bottom: var(--space-lg-1);
   }
-  // Add margin top to all elements, except paragraph, that are preceded by a paragraph
-  > p + *:not(p) {
+  // Add margin top to all elements, except paragraph and headings, that follow a paragraph.
+  > p + *:not(p)*:not(h2, h3, h4, h5, h6) {
     margin-top: var(--space-lg-2);
   }
-  // Add margin top to all paragraphs, preceded by elements that are not another paragraph or a h3
-  > *:not(p):not(h3) + p {
+  // Add margin top to all paragraphs that follow elements that are not another paragraph or a .direct-link
+  > *:not(p):not(.direct-link) + p {
     margin-top: var(--space-lg-2);
   }
   //No margin bottom for the last child
