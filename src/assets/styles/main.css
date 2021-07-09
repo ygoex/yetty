@@ -815,7 +815,7 @@ header {
   color: var(--black); }
 
 .text-muted {
-  color: var(--grey-600); }
+  color: var(--grey-700); }
 
 .small-caps {
   font-variant-caps: small-caps; }
