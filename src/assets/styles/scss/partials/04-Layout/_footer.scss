@@ -81,18 +81,7 @@
 
 .footer__link {
   padding: var(--space-sm-6) var(--space-sm-6) var(--space-sm-6) var(--space-sm-2);
-  text-decoration: none;
-  span {
-    width: 100%;
-    padding-bottom: var(--space-sm-1);
-    transition: var(--transition-default);
-    background-image: linear-gradient(transparent 95%,currentColor 0.07rem);
-    background-repeat: no-repeat;
-    background-size: 1rem 100%;
-    &:hover {
-      background-size: 100% 100%;
-    }
-  }
+  @extend %dashed-underline;
   @include media-query(md) {
     padding: var(--space-sm-2);
   }
