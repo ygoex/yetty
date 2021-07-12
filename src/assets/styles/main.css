@@ -85,6 +85,17 @@ p, .grid > *:not(figure):not(.hero), .tmpl-post article > *:not(figure):not(.her
 .hero, .grid-column-full {
   grid-column: 1 / 4; }
 
+.footer__link, .post__content a:not(.direct-link), .post__prev--link,
+.post__next--link {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: var(--space-sm-1);
+  text-underline-offset: var(--space-sm-2);
+  transition: var(--transition-default); }
+  .footer__link:hover, .post__content a:hover:not(.direct-link), .post__prev--link:hover,
+  .post__next--link:hover {
+    text-decoration-style: solid; }
+
 * {
   box-sizing: border-box;
   margin: var(--space-0);
@@ -607,17 +618,7 @@ header {
   text-align: center; }
 
 .footer__link {
-  padding: var(--space-sm-6) var(--space-sm-6) var(--space-sm-6) var(--space-sm-2);
-  text-decoration: none; }
-  .footer__link span {
-    width: 100%;
-    padding-bottom: var(--space-sm-1);
-    transition: var(--transition-default);
-    background-image: linear-gradient(transparent 95%, currentColor 0.07rem);
-    background-repeat: no-repeat;
-    background-size: 1rem 100%; }
-    .footer__link span:hover {
-      background-size: 100% 100%; }
+  padding: var(--space-sm-6) var(--space-sm-6) var(--space-sm-6) var(--space-sm-2); }
   @media all and (min-width: 60em) {
     .footer__link {
       padding: var(--space-sm-2); } }
@@ -713,7 +714,8 @@ header {
   text-transform: uppercase; }
   .post__prev--label::after,
   .post__next--label::after {
-    content: ":"; }
+    content: ":";
+    margin-left: var(--space-sm-4n); }
   @media all and (min-width: 60em) {
     .post__prev--label::after,
     .post__next--label::after {
@@ -743,25 +745,10 @@ header {
 .post__next--icon {
   right: var(--space-sm-4n); }
 
-.post__prev--link,
-.post__next--link {
-  text-decoration: none; }
-  @media all and (min-width: 60em) {
-    .post__prev--link,
-    .post__next--link {
-      display: block; } }
-  .post__prev--link span,
-  .post__next--link span {
-    width: 100%;
-    padding-bottom: var(--space-sm-1);
-    transition: var(--transition-default);
-    background-image: linear-gradient(transparent 95%, currentColor 0.07rem);
-    background-repeat: no-repeat;
-    background-size: 1rem 100%;
-    text-decoration: none; }
-    .post__prev--link span:hover,
-    .post__next--link span:hover {
-      background-size: 100% 100%; }
+@media all and (min-width: 60em) {
+  .post__prev--link,
+  .post__next--link {
+    display: block; } }
 
 .not-found h2:first-of-type {
   margin-top: var(--space-0); }
