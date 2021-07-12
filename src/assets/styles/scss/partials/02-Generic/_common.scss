@@ -21,15 +21,15 @@
   position: relative;
   text-decoration: none;
   &:after {
-    position: relative;
     display: inline-block;
-    content: ' ';
-    background-image: url('/assets/images/anchor.svg');
-    background-size: var(--space-lg-1h) var(--space-lg-1h);
-    height: var(--space-lg-1h);
-    width: var(--space-lg-1h);
-    margin-left: var(--space-sm-4);
+    position: relative;
     top: var(--space-sm-2);
+    width: var(--space-lg-1h);
+    height: var(--space-lg-1h);
+    margin-left: var(--space-sm-4);
+    background-image: url("/assets/images/anchor.svg");
+    background-size: var(--space-lg-1h) var(--space-lg-1h);
+    content: " ";
     filter: brightness(150%);
   }
   &:hover {

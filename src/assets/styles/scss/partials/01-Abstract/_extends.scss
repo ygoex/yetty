@@ -36,11 +36,11 @@
 }
 
 %dashed-underline {
+  transition: var(--transition-default);
   text-decoration: underline;
   text-decoration-style: dashed;
   text-decoration-thickness: var(--space-sm-1);
   text-underline-offset: var(--space-sm-2);
-  transition: var(--transition-default);
   &:hover {
     text-decoration-style: solid;
   }

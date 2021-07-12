@@ -83,8 +83,8 @@
     letter-spacing: var(--space-sm-1);
     text-transform: uppercase;
     &::after {
-      content: ":";
       margin-left: var(--space-sm-4n);
+      content: ":";
     }
     @include media-query(md) {
       &::after {
