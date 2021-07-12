@@ -76,7 +76,7 @@
               Next
             </span>
             <a class="post__next--link" href="{{ nextPost.url | url }}">
-              <span>{{ nextPost.data.title }}</span>
+              {{ nextPost.data.title }}
             </a>
           </li>
         {% endif %}
@@ -96,7 +96,7 @@
               }}
             </span>
             <a class="post__prev--link" href="{{ previousPost.url | url }}">
-              <span>{{ previousPost.data.title }}</span>
+              {{ previousPost.data.title }}
             </a>
           </li>
         {% endif %}
