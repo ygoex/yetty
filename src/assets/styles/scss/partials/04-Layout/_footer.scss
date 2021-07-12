@@ -80,8 +80,8 @@
 }
 
 .footer__link {
-  padding: var(--space-sm-6) var(--space-sm-6) var(--space-sm-6) var(--space-sm-2);
   @extend %dashed-underline;
+  padding: var(--space-sm-6) var(--space-sm-6) var(--space-sm-6) var(--space-sm-2);
   @include media-query(md) {
     padding: var(--space-sm-2);
   }
