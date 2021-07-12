@@ -35,6 +35,17 @@
   grid-column: 1 / 4;
 }
 
+%dashed-underline {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: var(--space-sm-1);
+  text-underline-offset: var(--space-sm-2);
+  transition: var(--transition-default);
+  &:hover {
+    text-decoration-style: solid;
+  }
+}
+
 %gradient-polka {
   background-color: var(--white);
   background-image: radial-gradient(var(--grey-300) 1px, var(--white) 1px);
