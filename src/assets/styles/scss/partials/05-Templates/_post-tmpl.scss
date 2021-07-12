@@ -46,6 +46,9 @@
   > p:last-child {
     margin-bottom: var(--space-0);
   }
+  a:not(.direct-link){
+    @extend %dashed-underline;
+  }
 }
 
 .post__footer {
@@ -81,6 +84,7 @@
     text-transform: uppercase;
     &::after {
       content: ":";
+      margin-left: var(--space-sm-4n);
     }
     @include media-query(md) {
       &::after {
@@ -117,20 +121,8 @@
 
 .post__prev--link,
 .post__next--link {
-  text-decoration: none;
+  @extend %dashed-underline;
   @include media-query(md) {
     display: block;
-  }
-  span {
-    width: 100%;
-    padding-bottom: var(--space-sm-1);
-    transition: var(--transition-default);
-    background-image: linear-gradient(transparent 95%, currentColor 0.07rem);
-    background-repeat: no-repeat;
-    background-size: 1rem 100%;
-    text-decoration: none;
-    &:hover {
-      background-size: 100% 100%;
-    }
   }
 }
