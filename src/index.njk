@@ -12,7 +12,7 @@ eleventyNavigation:
 
 {% block content %}
   <section class="hero">
-    <h1>Yetty is a minimal Eleventy theme for basic blogs & websites built with accessibility and performance in mind.</h1>
+    <h1>{{ home.hero }}</h1>
   </section>
 
   {% set maxPosts = collections.posts.length | min(3) %}
