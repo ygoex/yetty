@@ -2,6 +2,7 @@
   "title": "Yetty",
   "url": "https://yetty.netlify.app/",
   "description": "Yet another 11ty boilerplate to start a new website with optional blog.",
+  "repo": "https://github.com/ygoex/yetty",
   "feed": {
     "subtitle": "Yet another 11ty boilerplate to start a new website with optional blog.",
     "filename": "feed.xml",
@@ -15,6 +16,12 @@
   "author": {
     "name": "Yolanda Gorriz Exposito",
     "email": "helloygoex@gmail.com",
-    "url": "https://yetty.netlify.app/about-me/"
+    "url": "https://yetty.netlify.app/about-me/",
+    "github": "https://github.com/ygoex",
+    "twitter": "https://twitter.com/ygoex",
+    "codepen": "https://codepen.io/ygoex",
+    "dribbble": "https://dribbble.com/ygoex",
+    "behance": "https://www.behance.net/ygoex",
+    "linkedin": "https://www.linkedin.com/in/ygoex/"
   }
 }
