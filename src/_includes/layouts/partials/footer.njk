@@ -4,7 +4,7 @@
   <div class="footer__top">
     <div class="footer__top-left mb-1">
       <a class="footer__logo home" href="{{ '/' | url }}">{{ metadata.title }}</a>
-      <p>{{ metadata.title }} is maintained by {{ metadata.author.name }} as a quick start for some of her projects, but happy to share it for anyone that might find it useful. Check the repo on GitHub.</p>
+      <p>{{ metadata.title }} is maintained by <a class="footer__link" href="{{ metadata.author.github }}">{{ metadata.author.name }}</a> as a quick start for some of her projects, but happy to share it for anyone that might find it useful. Check <a class="footer__link" href="{{ metadata.repo }}">the repo</a> on GitHub.</p>
       <p>This page was generated on {% today %}</p>
     </div>
     <div class="footer__top-right">
@@ -21,7 +21,7 @@
             <a class="footer__link" href="{{ '/about' | url }}">About</a>
           </li>
           <li class="footer__quick-link-item">
-            <a class="footer__link" href="mailto:helloygoex@gmail.com">Contact</a>
+            <a class="footer__link" href="mailto:{{ metadata.author.email }}">Contact</a>
           </li>
           <li class="footer__quick-link-item">
             <a class="footer__link" href="{{ '/sitemap' | url }}">Sitemap</a>
@@ -31,15 +31,15 @@
       <div class="footer__contact-follow-wrapper">
         <div class="footer__contact">
           <p class="h6 text-bold mb-0-5">Contact me</p>
-          <a class="footer__link" href="mailto:helloygoex@gmail.com">
-            helloygoex@gmail.com</a>
+          <a class="footer__link" href="mailto:{{ metadata.author.email }}">
+            {{ metadata.author.email }}</a>
         </div>
         <div class="footer__follow">
           <p class="h6 text-bold mb-0-5">Follow me</p>
           <nav>
             <ul class="footer__social-items">
               <li class="footer__social-item">
-                <a class="footer__social-link" href="https://twitter.com/ygoex">
+                <a class="footer__social-link" href="{{ metadata.author.twitter }}">
                   {{ svgIcon({
                     svgWidth: 20,
                     svgHeight: 20,
@@ -51,7 +51,7 @@
                 </a>
               </li>
               <li class="footer__social-item">
-                <a class="footer__social-link" href="https://codepen.io/ygoex">
+                <a class="footer__social-link" href="{{ metadata.author.codepen }}">
                   {{ svgIcon({
                     svgWidth: 21,
                     svgHeight: 21,
@@ -63,7 +63,7 @@
                 </a>
               </li>
               <li class="footer__social-item">
-                <a class="footer__social-link" href="https://dribbble.com/ygoex">
+                <a class="footer__social-link" href="{{ metadata.author.dribbble }}">
                   {{ svgIcon({
                     svgWidth: 20,
                     svgHeight: 20,
@@ -75,7 +75,7 @@
                 </a>
               </li>
               {# <li class="footer__social-item">
-                <a class="footer__social-link" href="https://www.behance.net/ygoex">
+                <a class="footer__social-link" href="{{ metadata.author.behance }}">
                   {{ svgIcon({
                     svgWidth: 20,
                     svgHeight: 20,
@@ -87,7 +87,7 @@
                 </a>
               </li> #}
               <li class="footer__social-item">
-                <a class="footer__social-link" href="https://www.linkedin.com/in/ygoex/">
+                <a class="footer__social-link" href="{{ metadata.author.linkedin }}">
                   {{ svgIcon({
                     svgWidth: 20,
                     svgHeight: 20,
@@ -117,7 +117,7 @@
     </div>
   </div>
   <p class="footer__copyright">&copy; {% year %}
-    <a class="footer__link" href="https://github.com/ygoex">
+    <a class="footer__link" href="{{ metadata.author.github }}">
       Ygoex</a> - Powered by <a class="footer__link" href="https://11ty.io">
       Eleventy</a> and <a class="footer__link" href="https://www.netlify.com">
       Netlify</a>
