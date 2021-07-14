@@ -47,7 +47,7 @@
     margin-bottom: var(--space-0);
   }
   a:not(.direct-link){
-    @extend %dashed-underline;
+    @extend %underline-dashed;
   }
 }
 
@@ -121,7 +121,7 @@
 
 .post__prev--link,
 .post__next--link {
-  @extend %dashed-underline;
+  @extend %underline-dashed;
   @include media-query(md) {
     display: block;
   }
