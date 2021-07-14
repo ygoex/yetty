@@ -39,6 +39,7 @@ $colours: (
   "black-50-a": hsla(0, 0%, 0%, 0.05),
   "black-100-a": hsla(0, 0%, 0%, 0.1),
   "white-700-a": hsla(0, 0%, 100%, 0.7),
+  "white-850-a": hsla(0, 0%, 100%, 0.85),
   "purple": hsl(300, 100%, 25%),
   "blue": hsl(240, 100%, 50%)
 );
@@ -100,6 +101,7 @@ $colours: (
   // Spacing: small
   --space-sm-8n: -0.5rem; //-8px
   --space-sm-4n: -0.25rem; //-4px
+  --space-sm-2n: -0.125rem; //-2px
   --space-0: 0;
   --space: 0.025rem; //~0.5px
   --space-sm-1: 0.06rem; //1px
