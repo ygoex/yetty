@@ -13,6 +13,7 @@
   --black-50-a: rgba(0, 0, 0, 0.05);
   --black-100-a: rgba(0, 0, 0, 0.1);
   --white-700-a: rgba(255, 255, 255, 0.7);
+  --white-850-a: rgba(255, 255, 255, 0.85);
   --purple: purple;
   --blue: blue;
   --font-size-xs: 0.75rem;
@@ -38,6 +39,7 @@
   --border-radius-circle: 50%;
   --space-sm-8n: -0.5rem;
   --space-sm-4n: -0.25rem;
+  --space-sm-2n: -0.125rem;
   --space-0: 0;
   --space: 0.025rem;
   --space-sm-1: 0.06rem;
@@ -86,14 +88,14 @@ p, .grid > *:not(figure):not(.hero), .tmpl-post article > *:not(figure):not(.her
   grid-column: 1 / 4; }
 
 .footer__link, .post__content a:not(.direct-link), .post__prev--link,
-.post__next--link {
+.post__next--link, .underline-dashed {
   transition: var(--transition-default);
   text-decoration: underline;
   text-decoration-style: dashed;
   text-decoration-thickness: var(--space-sm-1);
   text-underline-offset: var(--space-sm-2); }
   .footer__link:hover, .post__content a:hover:not(.direct-link), .post__prev--link:hover,
-  .post__next--link:hover {
+  .post__next--link:hover, .underline-dashed:hover {
     text-decoration-style: solid; }
 
 * {
@@ -291,16 +293,35 @@ h6,
 .menu__link {
   transition: var(--transition-default);
   color: initial;
-  text-decoration: none; }
+  text-decoration: none;
+  position: relative; }
+  .menu__link:after {
+    content: "";
+    background: var(--black);
+    width: var(--space-0);
+    height: var(--space-sm-2);
+    position: absolute;
+    z-index: -1;
+    bottom: 40%;
+    left: var(--space-sm-2n);
+    transition: var(--transition-default); }
+  .menu__link:hover::after {
+    width: calc(100% + var(--space-sm-4)); }
   .menu__link:visited {
     color: initial; }
-  .menu__link:hover {
-    border-color: var(--blue);
-    color: var(--blue); }
 
 .menu__item--active a {
-  padding-bottom: var(--space-sm-2);
-  border-bottom: var(--border-width-medium) solid var(--black); }
+  position: relative; }
+  .menu__item--active a:after {
+    content: "";
+    background: var(--black);
+    width: calc(100% + var(--space-sm-4));
+    height: var(--space-sm-2);
+    position: absolute;
+    z-index: -1;
+    bottom: 40%;
+    left: var(--space-sm-2n);
+    transition: var(--transition-default); }
 
 .pager {
   text-align: center; }
@@ -436,7 +457,7 @@ figcaption {
   max-width: var(--line-length);
   transition: var(--transition-default);
   border-radius: var(--border-radius-default);
-  background-color: var(--white-700-a);
+  background-color: var(--white-850-a);
   box-shadow: -1rem 0 2rem var(--black-100-a);
   overflow: hidden; }
   .postlist__item:hover {
