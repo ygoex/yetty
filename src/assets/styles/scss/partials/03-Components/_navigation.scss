@@ -29,18 +29,39 @@
   transition: var(--transition-default);
   color: initial;
   text-decoration: none;
+  position: relative;
+  &:after {
+    content: "";
+    background: var(--black);
+    width: var(--space-0);
+    height: var(--space-sm-2);
+    position: absolute;
+    z-index: -1;
+    bottom: 40%;
+    left: var(--space-sm-2n);
+    transition: var(--transition-default);
+  }
+  &:hover::after{
+    width: calc(100% + var(--space-sm-4));
+  }
   &:visited {
     color: initial;
-  }
-  &:hover {
-    border-color: var(--blue);
-    color: var(--blue);
   }
 }
 
 .menu__item--active {
   a {
-    padding-bottom: var(--space-sm-2);
-    border-bottom: var(--border-width-medium) solid var(--black);
+    position: relative;
+    &:after {
+      content: "";
+      background: var(--black);
+      width: calc(100% + var(--space-sm-4));
+      height: var(--space-sm-2);
+      position: absolute;
+      z-index: -1;
+      bottom: 40%;
+      left: var(--space-sm-2n);
+      transition: var(--transition-default);
+    }
   }
 }
