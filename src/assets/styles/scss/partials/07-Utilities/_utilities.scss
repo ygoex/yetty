@@ -95,3 +95,7 @@
 .flex-wrap {
   flex-wrap: wrap;
 }
+
+.underline-dashed {
+  @extend %underline-dashed;
+}
