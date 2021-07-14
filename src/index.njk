@@ -23,5 +23,5 @@ eleventyNavigation:
   {% set postslistCounter = collections.posts | length %}
   {% include "layouts/partials/posts-list.njk" %}
 
-  <p>More posts can be found in the <a href="{{ '/posts/' | url }}">blog</a>.</p>
+  <p>More posts can be found in the <a class="underline-dashed" href="{{ '/posts/' | url }}">blog</a>.</p>
 {% endblock %}
