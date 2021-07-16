@@ -1,5 +1,3 @@
-{% from "layouts/partials/components/svg-icon/macro.njk" import svgIcon %}
-
 {% extends 'layouts/base.njk' %}
 
 {% if templateClass is not defined %}
@@ -64,15 +62,14 @@
         {%- if nextPost %}
           <li class="post__next">
             <span class="post__next--label">
-              {{ svgIcon({
+              {{ component('svg-icon', {
                 svgWidth: 24,
                 svgHeight: 24,
                 svgClass: "post__next--icon",
                 ariaLabel: "Chevron left icon",
                 symbolId: "icon-chevron-left",
                 screenReader: "Chevron left"
-                })
-              }}
+              }) }}
               Next
             </span>
             <a class="post__next--link" href="{{ nextPost.url | url }}">
@@ -85,15 +82,14 @@
           <li class="post__prev{%- if not nextPost %} ml-md-auto{% endif %}">
             <span class="post__prev--label">
               Previous
-              {{ svgIcon({
+              {{ component('svg-icon', {
                 svgWidth: 24,
                 svgHeight: 24,
                 svgClass: "post__prev--icon",
                 ariaLabel: "Chevron right icon",
                 symbolId: "icon-chevron-right",
                 screenReader: "Chevron right"
-                })
-              }}
+              }) }}
             </span>
             <a class="post__prev--link" href="{{ previousPost.url | url }}">
               {{ previousPost.data.title }}
