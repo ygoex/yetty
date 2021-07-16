@@ -1,13 +1,12 @@
-{% from "layouts/partials/components/post-card/macro.njk" import postCard %}
+{%- from "layouts/partials/component.njk" import component -%}
 
-<ul class="postlist">
+<ul class="postlist test">
   {% for post in postslist %}
     <li class="postlist__item post-card">
-      {{ postCard({
+      {{ component('post-card', {
         post: post,
         tagList: collections.tagList
-        })
-      }}
+      }) }}
     </li>
   {% endfor %}
 </ul>
