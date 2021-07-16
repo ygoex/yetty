@@ -1,5 +1,3 @@
-{% from "layouts/partials/components/svg-icon/macro.njk" import svgIcon %}
-
 <footer class="footer grid mb-0">
   <div class="footer__top">
     <div class="footer__top-left mb-1">
@@ -40,74 +38,68 @@
             <ul class="footer__social-items">
               <li class="footer__social-item">
                 <a class="footer__social-link" href="{{ metadata.author.twitter }}">
-                  {{ svgIcon({
+                  {{ component('svg-icon', {
                     svgWidth: 20,
                     svgHeight: 20,
                     ariaLabel: "Twitter icon",
                     symbolId: "icon-social-twitter",
-                    screenReader: "Follow us on Twitterrrrr"
-                    })
-                  }}
+                    screenReader: "Follow me on Twitter"
+                  }) }}
                 </a>
               </li>
               <li class="footer__social-item">
                 <a class="footer__social-link" href="{{ metadata.author.codepen }}">
-                  {{ svgIcon({
+                  {{ component('svg-icon', {
                     svgWidth: 21,
                     svgHeight: 21,
                     ariaLabel: "Codepen icon",
                     symbolId: "icon-social-codepen",
                     screenReader: "Follow me on Codepen"
-                    })
-                  }}
+                  }) }}
                 </a>
               </li>
               <li class="footer__social-item">
                 <a class="footer__social-link" href="{{ metadata.author.dribbble }}">
-                  {{ svgIcon({
+                  {{ component('svg-icon', {
                     svgWidth: 20,
                     svgHeight: 20,
                     ariaLabel: "Dribbble icon",
                     symbolId: "icon-social-dribbble",
                     screenReader: "Follow me on Dribbble"
-                    })
-                  }}
+                  }) }}
                 </a>
               </li>
               {# <li class="footer__social-item">
                 <a class="footer__social-link" href="{{ metadata.author.behance }}">
-                  {{ svgIcon({
+                  {{ component('svg-icon', {
                     svgWidth: 20,
                     svgHeight: 20,
                     ariaLabel: "Behance icon",
                     symbolId: "icon-social-behance",
                     screenReader: "Follow me on Behance"
-                    })
-                  }}
+                  }) }}
                 </a>
               </li> #}
               <li class="footer__social-item">
                 <a class="footer__social-link" href="{{ metadata.author.linkedin }}">
-                  {{ svgIcon({
+                  {{ component('svg-icon', {
                     svgWidth: 20,
                     svgHeight: 20,
                     ariaLabel: "LinkedIn icon",
                     symbolId: "icon-social-linkedin",
                     screenReader: "Follow me on LinkedIn"
-                    })
-                  }}
+                  }) }}
                 </a>
               </li>
               <li class="footer__social-item">
                 <a class="footer__social-link" href="{{ metadata.feed.path | url }}">
-                  {{ svgIcon({
+                  {{ component('svg-icon', {
                     svgWidth: 18,
                     svgHeight: 22,
                     ariaLabel: "Rss icon",
                     symbolId: "icon-social-rss",
                     screenReader: "Subscribe to my feed."
-                    })
-                  }}
+                  }) }}
                 </a>
               </li>
             </ul>
