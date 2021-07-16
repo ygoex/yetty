@@ -1,0 +1,6 @@
+{# One macro to rule them all concept extracted from:
+ https://www.trysmudford.com/blog/encapsulated-11ty-components/ #}
+
+{%- macro component(name, params) -%}
+  {%- include "layouts/partials/components/" + name + "/" + name + ".njk" ignore missing -%}
+{%- endmacro -%}
