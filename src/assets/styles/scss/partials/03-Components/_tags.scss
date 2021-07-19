@@ -1,7 +1,15 @@
+.tags {
+  grid-template-rows: min-content;
+}
+
 // https://pineco.de/get-to-know-the-lobotomized-owl-selector/
 .tag__items > * + *,
 .post-card__tags > * + * {
   margin-left: var(--space-sm-6);
+}
+
+.tag__items {
+  align-content: flex-start;
 }
 
 .tag__item {
