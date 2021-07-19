@@ -12,6 +12,10 @@ html {
   html { scroll-behavior: auto; }
 }
 
+@media (prefers-color-scheme: dark) {
+  /* Dark mode Custom Properties */
+}
+
 body {
   width: 100vw;
   background-color: var(--body-background);
