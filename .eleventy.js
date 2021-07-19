@@ -14,6 +14,7 @@ const dateFilter = require("./utils/filters/dateFilter.js");
 const imgSize = require("./utils/filters/imgSize.js");
 const tagList = require("./utils/collections/tagList.js");
 const readingTime = require('eleventy-plugin-reading-time');
+const mila = require('markdown-it-link-attributes');
 
 // Import transforms
 const htmlMinTransform = require("./utils/transforms/html-min-transform.js");
@@ -169,6 +170,13 @@ module.exports = function(eleventyConfig) {
     html: true,
     breaks: true,
     linkify: true
+  })
+  .use(mila, {
+    pattern: /^(?!(https:\/\/yetty\.netlify\.app|#)).*$/gm,
+    attrs: {
+      target: '_blank',
+      rel: 'noopener noreferrer'
+    }
   })
   .use(markdownItAnchor, {
     // Options before 8.1
