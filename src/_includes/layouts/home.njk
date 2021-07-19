@@ -1,7 +1,7 @@
 {% extends 'layouts/base.njk' %}
 
 {% if templateClass is not defined %}
-  {% set templateClass = 'tmpl-home grid' %}
+  {% set templateClass = 'tmpl-home grid ' + page.fileSlug %}
 {% endif %}
 
 {% block content %}
