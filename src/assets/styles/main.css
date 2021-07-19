@@ -110,6 +110,9 @@ html {
   html {
     scroll-behavior: auto; } }
 
+@media (prefers-color-scheme: dark) {
+  /* Dark mode Custom Properties */ }
+
 body {
   width: 100vw;
   background-color: var(--body-background);
@@ -514,9 +517,15 @@ figcaption {
   padding-top: var(--space-lg-1);
   border-top: var(--border-width-thin) solid var(--grey-200); }
 
+.tags {
+  grid-template-rows: min-content; }
+
 .tag__items > * + *,
 .post-card__tags > * + * {
   margin-left: var(--space-sm-6); }
+
+.tag__items {
+  align-content: flex-start; }
 
 .tag__item {
   margin-bottom: var(--space-sm-6); }
