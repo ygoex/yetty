@@ -22,11 +22,8 @@
     <!-- Current page: {{ page.url | url }} -->
 
     <script src="{% if yetty.environment === 'production' %}{{ '/assets/scripts/bundle.min.js' | url }}{% else %}{{ '/assets/scripts/index.js' | url }}{% endif %}"></script>
-    {% if page.url === '/posts/mermaid_test/' %}
-      <script src="{{ '/assets/scripts/mermaid.min.js' | url }}"></script>
-      <script>
-        mermaid.initialize({startOnLoad: true});
-      </script>
-    {% endif %}
+
+    {% block js %}{% endblock %}
+
   </body>
 </html>
