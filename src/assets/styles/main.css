@@ -16,6 +16,7 @@
   --white-850-a: rgba(255, 255, 255, 0.85);
   --purple: purple;
   --blue: blue;
+  --yellow: #fee267;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
@@ -106,12 +107,13 @@ p, .grid > *:not(figure):not(.hero), .tmpl-post article > *:not(figure):not(.her
 html {
   scroll-behavior: smooth; }
 
-@media screen and (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto; } }
+::-moz-selection {
+  color: var(--body-font-color);
+  background-color: var(--yellow); }
 
-@media (prefers-color-scheme: dark) {
-  /* Dark mode Custom Properties */ }
+::selection {
+  color: var(--body-font-color);
+  background-color: var(--yellow); }
 
 body {
   width: 100vw;
@@ -851,5 +853,20 @@ header {
 
 .flex-wrap {
   flex-wrap: wrap; }
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto; } }
+
+@media (prefers-reduced-data: reduce) {
+  img, video {
+    display: none; } }
+
+@media (prefers-color-scheme: dark) {
+  .gradient-home {
+    background-image: url("/assets/images/mesh-gradient-black.jpg");
+    background-image: url("/assets/images/mesh-gradient-black.webp");
+    background-repeat: no-repeat;
+    background-size: contain; } }
 
 /*# sourceMappingURL=main.css.map */
