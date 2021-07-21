@@ -1,0 +1,22 @@
+@media screen and (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+// For additional information see -->
+// https://twitter.com/argyleink/status/1389244232641089537?s=20
+// For this to work, loading=lazy is required in image.
+// https://twitter.com/argyleink/status/1417569595276206083?s=20
+@media (prefers-reduced-data: reduce) {
+  img, video {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .gradient-home {
+    background-image: url("/assets/images/mesh-gradient-black.jpg");
+    background-image: url("/assets/images/mesh-gradient-black.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
