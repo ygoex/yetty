@@ -27,12 +27,12 @@
 
 .menu__link {
   transition: var(--transition-default);
-  color: initial;
+  color: var(--body-font-color);
   text-decoration: none;
   position: relative;
   &:after {
     content: "";
-    background: var(--black);
+    background: var(--body-font-color);
     width: var(--space-0);
     height: var(--space-sm-2);
     position: absolute;
@@ -45,7 +45,7 @@
     width: calc(100% + var(--space-sm-4));
   }
   &:visited {
-    color: initial;
+    color: var(--body-font-color);
   }
 }
 
@@ -54,7 +54,7 @@
     position: relative;
     &:after {
       content: "";
-      background: var(--black);
+      background: var(--body-font-color);
       width: calc(100% + var(--space-sm-4));
       height: var(--space-sm-2);
       position: absolute;
