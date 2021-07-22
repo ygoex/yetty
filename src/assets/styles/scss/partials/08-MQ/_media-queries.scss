@@ -13,6 +13,19 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  :root {
+    --body-background: var(--grey-900);
+    --body-font-color: var(--white);
+    --body-font-color-alt: var(--black);
+    --heading-font-color: var(--grey-100);
+    --card-background: var(--black);
+    --footer-background: var(--black);
+    --text-muted: var(--grey-200);
+    --link-color: var(--yellow);
+    --link-color-alt: var(--skyblue);
+    --footer-color: var(--grey-200);
+  }
+
   .gradient-home {
     background-image: url("/assets/images/mesh-gradient-black.jpg");
     background-image: url("/assets/images/mesh-gradient-black.webp");
