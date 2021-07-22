@@ -28,8 +28,8 @@
   color: var(--black);
   text-decoration: none;
   &:hover {
-    border-color: var(--blue);
-    color: var(--blue);
+    border-color: var(--link-color);
+    color: var(--link-color);
   }
 }
 
