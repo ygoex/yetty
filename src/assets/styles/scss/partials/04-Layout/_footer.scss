@@ -1,7 +1,7 @@
 .footer {
   padding: var(--space-lg-1) var(--space-0);
-  background-color: var(--grey-200);
-  color: var(--grey-800);
+  background-color: var(--footer-background);
+  color: var(--footer-color);
   font-size: var(--font-size-sm);
 }
 
@@ -41,12 +41,12 @@
 .footer__logo {
   display: inline-block;
   margin: var(--space-lg-1) var(--space-0);
-  border: var(--border-width-medium) solid var(--grey-800);
-  color: var(--grey-800);
+  border: var(--border-width-medium) solid var(--footer-color);
+  color: var(--footer-color);
   font-size: var(--font-size-xl);
   &:hover {
-    border: var(--border-width-medium) solid var(--blue);
-    color: var(--blue);
+    border: var(--border-width-medium) solid var(--link-color);
+    color: var(--link-color);
   }
 }
 
@@ -75,7 +75,7 @@
 
 .footer__copyright {
   padding: var(--space-lg-1) var(--space-0);
-  border-top: var(--border-width-thin) solid var(--grey-200);
+  border-top: var(--border-width-thin) solid var(--footer-background);
   text-align: center;
 }
 
@@ -96,21 +96,21 @@
   margin-right: var(--space-sm-8);
   padding: var(--space-sm-2) var(--space-sm-6) var(--space-0) var(--space-sm-6);
   transition: var(--transition-default);
-  border: var(--border-width-medium) solid var(--grey-700);
+  border: var(--border-width-medium) solid var(--text-muted);
   border-radius: var(--border-radius-circle);
   font-size: var(--font-size-xl);
   svg {
     transition: var(--transition-default);
-    fill: var(--grey-700);
-    color: var(--grey-700);
-    stroke: var(--grey-700);
+    fill: var(--text-muted);
+    color: var(--text-muted);
+    stroke: var(--text-muted);
   }
   &:hover {
-    border-color: var(--blue);
+    border-color: var(--link-color);
     svg {
-      fill: var(--blue);
-      color: var(--blue);
-      stroke: var(--blue);
+      fill: var(--link-color);
+      color: var(--link-color);
+      stroke: var(--link-color);
     }
   }
 }
