@@ -42,7 +42,8 @@ $colours: (
   "white-850-a": hsla(0, 0%, 100%, 0.85),
   "purple": hsl(300, 100%, 25%),
   "blue": hsl(240, 100%, 50%),
-  "yellow": hsl(49, 99%, 70%)
+  "yellow": hsl(49, 99%, 70%),
+  "skyblue": hsl(197, 71%, 73%)
 );
 
 :root {
@@ -62,10 +63,18 @@ $colours: (
   --font-size-h2: 2.441rem; //39px
   --font-size-h1: 3.052rem; //48px
 
-  // Body
+  // Theme
   --body-background: var(--white);
   --body-font-color: var(--grey-900);
+  --body-font-color-alt: var(--white);
   --body-font-size: var(--font-size-md);
+  --heading-font-color: var(--grey-800);
+  --card-background: var(--white-850-a);
+  --footer-background: var(--grey-200);
+  --text-muted: var(--grey-700);
+  --link-color: var(--blue);
+  --link-color-alt: var(--purple);
+  --footer-color: var(--grey-800);
 
   // Sans System fonts explanation:
   // The browser looks for each successive font, preferring the first one if // possible, and falls back to the next if it cannot find the font (on the // system or defined in CSS).
