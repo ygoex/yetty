@@ -3,7 +3,7 @@
   &:hover {
     .post-card__link,
     .post-card__link:visited {
-      color: var(--blue);
+      color: var(--link-color);
       text-decoration: none;
     }
   }
@@ -11,7 +11,7 @@
 
 .post-card__link,
 .post-card__link:visited {
-  color: var(--grey-800);
+  color: var(--heading-font-color);
   text-decoration: none;
 }
 
@@ -28,7 +28,7 @@
   &:focus-visible {
     outline: none;
     &:after {
-      border: var(--border-width-medium) dashed var(--purple);
+      border: var(--border-width-medium) dashed var(--link-color-alt);
       border-radius: var(--border-radius-default);
     }
   }
