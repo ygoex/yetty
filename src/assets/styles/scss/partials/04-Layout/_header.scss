@@ -12,7 +12,7 @@ header {
   margin: var(--space-lg-1h);
   padding: var(--space-sm-2) var(--space-sm-8) var(--space-sm-4) var(--space-sm-6);
   transition: var(--transition-default);
-  border: var(--border-width-thick) solid var(--black);
+  border: var(--border-width-thick) solid var(--body-font-color);
   border-radius: var(--border-radius-sm);
   color: var(--body-font-color);
   font-family: var(--sans-font-family);
@@ -26,7 +26,7 @@ header {
     color: inherit;
   }
   &:hover {
-    border-color: var(--blue);
-    color: var(--blue);
+    border-color: var(--link-color);
+    color: var(--link-color);
   }
 }
