@@ -67,19 +67,19 @@ picture {
 // Focus state as seen in: https://moderncss.dev/modern-css-upgrades-to-improve-accessibility/
 
 a {
-  color: var(--blue);
+  color: var(--link-color);
   &:visited {
-    color: var(--purple);
+    color: var(--link-color-alt);
   }
   &:focus {
-    outline: var(--border-width-medium) dashed var(--purple);
+    outline: var(--border-width-medium) dashed var(--link-color-alt);
     outline-offset: var(--space-sm-4);
   }
   &:focus:not(:focus-visible) {
     outline: none;
   }
   &:focus-visible {
-    outline: var(--border-width-medium) dashed var(--purple);
+    outline: var(--border-width-medium) dashed var(--link-color-alt);
     outline-offset: var(--space-sm-4);
   }
 }
