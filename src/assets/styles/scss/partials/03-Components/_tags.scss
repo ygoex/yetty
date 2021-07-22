@@ -21,9 +21,9 @@
   display: inline-block;
   padding: var(--space-sm-1) var(--space-sm-8);
   transition: var(--transition-default);
-  border: var(--border-width-thin) solid var(--black);
+  border: var(--border-width-thin) solid var(--body-font-color);
   border-radius: var(--border-radius-default);
-  color: initial;
+  color: var(--body-font-color);
   font-size: var(--font-size-sm);
   text-decoration: none;
   vertical-align: text-top;
@@ -31,8 +31,8 @@
     color: initial;
   }
   &:hover {
-    border-color: var(--blue);
-    color: var(--blue);
+    border-color: var(--link-color);
+    color: var(--link-color);
   }
 }
 
