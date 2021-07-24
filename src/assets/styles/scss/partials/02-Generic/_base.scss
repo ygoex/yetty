@@ -92,7 +92,7 @@ code {
 pre {
   margin: var(--space) var(--space-0);
   padding: var(--space-lg-1);
-  background-color: var(--body-background); //For a better integration of Mermaid charts with body background.
+  background: var(--body-background); //For a better integration of Mermaid charts with body background.
   font-size: var(--font-size-sm);
   line-height: 1.375;
   text-align: left;
@@ -117,4 +117,5 @@ pre[class*="language-"] {
   margin: var(--space-lg-1) var(--space-0);
   //Fix issue with prism
   padding: var(--space-lg-1);
+  background: var(--body-background);
 }
