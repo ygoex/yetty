@@ -28,7 +28,7 @@
   text-decoration: none;
   vertical-align: text-top;
   &:visited {
-    color: initial;
+    color: var(--body-font-color);
   }
   &:hover {
     border-color: var(--link-color);
