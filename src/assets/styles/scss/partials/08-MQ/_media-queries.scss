@@ -26,10 +26,33 @@
     --footer-color: var(--grey-200);
   }
 
+  img {
+    filter: grayscale(1);
+  }
+
+  pre[class*="language-"] {
+    border: var(--border-width-thin) solid var(--white);
+    margin-top: var(--space-lg-2);
+  }
+
   .gradient-home {
     background-image: url("/assets/images/mesh-gradient-black.jpg");
     background-image: url("/assets/images/mesh-gradient-black.webp");
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  .post-card {
+    &:hover {
+      border: var(--border-width-thin) solid var(--white);
+    }
+  }
+
+  .direct-link {
+    &:hover {
+      &:after {
+        filter: brightness(500%);
+      }
+    }
   }
 }
