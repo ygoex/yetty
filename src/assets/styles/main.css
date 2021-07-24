@@ -178,7 +178,7 @@ code {
 pre {
   margin: var(--space) var(--space-0);
   padding: var(--space-lg-1);
-  background-color: var(--body-background);
+  background: var(--body-background);
   font-size: var(--font-size-sm);
   line-height: 1.375;
   text-align: left;
@@ -198,7 +198,8 @@ pre[class*="language-"] {
   display: block;
   max-width: calc(100vw - var(--space-lg-3));
   margin: var(--space-lg-1) var(--space-0);
-  padding: var(--space-lg-1); }
+  padding: var(--space-lg-1);
+  background: var(--body-background); }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -357,9 +358,9 @@ h6,
 
 .pager__link {
   display: flex;
-  border: var(--border-width-thin) solid var(--black);
+  border: var(--border-width-thin) solid var(--body-font-color);
   border-radius: var(--border-radius-default);
-  color: var(--black);
+  color: var(--body-font-color);
   text-decoration: none; }
   .pager__link:hover {
     border-color: var(--link-color);
@@ -372,10 +373,10 @@ h6,
   color: inherit; }
 
 .pager__current {
-  border: var(--border-width-thin) solid var(--grey-800);
+  border: var(--border-width-thin) solid var(--heading-font-color);
   border-radius: var(--border-radius-default);
-  background: var(--grey-800);
-  color: var(--white); }
+  background: var(--heading-font-color);
+  color: var(--body-font-color-alt); }
 
 .btn {
   padding: var(--space-sm-8) var(--space-sm-12);
@@ -554,7 +555,7 @@ figcaption {
   vertical-align: text-top; }
   .tag__link:visited,
   .post-card__tag:visited {
-    color: initial; }
+    color: var(--body-font-color); }
   .tag__link:hover,
   .post-card__tag:hover {
     border-color: var(--link-color);
@@ -840,7 +841,7 @@ header {
   clip: rect(0, 0, 0, 0); }
 
 .text-black {
-  color: var(--black); }
+  color: var(--body-font-color); }
 
 .text-muted {
   color: var(--text-muted); }
@@ -883,10 +884,19 @@ header {
     --link-color: var(--yellow);
     --link-color-alt: var(--skyblue);
     --footer-color: var(--grey-200); }
+  img {
+    filter: grayscale(1); }
+  pre[class*="language-"] {
+    border: var(--border-width-thin) solid var(--white);
+    margin-top: var(--space-lg-2); }
   .gradient-home {
     background-image: url("/assets/images/mesh-gradient-black.jpg");
     background-image: url("/assets/images/mesh-gradient-black.webp");
     background-repeat: no-repeat;
-    background-size: contain; } }
+    background-size: contain; }
+  .post-card:hover {
+    border: var(--border-width-thin) solid var(--white); }
+  .direct-link:hover:after {
+    filter: brightness(500%); } }
 
 /*# sourceMappingURL=main.css.map */
