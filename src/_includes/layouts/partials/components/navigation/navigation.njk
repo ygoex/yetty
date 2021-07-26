@@ -1,16 +1,27 @@
 {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
 <nav class="{{ params.name | lower | replace(" ", "-") }} display-flex" aria-labelledby="{{ params.name | lower | replace(" ", "-") }}">
   <h2 id="{{ params.name | lower | replace(" ", "-") }}" class="sr-only">{{ params.name | capitalize }}</h2>
-  <ul class="menu__items">
+  <ul class="menu__items flex-wrap">
     {%- for item in params.collection | eleventyNavigation %}
       <li class="menu__item{% if item.url == params.page.url %} menu__item--active{% endif %}">
         <a class="menu__link" href="{{ item.url | url }}">{{ item.title }}</a>
       </li>
     {%- endfor %}
     {% if params.hasButton %}
-      <li class="menu__item mr-1">
+      <li class="menu__item">
         <a class="menu__link btn font-xs" href="{{ params.buttonHref | url }}">{{ params.buttonText }}</a>
       </li>
     {% endif %}
+    <li id="dark-light-mode" class="menu__item theme-toggle ml-1h mr-1">
+      <button class="btn-reset" title="Theme toggle">
+        {{ component('svg-icon', {
+          svgWidth: 27,
+          svgHeight: 27,
+          ariaLabel: "Twitter icon",
+          symbolId: "theme",
+          screenReader: "Follow me on Twitter"
+        }) }}
+      </button>
+    </li>
   </ul>
 </nav>
