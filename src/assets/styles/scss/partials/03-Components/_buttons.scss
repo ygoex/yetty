@@ -1,3 +1,11 @@
+.btn-reset {
+  background: transparent;
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .btn {
   padding: var(--space-sm-8) var(--space-sm-12);
   transition: var(--transition-default);
