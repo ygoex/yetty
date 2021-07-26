@@ -283,6 +283,21 @@ h6,
     .direct-link:hover:after {
       filter: brightness(0%); }
 
+.theme-toggle {
+  position: absolute;
+  top: var(--space-lg-2);
+  right: var(--space-sm-8);
+  display: flex;
+  align-items: center;
+  fill: var(--body-font-color);
+  transition: var(--transition-default); }
+  @media all and (min-width: 36em) {
+    .theme-toggle {
+      position: initial; } }
+  .theme-toggle:hover {
+    cursor: pointer;
+    fill: var(--grey-500); }
+
 .menu__items {
   display: flex;
   align-items: center;
@@ -377,6 +392,12 @@ h6,
   border-radius: var(--border-radius-default);
   background: var(--heading-font-color);
   color: var(--body-font-color-alt); }
+
+.btn-reset {
+  background: transparent;
+  border: none; }
+  .btn-reset:hover {
+    cursor: pointer; }
 
 .btn {
   padding: var(--space-sm-8) var(--space-sm-12);
@@ -806,6 +827,9 @@ header {
 
 .mb-1 {
   margin-bottom: var(--space-lg-1); }
+
+.ml-1h {
+  margin-left: var(--space-lg-1h); }
 
 .mr-1 {
   margin-right: var(--space-lg-1); }
