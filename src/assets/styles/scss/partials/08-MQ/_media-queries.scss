@@ -27,12 +27,13 @@
   }
 
   img {
-    filter: grayscale(1);
+    filter: grayscale(1) brightness(.8) contrast(1.2);
   }
 
   pre[class*="language-"] {
     border: var(--border-width-thin) solid var(--white);
     margin-top: var(--space-lg-2);
+    background-color: var(--body-background);
   }
 
   .gradient-home {
@@ -44,7 +45,7 @@
 
   .post-card {
     &:hover {
-      border: var(--border-width-thin) solid var(--white);
+      box-shadow: 0 0 1rem var(--white-400-a);
     }
   }
 
@@ -52,6 +53,53 @@
     &:hover {
       &:after {
         filter: brightness(500%);
+      }
+    }
+  }
+
+  body.light-theme {
+    --body-background: var(--white);
+    --body-font-color: var(--grey-900);
+    --body-font-color-alt: var(--white);
+    --body-font-size: var(--font-size-md);
+    --heading-font-color: var(--grey-800);
+    --card-background: var(--white-850-a);
+    --footer-background: var(--grey-200);
+    --text-muted: var(--grey-700);
+    --link-color: var(--blue);
+    --link-color-alt: var(--purple);
+    --footer-color: var(--grey-800);
+  }
+
+  .gradient-home.light-theme {
+    background-image: url("/assets/images/mesh-gradient-white.jpg");
+    background-image: url("/assets/images/mesh-gradient-white.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .light-theme {
+    img {
+      filter: grayscale(0);
+    }
+
+    pre[class*="language-"] {
+      border: var(--border-width-thin) solid var(--black);
+      margin-top: var(--space-lg-1);
+      background-color: var(--body-font-color);
+    }
+
+    .post-card {
+      &:hover {
+        box-shadow: 0 10px 15px -3px var(--black-100-a), 0 -3px 6px -2px var(--black-50-a);
+      }
+    }
+
+    .direct-link {
+      &:hover {
+        &:after {
+          filter: brightness(0%);
+        }
       }
     }
   }
