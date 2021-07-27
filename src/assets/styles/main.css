@@ -12,6 +12,7 @@
   --black: black;
   --black-50-a: rgba(0, 0, 0, 0.05);
   --black-100-a: rgba(0, 0, 0, 0.1);
+  --white-400-a: rgba(255, 255, 255, 0.4);
   --white-700-a: rgba(255, 255, 255, 0.7);
   --white-850-a: rgba(255, 255, 255, 0.85);
   --purple: purple;
@@ -133,6 +134,18 @@ body {
   line-height: 1.7;
   overflow-x: hidden; }
 
+body.dark-theme {
+  --body-background: var(--grey-900);
+  --body-font-color: var(--white);
+  --body-font-color-alt: var(--black);
+  --heading-font-color: var(--grey-100);
+  --card-background: var(--black);
+  --footer-background: var(--black);
+  --text-muted: var(--grey-200);
+  --link-color: var(--yellow);
+  --link-color-alt: var(--skyblue);
+  --footer-color: var(--grey-200); }
+
 p {
   margin-bottom: var(--space-lg-1); }
   p:last-child {
@@ -199,7 +212,7 @@ pre[class*="language-"] {
   max-width: calc(100vw - var(--space-lg-3));
   margin: var(--space-lg-1) var(--space-0);
   padding: var(--space-lg-1);
-  background: var(--body-background); }
+  background-color: var(--body-font-color); }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -909,18 +922,46 @@ header {
     --link-color-alt: var(--skyblue);
     --footer-color: var(--grey-200); }
   img {
-    filter: grayscale(1); }
+    filter: grayscale(1) brightness(0.8) contrast(1.2); }
   pre[class*="language-"] {
     border: var(--border-width-thin) solid var(--white);
-    margin-top: var(--space-lg-2); }
+    margin-top: var(--space-lg-2);
+    background-color: var(--body-background); }
   .gradient-home {
     background-image: url("/assets/images/mesh-gradient-black.jpg");
     background-image: url("/assets/images/mesh-gradient-black.webp");
     background-repeat: no-repeat;
     background-size: contain; }
   .post-card:hover {
-    border: var(--border-width-thin) solid var(--white); }
+    box-shadow: 0 0 1rem var(--white-400-a); }
   .direct-link:hover:after {
-    filter: brightness(500%); } }
+    filter: brightness(500%); }
+  body.light-theme {
+    --body-background: var(--white);
+    --body-font-color: var(--grey-900);
+    --body-font-color-alt: var(--white);
+    --body-font-size: var(--font-size-md);
+    --heading-font-color: var(--grey-800);
+    --card-background: var(--white-850-a);
+    --footer-background: var(--grey-200);
+    --text-muted: var(--grey-700);
+    --link-color: var(--blue);
+    --link-color-alt: var(--purple);
+    --footer-color: var(--grey-800); }
+  .gradient-home.light-theme {
+    background-image: url("/assets/images/mesh-gradient-white.jpg");
+    background-image: url("/assets/images/mesh-gradient-white.webp");
+    background-repeat: no-repeat;
+    background-size: contain; }
+  .light-theme img {
+    filter: grayscale(0); }
+  .light-theme pre[class*="language-"] {
+    border: var(--border-width-thin) solid var(--black);
+    margin-top: var(--space-lg-1);
+    background-color: var(--body-font-color); }
+  .light-theme .post-card:hover {
+    box-shadow: 0 10px 15px -3px var(--black-100-a), 0 -3px 6px -2px var(--black-50-a); }
+  .light-theme .direct-link:hover:after {
+    filter: brightness(0%); } }
 
 /*# sourceMappingURL=main.css.map */
