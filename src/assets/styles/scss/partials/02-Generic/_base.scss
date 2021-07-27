@@ -28,6 +28,19 @@ body {
   overflow-x: hidden;
 }
 
+body.dark-theme {
+  --body-background: var(--grey-900);
+  --body-font-color: var(--white);
+  --body-font-color-alt: var(--black);
+  --heading-font-color: var(--grey-100);
+  --card-background: var(--black);
+  --footer-background: var(--black);
+  --text-muted: var(--grey-200);
+  --link-color: var(--yellow);
+  --link-color-alt: var(--skyblue);
+  --footer-color: var(--grey-200);
+}
+
 p {
   @extend %grid-column-center;
 
@@ -117,5 +130,5 @@ pre[class*="language-"] {
   margin: var(--space-lg-1) var(--space-0);
   //Fix issue with prism
   padding: var(--space-lg-1);
-  background: var(--body-background);
+  background-color: var(--body-font-color);
 }
