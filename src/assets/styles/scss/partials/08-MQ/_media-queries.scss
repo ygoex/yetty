@@ -31,8 +31,8 @@
   }
 
   pre[class*="language-"] {
-    border: var(--border-width-thin) solid var(--white);
     margin-top: var(--space-lg-2);
+    border: var(--border-width-thin) solid var(--white);
     background-color: var(--body-background);
   }
 
@@ -57,7 +57,7 @@
     }
   }
 
-  body.light-theme {
+  .light-theme {
     --body-background: var(--white);
     --body-font-color: var(--grey-900);
     --body-font-color-alt: var(--white);
@@ -84,8 +84,8 @@
     }
 
     pre[class*="language-"] {
-      border: var(--border-width-thin) solid var(--black);
       margin-top: var(--space-lg-1);
+      border: var(--border-width-thin) solid var(--black);
       background-color: var(--body-font-color);
     }
 
