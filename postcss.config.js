@@ -5,7 +5,7 @@ const plugins = [
                   autoprefixer,
                   purgecss({
                     content: ['./dist/**/*.html'],
-                    whitelist: ['active']
+                    safelist: ['active', 'dark-theme', 'light-theme']
                   })
                 ]
 
