@@ -9,13 +9,13 @@ html {
 }
 
 ::-moz-selection {
-  color: var(--body-font-color);
   background-color: var(--yellow);
+  color: var(--body-font-color);
 }
 
 ::selection {
-  color: var(--body-font-color);
   background-color: var(--yellow);
+  color: var(--body-font-color);
 }
 
 body {
@@ -28,7 +28,7 @@ body {
   overflow-x: hidden;
 }
 
-body.dark-theme {
+.dark-theme {
   --body-background: var(--grey-900);
   --body-font-color: var(--white);
   --body-font-color-alt: var(--black);
