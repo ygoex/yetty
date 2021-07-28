@@ -26,20 +26,20 @@
 }
 
 .menu__link {
+  position: relative;
   transition: var(--transition-default);
   color: var(--body-font-color);
   text-decoration: none;
-  position: relative;
   &:after {
-    content: "";
-    background: var(--body-font-color);
-    width: var(--space-0);
-    height: var(--space-sm-2);
     position: absolute;
-    z-index: -1;
     bottom: 40%;
     left: var(--space-sm-2n);
+    width: var(--space-0);
+    height: var(--space-sm-2);
     transition: var(--transition-default);
+    background: var(--body-font-color);
+    content: "";
+    z-index: -1;
   }
   &:hover::after{
     width: calc(100% + var(--space-sm-4));
@@ -53,15 +53,15 @@
   a {
     position: relative;
     &:after {
-      content: "";
-      background: var(--body-font-color);
-      width: calc(100% + var(--space-sm-4));
-      height: var(--space-sm-2);
       position: absolute;
-      z-index: -1;
       bottom: 42%;
       left: var(--space-sm-2n);
+      width: calc(100% + var(--space-sm-4));
+      height: var(--space-sm-2);
       transition: var(--transition-default);
+      background: var(--body-font-color);
+      content: "";
+      z-index: -1;
     }
   }
 }
