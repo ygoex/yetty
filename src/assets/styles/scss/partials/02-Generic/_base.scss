@@ -40,7 +40,7 @@ body {
   --link-color-alt: var(--skyblue);
   --footer-color: var(--grey-200);
 
-  .gradient-home {
+  &.gradient-home {
     background-image: url("/assets/images/mesh-gradient-black.jpg");
     background-image: url("/assets/images/mesh-gradient-black.webp");
     background-repeat: no-repeat;
