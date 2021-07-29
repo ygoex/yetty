@@ -5,10 +5,10 @@
   "scripts": {
     "eleventy:dev": "cross-env ELEVENTY_ENV=development eleventy --serve",
     "eleventy:prod": "cross-env ELEVENTY_ENV=production eleventy",
-    "prebuild": "npm run lint:sass && NODE_ENV=production npm run sass:prod && npm run scripts",
+    "prebuild": "npm run lint:sass && NODE_ENV=production npm run sass:prod && npm run scripts && npm run modernizr",
     "build": "npm run clean && npm run eleventy:prod",
     "postbuild": "npm run postcss",
-    "predev": "npm run sass:dev",
+    "predev": "npm run sass:dev && npm run modernizr",
     "dev": "concurrently 'npm run eleventy:dev' 'npm run sass:watch'",
     "start": "npm run dev",
     "debug": "DEBUG=* eleventy",
@@ -19,6 +19,7 @@
     "lint:sass": "stylelint --fix 'src/assets/styles/scss/**/*.scss' 'src/assets/styles/scss/**/**/*.scss' 'src/assets/styles/scss/**/**/**/*.scss'",
     "scripts": "webpack --mode=production",
     "clean": "rimraf dist",
+    "modernizr": "npx modernizr -c .modernizrrc.json -d src/assets/scripts/vendors/modernizr.min.js -u",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -54,6 +55,7 @@
     "markdown-it": "^12.0.4",
     "markdown-it-anchor": "^8.1.0",
     "markdown-it-link-attributes": "^3.0.0",
+    "modernizr": "^3.11.3",
     "node-sass": "^6.0.1",
     "postcss": "^8.2.8",
     "postcss-cli": "^8.3.1",
