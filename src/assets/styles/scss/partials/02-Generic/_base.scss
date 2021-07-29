@@ -40,13 +40,6 @@ body {
   --link-color-alt: var(--skyblue);
   --footer-color: var(--grey-200);
 
-  &.gradient-home {
-    background-image: url("/assets/images/mesh-gradient-black.jpg");
-    background-image: url("/assets/images/mesh-gradient-black.webp");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
   img {
     filter: grayscale(1) brightness(.8) contrast(1.2);
   }
@@ -70,6 +63,18 @@ body {
       }
     }
   }
+
+  &.gradient-home {
+    background-image: url("/assets/images/mesh-gradient-black.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.no-webp .dark-theme.gradient-home {
+  background-image: url("/assets/images/mesh-gradient-black.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 p {
