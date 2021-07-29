@@ -36,13 +36,6 @@
     background-color: var(--body-background);
   }
 
-  .gradient-home {
-    background-image: url("/assets/images/mesh-gradient-black.jpg");
-    background-image: url("/assets/images/mesh-gradient-black.webp");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
   .post-card {
     &:hover {
       box-shadow: 0 0 1rem var(--white-400-a);
@@ -55,6 +48,18 @@
         filter: brightness(500%);
       }
     }
+  }
+
+  .gradient-home {
+    background-image: url("/assets/images/mesh-gradient-black.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .no-webp .gradient-home {
+    background-image: url("/assets/images/mesh-gradient-black.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   .light-theme {
@@ -72,8 +77,13 @@
   }
 
   .gradient-home.light-theme {
-    background-image: url("/assets/images/mesh-gradient-white.jpg");
     background-image: url("/assets/images/mesh-gradient-white.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .no-webp .gradient-home.light-theme {
+    background-image: url("/assets/images/mesh-gradient-white.jpg");
     background-repeat: no-repeat;
     background-size: contain;
   }
