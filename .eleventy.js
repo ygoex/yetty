@@ -152,9 +152,10 @@ module.exports = function(eleventyConfig) {
    */
   eleventyConfig.addPassthroughCopy("./src/assets/images");
   eleventyConfig.addPassthroughCopy("./src/assets/styles/*.css");
-  eleventyConfig.addPassthroughCopy({"node_modules/mermaid/dist/mermaid.min.js": "/assets/scripts/mermaid.min.js"});
+  eleventyConfig.addPassthroughCopy({"node_modules/mermaid/dist/mermaid.min.js": "/assets/scripts/vendors/mermaid.min.js"});
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
   eleventyConfig.addPassthroughCopy("./src/manifest.json");
+  eleventyConfig.addPassthroughCopy("./src/assets/scripts/vendors/modernizr.min.js");
   if (env === 'production') {
     eleventyConfig.addPassthroughCopy("./src/assets/scripts/bundle.min.js");
   } else {
