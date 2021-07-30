@@ -12,6 +12,7 @@ const pluginPWA = require("eleventy-plugin-pwa");
 const imageShortcode = require('./utils/shortcodes/imageProcess.js');
 const dateFilter = require("./utils/filters/dateFilter.js");
 const imgSize = require("./utils/filters/imgSize.js");
+const cacheBuster = require("./utils/filters/cacheBuster.js");
 const tagList = require("./utils/collections/tagList.js");
 const readingTime = require('eleventy-plugin-reading-time');
 const mila = require('markdown-it-link-attributes');
@@ -85,6 +86,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter("dateFilter", dateFilter);
   eleventyConfig.addFilter("imgSize", imgSize);
+  eleventyConfig.addFilter("cacheBuster", cacheBuster);
 
   // Get the first `n` elements of a collection.
   eleventyConfig.addFilter("head", (array, n) => {
@@ -159,6 +161,7 @@ module.exports = function(eleventyConfig) {
   if (env === 'production') {
     eleventyConfig.addPassthroughCopy("./src/assets/scripts/bundle.min.js");
   } else {
+    eleventyConfig.addPassthroughCopy("./src/assets/styles/*.map");
     eleventyConfig.addPassthroughCopy("./src/assets/scripts/index.js");
   };
 
@@ -180,10 +183,6 @@ module.exports = function(eleventyConfig) {
     }
   })
   .use(markdownItAnchor, {
-    // Options before 8.1
-    // permalink: true,
-    // permalinkClass: "direct-link",
-    // permalinkSymbol: "#",
     // Options with v8.1 for accessibility
     permalink: markdownItAnchor.permalink.linkAfterHeader({
       class: "direct-link",
