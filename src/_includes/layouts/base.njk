@@ -25,7 +25,7 @@
       <script src="{{ '/assets/scripts/vendors/modernizr.min.js' | url }}"></script>
     {% endif %}
 
-    <script src="{% if yetty.environment === 'production' %}{{ '/assets/scripts/bundle.min.js' | url }}{% else %}{{ '/assets/scripts/index.js' | url }}{% endif %}"></script>
+    <script src="{% if yetty.environment === 'production' %}{{ '/assets/scripts/bundle.min.js' | url | cacheBuster }}{% else %}{{ '/assets/scripts/index.js' | url | cacheBuster }}{% endif %}"></script>
 
     {% block js %}{% endblock %}
 
