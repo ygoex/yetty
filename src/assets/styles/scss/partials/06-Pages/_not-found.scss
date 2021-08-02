@@ -1,5 +1,11 @@
 .not-found {
-  h2:first-of-type {
-    margin-top: var(--space-0);
+  h2 {
+    margin-top: var(--space-lg-2);
+    &:first-of-type {
+      margin-top: var(--space-0);
+    }
+  }
+  .direct-link {
+    display: none;
   }
 }
