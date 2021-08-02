@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(){
   // https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/
 
   // Select the button
-  const btn = document.querySelector(".theme-toggle");
+  const btn = document.getElementById("dark-light-mode");
   // Check for dark mode preference at the OS level
   const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
