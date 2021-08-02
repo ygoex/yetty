@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="{{ params.svgWidth }}" height="{{ params.svgHeight }}" viewBox="0 0 {{ params.svgWidth }} {{ params.svgHeight }}" class="icon {{ params.svgClass }}" aria-label="{{ params.ariaLabel }}">
+{# As seen in --> https://www.sarasoueidan.com/blog/accessible-icon-buttons/ and  https://piccalil.li/course/learn-eleventy-from-scratch/lesson/6/ #}
+
+<svg xmlns="http://www.w3.org/2000/svg" width="{{ params.svgWidth }}" height="{{ params.svgHeight }}" viewBox="0 0 {{ params.svgWidth }} {{ params.svgHeight }}" class="icon {{ params.svgClass }}" aria-hidden="true" focusable="false">
   <use href="#{{ params.symbolId }}" class="{{ params.symbolId }}"></use>
-  <span class="sr-only">{{ params.screenReader }}</span>
 </svg>
+<span class="sr-only">{{ params.screenReader }}</span>
