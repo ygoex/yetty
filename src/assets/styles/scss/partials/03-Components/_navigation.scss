@@ -65,3 +65,30 @@
     }
   }
 }
+
+.toggle__theme--wrap {
+  display: flex;
+  position: absolute;
+  top: var(--space-lg-2);
+  right: var(--space-sm-8);
+  align-items: center;
+  @include media-query(xs) {
+    position: initial;
+  }
+  &:hover {
+    .toggle__theme--svg {
+      fill: var(--grey-500);
+    }
+  }
+}
+
+.toggle__theme--btn {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.toggle__theme--svg {
+  transition: var(--transition-default);
+  fill: var(--body-font-color);
+}
