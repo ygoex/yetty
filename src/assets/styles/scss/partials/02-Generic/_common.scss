@@ -39,20 +39,3 @@
     }
   }
 }
-
-.theme-toggle {
-  display: flex;
-  position: absolute;
-  top: var(--space-lg-2);
-  right: var(--space-sm-8);
-  align-items: center;
-  transition: var(--transition-default);
-  fill: var(--body-font-color);
-  @include media-query(xs) {
-    position: initial;
-  }
-  &:hover {
-    fill: var(--grey-500);
-    cursor: pointer;
-  }
-}
