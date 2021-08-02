@@ -121,6 +121,18 @@ a {
   &:visited {
     color: var(--link-color-alt);
   }
+}
+
+button {
+  border: none;
+  background: transparent;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+a,
+button {
   &:focus {
     outline: var(--border-width-medium) dashed var(--link-color-alt);
     outline-offset: var(--space-sm-4);
