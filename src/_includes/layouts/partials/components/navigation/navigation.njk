@@ -1,10 +1,9 @@
 {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-<nav class="{{ params.name | lower | replace(" ", "-") }} display-flex" aria-labelledby="{{ params.name | lower | replace(" ", "-") }}">
-  <h2 id="{{ params.name | lower | replace(" ", "-") }}" class="sr-only">{{ params.name | capitalize }}</h2>
+<nav class="{{ params.name | lower | replace(" ", "-") }} display-flex" aria-label="{{ params.name }}">
   <ul class="menu__items flex-wrap">
     {%- for item in params.collection | eleventyNavigation %}
       <li class="menu__item{% if item.url == params.page.url %} menu__item--active{% endif %}">
-        <a class="menu__link" href="{{ item.url | url }}">{{ item.title }}</a>
+        <a class="menu__link" href="{{ item.url | url }}" {% if item.url == params.page.url %}aria-label="Current page, {{ item.title }}"{% endif %}>{{ item.title }}</a>
       </li>
     {%- endfor %}
     {% if params.hasButton %}
