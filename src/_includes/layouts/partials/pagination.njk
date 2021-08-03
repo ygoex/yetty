@@ -1,19 +1,16 @@
-<nav class="pager mt-1" aria-labelledby="{{ title | lower }}-pagination">
-  <h2 id="{{ title | lower }}-pagination" class="sr-only">{{ title }} pagination</h2>
+<nav class="pager mt-1" aria-label="{{ title }} pagination">
   <ul class="pager__items">
     {% if page.url != pagination.href.first %}
       <li class="pager__item pager__item--first">
         <a class="pager__link" href="{{ pagination.href.first }}">
-          <span class="pager__content">First</span>
-          <span class="sr-only">page</span>
+          <span class="pager__content" aria-label="First page">First</span>
         </a>
       </li>
     {% endif %}
     {% if pagination.href.previous %}
       <li class="pager__item pager__item--previous">
         <a class="pager__link" href="{{ pagination.href.previous }}">
-          <span class="pager__content">Previous</span>
-          <span class="sr-only">page</span>
+          <span class="pager__content" aria-label="Previous page">Previous</span>
         </a>
       </li>
     {% endif %}
@@ -22,13 +19,10 @@
         <li class="pager__item pager__number pager__{{ loop.index }}{% if page.url == pagination.hrefs[loop.index0] %} pager__current{% endif %}">
           {% if page.url !== pagination.hrefs[loop.index0] %}
             <a class="pager__link" href="{{ pagination.hrefs[ loop.index0 ] }}">
-              <span class="sr-only">Page</span>
-              <span class="pager__content">{{ loop.index }}</span>
+              <span class="pager__content" aria-label="Go to Page {{ loop.index }}">{{ loop.index }}</span>
             </a>
           {% else %}
-            <span class="sr-only">Current page</span>
-            <span class="sr-only">Page</span>
-            <span class="pager__content">{{ loop.index }}</span>
+            <span class="pager__content" aria-label="Current Page, Page {{ loop.index }}" aria-current="true">{{ loop.index }}</span>
           {% endif %}
         </li>
       {%- endfor %}
@@ -36,18 +30,16 @@
     {% if pagination.href.next %}
       <li class="pager__item pager__item--next">
         <a class="pager__link" href="{{ pagination.href.next }}">
-          <span class="pager__content">Next</span>
-          <span class="sr-only">page</span>
+          <span class="pager__content" aria-label="Next page">Next</span>
         </a>
       </li>
     {% endif %}
     {% if page.url != pagination.href.last %}
       <li class="pager__item pager__item--last">
         <a class="pager__link" href="{{ pagination.href.last }}">
-          <span class="pager__content">Last</span>
-          <span class="sr-only">page</span>
+          <span class="pager__content" aria-label="Last page">Last</span>
         </a>
       </li>
     {% endif %}
-  </ol>
+  </ul>
 </nav>
