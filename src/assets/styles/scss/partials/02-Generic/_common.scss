@@ -39,3 +39,54 @@
     }
   }
 }
+
+// Class for managing the theme with the contrast icon button in main navigation
+.dark-theme {
+  --body-background: var(--grey-900);
+  --body-font-color: var(--white);
+  --body-font-color-alt: var(--black);
+  --heading-font-color: var(--grey-100);
+  --card-background: var(--black);
+  --footer-background: var(--black);
+  --text-muted: var(--grey-200);
+  --link-color: var(--yellow);
+  --link-color-alt: var(--skyblue);
+  --footer-color: var(--grey-200);
+
+  img {
+    filter: grayscale(1) brightness(.8) contrast(1.2);
+  }
+
+  pre[class*="language-"] {
+    margin-top: var(--space-lg-2);
+    border: var(--border-width-thin) solid var(--white);
+    background-color: var(--body-background);
+  }
+
+  .post-card {
+    &:hover {
+      box-shadow: 0 0 1rem var(--white-400-a);
+    }
+  }
+
+  .direct-link {
+    &:hover {
+      &:after {
+        filter: brightness(500%);
+      }
+    }
+  }
+
+  &.gradient-home {
+    background-image: url("/assets/images/mesh-gradient-black.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+/*! purgecss ignore */
+.no-webp .dark-theme.gradient-home {
+  background-image: url("/assets/images/mesh-gradient-black.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
