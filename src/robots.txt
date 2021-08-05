@@ -1,4 +1,3 @@
-# start of file
 user-agent: *
 allow: *
-sitemap: http://localhost:8080/sitemap.xml
+sitemap: https://yetty.netlify.app/sitemap.xml
