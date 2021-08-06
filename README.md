@@ -15,6 +15,7 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 - HTML minified
 - PWA
 - JS compilation with Webpack
+- Modernizr CLI to build a customized version of the library. In our case is used to detect if the browser supports Webp as background-image in CSS.
 
 ## TO-DO:
 - [x] Image processing
