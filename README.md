@@ -12,8 +12,6 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 - PostCSS ([Autoprefixer](https://github.com/postcss/autoprefixer) and [PurgeCSS](https://github.com/FullHuman/purgecss)): Both dependencies have been set up to run through the main css stylesheet after Eleventy has generated the dist folder.
 - Persistent dark mode
 - Cache busting via filter
-- Autoprefixer
-- PurgeCSS
 - HTML minified
 - PWA
 - JS compilation with Webpack
