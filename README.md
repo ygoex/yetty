@@ -10,23 +10,16 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 - [Sass/Scss](https://github.com/sass/node-sass): Scss files are compiled before Eleventy builds the site. The files are compiled in the `./src/styles` folder and then will be passed through copy (see `.eleventy.js`) to the new site created under `./dist/`. For Netlify users, an alternative option with plugins is explained here: [https://css-tricks.com/making-my-netlify-build-run-sass/](https://css-tricks.com/making-my-netlify-build-run-sass/).
 - [Critical CSS](https://github.com/gregives/eleventy-critical-css): Critical CSS is automatically included in the head of the document using the [eleventy-critical-css plugin](https://www.npmjs.com/package/eleventy-critical-css).
 - PostCSS ([Autoprefixer](https://github.com/postcss/autoprefixer) and [PurgeCSS](https://github.com/FullHuman/purgecss)): Both dependencies have been set up to run through the main css stylesheet after Eleventy has generated the dist folder.
+- Persistent dark mode
+- Cache busting via filter
+- Autoprefixer
+- PurgeCSS
+- HTML minified
+- PWA
+- JS compilation with Webpack
 
 ## TO-DO:
-- [x] Sass/Scss
-- [x] Bundle JS with Webpack
-- [x] PWA
-- [x] Add html-minifier
-- [x] Remove inline CSS and leave only resources and documentation for doing it.
-- [x] Refact scripts in package.json
-- [x] Critical CSS
-- [x] Add custom style
-- [x] Add cross-env
-- [x] PostCSS: Autoprefixer
-- [x] PostCSS: Purge CSS
 - [x] Image processing
-- [ ] Cache busting
-- [ ] Dark mode
-- [x] Refactor CSS
 - [ ] Improve documentation
 - [ ] Testing with Cypress
 
