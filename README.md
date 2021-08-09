@@ -1,6 +1,4 @@
-# yetty: Yet another 11ty boilerplate to start a new website with optional blog.
-
-This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog) et al.
+# yetty: Yet another Eleventy starter kit for my/your new projects.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/faab84cf-52cb-4150-b142-f0c4e0e5312f/deploy-status)](https://app.netlify.com/sites/yetty/deploys)
 
@@ -120,3 +118,6 @@ DEBUG=* npx eleventy
     1. [https://www.11ty.dev/docs/quicktips/inline-css/](https://www.11ty.dev/docs/quicktips/inline-css/)
     2. [https://www.11ty.dev/docs/quicktips/concatenate/](https://www.11ty.dev/docs/quicktips/concatenate/)
     3. [https://danabyerly.com/articles/manually-splitting-css-files-in-eleventy/](https://danabyerly.com/articles/manually-splitting-css-files-in-eleventy/)
+
+
+This starter kit was born as a fork of [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog), but it also includes features inspired on other Eleventy projects.
