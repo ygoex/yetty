@@ -15,10 +15,10 @@ This is a WIP based on [eleventy-base-blog](https://github.com/11ty/eleventy-bas
 - HTML minified
 - PWA
 - JS compilation with Webpack
+- Image processing with [eleventy-img](https://github.com/11ty/eleventy-img) plugin. Generates multiple sizes in two different formats (jpg and webp), and markup with `<figure>` and `<picture>`.
 - [Modernizr](https://modernizr.com/) CLI: To build a custom and minified version of the library as seen here: [https://v2.14islands.com/blog/2016/04/20/better-way-to-use-modernizr-with-command-line-config/](https://v2.14islands.com/blog/2016/04/20/better-way-to-use-modernizr-with-command-line-config/). Yetty is using it to detect if the browser supports Webp as background-image in CSS.
 
 ## TO-DO:
-- [x] Image processing
 - [ ] Improve documentation
 - [ ] Testing with Cypress
 
@@ -40,7 +40,6 @@ This builder is amazing. Try it out to get your own yetty site in a few clicks!
 git clone https://github.com/ygoex/yetty.git my-new-project
 ```
 
-
 ### 2. Navigate to the directory
 
 ```
@@ -59,7 +58,7 @@ npm install
 
 ### 5. Run Eleventy
 
-For local development and reload http://localhost:8080/ when a template, style or js changes:
+For local development and reload http://localhost:8081/ when a template, style or js changes:
 ```
 npm start
 ```
