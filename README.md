@@ -1,4 +1,4 @@
-# yetty: Yet another Eleventy starter kit for my (& your) new projects.
+# yetty: Yet another Eleventy starter kit for my (& your) new projects with accessibility and performance in mind.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/faab84cf-52cb-4150-b142-f0c4e0e5312f/deploy-status)](https://app.netlify.com/sites/yetty/deploys)
 
@@ -13,7 +13,7 @@
 - HTML minified
 - PWA
 - JS compilation with Webpack
-- Image processing with [eleventy-img](https://github.com/11ty/eleventy-img) plugin. Generates multiple sizes in two different formats (jpg and webp), and markup with `<figure>` and `<picture>`.
+- Image processing with [eleventy-img](https://github.com/11ty/eleventy-img) plugin. Generates multiple sizes images in two different formats (jpg and webp), and markup with `<figure>`, `<picture>` and native lazy loading.
 - [Modernizr](https://modernizr.com/) CLI: To build a custom and minified version of the library as seen here: [https://v2.14islands.com/blog/2016/04/20/better-way-to-use-modernizr-with-command-line-config/](https://v2.14islands.com/blog/2016/04/20/better-way-to-use-modernizr-with-command-line-config/). Yetty is using it to detect if the browser supports Webp as background-image in CSS.
 
 ## TO-DO:
