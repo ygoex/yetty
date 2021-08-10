@@ -12,7 +12,7 @@
 - Cache busting via filter based on [https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/](https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/).
 - HTML minified on prooduction with [https://www.npmjs.com/package/html-minifier](https://www.npmjs.com/package/html-minifier) package.
 - PWA using [https://github.com/okitavera/eleventy-plugin-pwa](https://github.com/okitavera/eleventy-plugin-pwa) plugin.
-- JS compilation with Webpack
+- JS compilation and minification with Webpack CLI.
 - Image processing with [eleventy-img](https://github.com/11ty/eleventy-img) plugin. Generates multiple sizes images in two different formats (jpg and webp), and markup with `<figure>`, `<picture>` and native lazy loading.
 - [Modernizr](https://modernizr.com/) CLI: To build a custom and minified version of the library as seen here: [https://v2.14islands.com/blog/2016/04/20/better-way-to-use-modernizr-with-command-line-config/](https://v2.14islands.com/blog/2016/04/20/better-way-to-use-modernizr-with-command-line-config/). Yetty is using it to detect if the browser supports Webp as background-image in CSS.
 
