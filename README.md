@@ -9,7 +9,7 @@
 - [Critical CSS](https://github.com/gregives/eleventy-critical-css): Critical CSS is automatically included in the head of the document using the [eleventy-critical-css plugin](https://www.npmjs.com/package/eleventy-critical-css).
 - PostCSS ([Autoprefixer](https://github.com/postcss/autoprefixer) and [PurgeCSS](https://github.com/FullHuman/purgecss)): Both dependencies have been set up to run through the main css stylesheet after Eleventy has generated the dist folder.
 - Persistent dark mode using local storage as seen here: [https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/)
-- Cache busting via filter
+- Cache busting via filter based on [https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/](https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/).
 - HTML minified
 - PWA
 - JS compilation with Webpack
