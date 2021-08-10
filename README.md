@@ -8,7 +8,7 @@
 - [Sass/Scss](https://github.com/sass/node-sass): Scss files are compiled before Eleventy builds the site. The files are compiled in the `./src/styles` folder and then will be passed through copy (see `.eleventy.js`) to the new site created under `./dist/`. For Netlify users, an alternative option with plugins is explained here: [https://css-tricks.com/making-my-netlify-build-run-sass/](https://css-tricks.com/making-my-netlify-build-run-sass/).
 - [Critical CSS](https://github.com/gregives/eleventy-critical-css): Critical CSS is automatically included in the head of the document using the [eleventy-critical-css plugin](https://www.npmjs.com/package/eleventy-critical-css).
 - PostCSS ([Autoprefixer](https://github.com/postcss/autoprefixer) and [PurgeCSS](https://github.com/FullHuman/purgecss)): Both dependencies have been set up to run through the main css stylesheet after Eleventy has generated the dist folder.
-- Persistent dark mode
+- Persistent dark mode using local storage as seen here: [https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/)
 - Cache busting via filter
 - HTML minified
 - PWA
