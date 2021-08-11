@@ -37,6 +37,8 @@ This builder is amazing. Try it out to get your own yetty site in a few clicks!
 ```
 git clone https://github.com/ygoex/yetty.git my-new-project
 ```
+or, if you are currently signed in to GitHub, [generate a repo from this template](https://github.com/ygoex/yetty/generate).
+
 
 ### 2. Navigate to the directory
 
@@ -52,16 +54,16 @@ Specifically have a look at `.eleventy.js` to see if you want to configure any E
 npm install
 ```
 
-### 4. Edit _data/metadata.json
+### 4. Edit _data/metadata.json and adjust the values to your details.
 
 ### 5. Run Eleventy
 
-For local development and reload http://localhost:8081/ when a template, style or js changes:
+For local development:
 ```
 npm start
 ```
 
-To build for production:
+To build a production version:
 ```
 npm run build
 ```
