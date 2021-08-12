@@ -123,4 +123,4 @@ DEBUG=* npx eleventy
 
 This starter kit was born as a fork of [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog), but it also includes features inspired on other Eleventy projects.
 
-[![Buy me a coffee](https://img.buymeacoffee.com/button-api/?text=Buy me chocolate&emoji=🍫&slug=ygoex&button_colour=ffdbe1&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00)](https://www.buymeacoffee.com/ygoex)
+[<img src="https://img.buymeacoffee.com/button-api/?text=Buy me chocolate&emoji=🍫&slug=ygoex&button_colour=ffdbe1&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00">](https://www.buymeacoffee.com/ygoex)
