@@ -1,10 +1,10 @@
 {
   "title": "Yetty",
-  "url": "https://yetty.netlify.app/",
-  "description": "Yet another 11ty boilerplate to start a new website with optional blog.",
+  "url": "https://yetty.netlify.app",
+  "description": "Yet another Eleventy starter kit for my (& your) new projects with accessibility and performance in mind.",
   "repo": "https://github.com/ygoex/yetty",
   "feed": {
-    "subtitle": "Yet another 11ty boilerplate to start a new website with optional blog.",
+    "subtitle": "Yet another Eleventy starter kit for my (& your) new projects with accessibility and performance in mind.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://yetty.netlify.app/"
@@ -16,6 +16,7 @@
   "author": {
     "name": "Yolanda Gorriz Exposito",
     "email": "helloygoex@gmail.com",
+    "username": "ygoex",
     "url": "https://yetty.netlify.app/about-me/",
     "github": "https://github.com/ygoex",
     "twitter": "https://twitter.com/ygoex",
