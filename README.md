@@ -1,4 +1,4 @@
-# yetty: Yet another Eleventy starter kit for my (& your) new projects with accessibility and performance in mind.
+# yetty: Yet another Eleventy starter kit for my (& your) new projects. Built with accessibility and performance in mind.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/faab84cf-52cb-4150-b142-f0c4e0e5312f/deploy-status)](https://app.netlify.com/sites/yetty/deploys)
 
