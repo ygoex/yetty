@@ -1,19 +1,69 @@
+{% set eleventyVersion = pkg.devDependencies['@11ty/eleventy'] | replace("^", "") %}
+{% set socialImg = '/assets/images/yetty-social.jpg' %}
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <title>{{ title or metadata.title }}</title>
+
+  {% if page.url === "/" %}
+    <title>{{ metadata.title }}</title>
+    <meta name="description" content="{{ metadata.description }}">
+    <link rel="canonical" href="{{ metadata.url }}" />
+  {% else %}
+    <title>{{ title }} | {{ metadata.title }}</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="canonical" href="{{ metadata.url }}{{ page.url }}" />
+  {% endif %}
+
   <meta name="author" content="{{ metadata.author.name }}"/>
-  <meta name="description" content="{{ description or metadata.description }}">
-  <meta name="generator" content="Eleventy">
+  <meta name="generator" content="Eleventy v{{ eleventyVersion }}">
   <meta name="theme-color" content="#ffffff"/>
   <link rel="manifest" href="{{ '/manifest.json' | url }}"/>
+
+  <!-- Styles -->
   {% if css_library %}
     <link rel="stylesheet" href="{{ css_library }}">
   {% endif %}
   <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url | cacheBuster }}">
+
+  {# <!-- Fonts -->
+  <link rel="preload" href="/assets/fonts/your-font.woff2" crossorigin="anonymous" as="font" type="font/woff2" /> #}
+
+  <!-- Feeds -->
   <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
   <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+
+  <!-- Icons -->
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
   <link rel="shortcut icon" href="{{ '/assets/images/favicon/favicon.ico' | url }}" type="image/x-icon"/>
+
+  <!-- Open Graph data -->
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="{{ socialImg | url }}" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="579" />
+  {% if page.url === "/" %}
+    <meta property="og:description" content="{{ metadata.description }}" />
+    <meta property="og:title" content="{{ metadata.title }}" />
+    <meta property="og:url" content = "{{ metadata.url }}/" />
+  {% else %}
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}" />
+  {% endif %}
+
+  <!-- Twitter card -->
+  <meta name="twitter:site" content="@{{ metadata.author.username }}">
+  <meta name="twitter:creator" content="@{{ metadata.author.username }}">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="{{ socialImg | url }}" />
+  {% if page.url === "/" %}
+    <meta name="twitter:description" content="{{ metadata.description }}" />
+    <meta name="twitter:title" content="{{ metadata.title }}" />
+  {% else %}
+    <meta name="twitter:description" content="{{ description }}" />
+    <meta name="twitter:title" content="{{ title }}" />
+  {% endif %}
+
 </head>
