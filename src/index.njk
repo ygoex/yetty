@@ -12,7 +12,8 @@ eleventyNavigation:
 
 {% block content %}
   <section class="hero">
-    <h1>{{ home.hero }}</h1>
+    <h1>{{ home.h1 }}</h1>
+    <p class="lead h3">{{ home.lead }}</p>
   </section>
 
   {% set maxPosts = collections.posts.length | min(3) %}
