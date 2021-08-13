@@ -40,7 +40,7 @@
 
   <!-- Open Graph data -->
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="{{ socialImg | url }}" />
+  <meta property="og:image" content="{{ imgUrl or socialImg | url }}" />
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="579" />
   {% if page.url === "/" %}
@@ -57,7 +57,7 @@
   <meta name="twitter:site" content="@{{ metadata.author.username }}">
   <meta name="twitter:creator" content="@{{ metadata.author.username }}">
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="{{ socialImg | url }}" />
+  <meta name="twitter:image" content="{{ imgUrl or socialImg | url }}" />
   {% if page.url === "/" %}
     <meta name="twitter:description" content="{{ metadata.description }}" />
     <meta name="twitter:title" content="{{ metadata.title }}" />
