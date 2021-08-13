@@ -1,5 +1,11 @@
 ---
 title: Blog
+imgUrl: https://source.unsplash.com/-K6JMRMj4x4/
+imgAlt: Disassembled typewriter
+imgSize: '(min-width: 30em) 50vw, 100vw'
+pictureClass: grid-column-full
+imgClass: img-full
+imgBorderColor: '#3f51b5'
 eleventyComputed:
     description: Thoughts & ramblings by {{ metadata.author.name }}
 permalink: /posts/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}/{% endif %}
@@ -23,8 +29,7 @@ pagination:
     }) }}
   </div>
 
-  {% imageNjk "https://source.unsplash.com/-K6JMRMj4x4/",
-  "Ink in water", "(min-width: 30em) 50vw, 100vw", "grid-column-full", "img-full", "#3f51b5" %}
+  {% imageNjk imgUrl, imgAlt, imgSize, pictureClass, imgClass, imgBorderColor %}
 
   {% set allPosts = collections.posts %}
   {% set postslist = posts %}
