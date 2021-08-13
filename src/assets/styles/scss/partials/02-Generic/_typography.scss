@@ -38,6 +38,7 @@ h2,
 h3,
 .h3 {
   font-size: var(--font-size-2xl);
+  font-size: unquote("clamp(1.25rem, 8.3vw - 2rem, 1.953rem)");
   line-height: 1.3;
 }
 
