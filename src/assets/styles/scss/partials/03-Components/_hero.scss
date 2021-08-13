@@ -16,17 +16,21 @@
   }
   h1 {
     max-width: var(--w-breakpoint-md);
-    margin: var(--space-lg-4) auto;
+    margin: var(--space-lg-4) auto var(--space-lg-2);
     // Explanation about the magic numbers:
     // https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
     // See also: https://fluid-typography.netlify.app/
     // The unquote function is necessary to about the following error on Sass compilation --> "Incompatible units: 'rem' and 'vw'."
-    margin: unquote("clamp(0rem, 33.3vw - 16rem, 4rem) auto");
+    margin: unquote("clamp(0rem, 33.3vw - 16rem, 4rem)") auto 2rem;
     color: var(--heading-font-color);
     line-height: 1.3;
     //Style for gradient text
     //background: linear-gradient(270deg, #ed0000, #7817a8, var(--link-color));
     //-webkit-background-clip: text;
     //-webkit-text-fill-color: transparent;
+  }
+  .lead {
+    margin: 0 auto unquote("clamp(0rem, 33.3vw - 16rem, 4rem)");
+    max-width: var(--w-breakpoint-md);
   }
 }
