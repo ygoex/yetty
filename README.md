@@ -32,6 +32,11 @@ This builder is amazing. Try it out to get your own yetty site in a few clicks!
 
 * [Get your own yetty web site on Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/ygoex/yetty)
 
+## Requirements
+
+- [Node.js v10 or higher](https://nodejs.org/en/download/) must be installed to run this program.
+- [npm 7.20.0 or higher](https://www.npmjs.com/package/npm) must be also installed.
+
 ## Getting Started
 
 ### 1. Clone this Repository
