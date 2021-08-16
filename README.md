@@ -121,6 +121,14 @@ DEBUG=* npx eleventy
 
 ---
 
-This starter kit was born as a fork of [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog), but it also includes features inspired on other Eleventy projects.
+This starter kit was born as a fork of [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog), but it also includes features inspired by other Eleventy projects:
+
+- [Eleventy Solo](https://github.com/brycewray/eleventy_solo)
+- [11ty Netlify Jumpstart](https://github.com/5t3ph/11ty-netlify-jumpstart)
+- [Eleventy Duo](https://github.com/yinkakun/eleventy-duo)
+- [Eleventy One](https://github.com/philhawksworth/eleventyone)
+- [Supermaya](https://github.com/MadeByMike/supermaya)
+- [Hylia](https://github.com/andy-piccalilli/hylia)
+
 
 [<img src="https://img.buymeacoffee.com/button-api/?text=Buy me chocolate&emoji=🍫&slug=ygoex&button_colour=ffdbe1&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00">](https://www.buymeacoffee.com/ygoex)
