@@ -126,11 +126,11 @@ DEBUG=* npx eleventy
 This starter kit was born as a fork of [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog), but it also includes features inspired by other Eleventy projects:
 
 - [Eleventy Solo](https://github.com/brycewray/eleventy_solo)
-- [11ty Netlify Jumpstart](https://github.com/5t3ph/11ty-netlify-jumpstart)
 - [Eleventy Duo](https://github.com/yinkakun/eleventy-duo)
 - [Eleventy One](https://github.com/philhawksworth/eleventyone)
-- [Supermaya](https://github.com/MadeByMike/supermaya)
 - [Hylia](https://github.com/andy-piccalilli/hylia)
+- [11ty Netlify Jumpstart](https://github.com/5t3ph/11ty-netlify-jumpstart)
+- [Supermaya](https://github.com/MadeByMike/supermaya)
 - [huphtur.nl](https://github.com/huphtur/huphtur.nl)
 - [11ty Component Macro](https://github.com/trys/11ty-component-macro)
 
