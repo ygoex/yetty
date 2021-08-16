@@ -30,7 +30,7 @@
     //-webkit-text-fill-color: transparent;
   }
   .lead {
-    margin: 0 auto unquote("clamp(0rem, 33.3vw - 16rem, 4rem)");
     max-width: var(--w-breakpoint-md);
+    margin: 0 auto unquote("clamp(0rem, 33.3vw - 16rem, 4rem)");
   }
 }
