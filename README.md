@@ -4,6 +4,8 @@
 
 ![GitHub](https://img.shields.io/github/license/ygoex/yetty?style=for-the-badge)
 
+![Yetty](https://github.com/ygoex/yetty/blob/main/src/assets/images/yetty-social.jpg?raw=true)
+
 ## Features:
 - [Sass/Scss](https://github.com/sass/node-sass): Scss files are compiled before Eleventy builds the site. The files are compiled in the `./src/styles` folder and then will be passed through copy (see `.eleventy.js`) to the new site created under `./dist/`. For Netlify users, an alternative option with plugins is explained here: [https://css-tricks.com/making-my-netlify-build-run-sass/](https://css-tricks.com/making-my-netlify-build-run-sass/).
 - [Critical CSS](https://github.com/gregives/eleventy-critical-css): Critical CSS is automatically included in the head of the document using the [eleventy-critical-css plugin](https://www.npmjs.com/package/eleventy-critical-css).
