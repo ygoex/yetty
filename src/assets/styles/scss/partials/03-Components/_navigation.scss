@@ -8,7 +8,7 @@
   list-style: none;
   // https://pineco.de/get-to-know-the-lobotomized-owl-selector/
   & > * + * {
-    margin-left: var(--space-lg-1);
+    margin-left: var(--space-sm-12);
     @include media-query(md) {
         margin-left: var(--space-lg-2);
     }
@@ -74,6 +74,7 @@
   align-items: center;
   @include media-query(xs) {
     position: initial;
+    margin-top: var(--space-sm-4);
   }
   &:hover {
     .toggle__theme--svg {
