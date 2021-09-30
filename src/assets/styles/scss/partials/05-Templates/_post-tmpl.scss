@@ -52,6 +52,8 @@
 }
 
 .post__footer {
+  content-visibility: auto;
+  contain-intrinsic-size: 150px;
   padding-bottom: var(--space-lg-1);
 }
 

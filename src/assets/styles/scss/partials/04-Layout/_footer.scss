@@ -1,4 +1,6 @@
 .footer {
+  content-visibility: auto;
+  contain-intrinsic-size: 750px;
   padding: var(--space-lg-1) var(--space-0);
   background-color: var(--footer-background);
   color: var(--footer-color);
