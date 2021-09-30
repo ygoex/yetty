@@ -14,7 +14,7 @@ rules:
   # attribute strings are normally quoted within the DOM.
   string-quotes: double
   property-no-unknown: null
-  ignoreProperties: ["contain-intrinsic-size"]
+  # ignoreProperties: ["contain-intrinsic-size"]
   order/order:
     - - type: at-rule
         hasBlock: false
