@@ -13,6 +13,8 @@ rules:
   # Double-quotes are our convention throughout our codebase within (S)CSS. They also reflect how
   # attribute strings are normally quoted within the DOM.
   string-quotes: double
+  property-no-unknown: null
+  ignoreProperties: ["contain-intrinsic-size"]
   order/order:
     - - type: at-rule
         hasBlock: false
