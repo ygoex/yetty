@@ -1,8 +1,11 @@
 # yetty: Yet another Eleventy starter kit for my (& your) new projects. Built with accessibility and performance in mind.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/faab84cf-52cb-4150-b142-f0c4e0e5312f/deploy-status)](https://app.netlify.com/sites/yetty/deploys)
+<!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/faab84cf-52cb-4150-b142-f0c4e0e5312f/deploy-status)](https://app.netlify.com/sites/yetty/deploys) -->
 
-![GitHub](https://img.shields.io/github/license/ygoex/yetty?style=for-the-badge)
+![Netlify-build](https://img.shields.io/netlify/faab84cf-52cb-4150-b142-f0c4e0e5312f?style=for-the-badge)
+![GitHub-license](https://img.shields.io/github/license/ygoex/yetty?style=for-the-badge)
+![GitHub-stars](https://img.shields.io/github/stars/ygoex/yetty?style=for-the-badge)
+![GitHub-forks](https://img.shields.io/github/forks/ygoex/yetty?style=for-the-badge)
 
 ![Yetty](https://github.com/ygoex/yetty/blob/main/src/assets/images/yetty-social.jpg?raw=true)
 
