@@ -58,12 +58,12 @@
     "markdown-it-link-attributes": "^3.0.0",
     "modernizr": "^3.11.8",
     "node-sass": "^6.0.1",
-    "postcss": "^8.3.11",
+    "postcss": "^8.3.9",
     "postcss-cli": "^9.0.1",
     "rimraf": "^3.0.2",
-    "stylelint": "^14.0.0",
-    "stylelint-order": "^5.0.0",
-    "webpack": "^5.59.1",
+    "stylelint": "^13.13.1",
+    "stylelint-order": "^4.1.0",
+    "webpack": "^5.58.2",
     "webpack-cli": "^4.9.1"
   },
   "dependencies": {
