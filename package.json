@@ -58,7 +58,7 @@
     "markdown-it-link-attributes": "^3.0.0",
     "modernizr": "^3.11.8",
     "node-sass": "^6.0.1",
-    "postcss": "^8.3.9",
+    "postcss": "^8.3.11",
     "postcss-cli": "^9.0.1",
     "rimraf": "^3.0.2",
     "stylelint": "^13.13.1",
