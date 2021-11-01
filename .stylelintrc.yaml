@@ -1,4 +1,7 @@
+extends:
+  - stylelint-config-standard-scss
 plugins:
+  - stylelint-scss
   - stylelint-order
 rules:
   # Override stylelint-config-standard - we only use CSS comments for annotations that don't warrant an empty line
@@ -14,7 +17,28 @@ rules:
   # attribute strings are normally quoted within the DOM.
   string-quotes: double
   property-no-unknown: null
+  max-line-length: null
+  # custom-property-pattern: null, because otherwise it throws following error
+  # Expected custom property name to be kebab-case (_settings.scss --> 51:5)
+  custom-property-pattern: null
   # ignoreProperties: ["contain-intrinsic-size"]
+  # see: https://stylelint.io/user-guide/rules/no-descending-specificity
+  no-descending-specificity: null
+  # selector-class-pattern: null, because otherwise it throws errors with BEM classes
+  selector-class-pattern: null
+  # Disallow unknown media feature names like "prefers-reduced-data"
+  # https://stylelint.io/user-guide/rules/media-feature-name-no-unknown/
+  media-feature-name-no-unknown: null
+  no-invalid-position-at-import-rule: null
+  # color-function-notation: legacy required to avoid compilation errors with node-sass
+  color-function-notation: legacy
+  alpha-value-notation: number
+  # SCSS
+  # double-slash-comment-whitespace-inside: null because throws error with comments that include urls.
+  scss/double-slash-comment-whitespace-inside: null
+  #  no-global-function-names: null because throws error with map-get or unquote functions
+  scss/no-global-function-names: null
+  scss/at-import-no-partial-leading-underscore: null
   order/order:
     - - type: at-rule
         hasBlock: false
