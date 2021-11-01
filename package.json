@@ -1,6 +1,6 @@
 {
   "name": "yetty",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Yet another Eleventy starter kit for my (& your) new projects.Built with accessibility and performance in mind.",
   "scripts": {
     "eleventy:dev": "cross-env ELEVENTY_ENV=development eleventy --serve",
