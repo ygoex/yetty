@@ -7,10 +7,14 @@
   grid-column: 2 / auto;
   grid-auto-rows: 1fr;
   grid-column-gap: var(--space-lg-1h);
+  /* stylelint-disable declaration-block-no-redundant-longhand-properties */
   grid-row-gap: 1.7rem;
+  /* stylelint-enable declaration-block-no-redundant-longhand-properties */
+
   @include media-query(xs) {
     grid-template-columns: repeat(2, 1fr);
   }
+
   @include media-query(lg) {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -23,6 +27,7 @@
   background-color: var(--card-background);
   box-shadow: -1rem 0 2rem var(--black-100-a);
   overflow: hidden;
+
   &:hover {
     cursor: pointer;
     box-shadow: 0 10px 15px -3px var(--black-100-a), 0 -3px 6px -2px var(--black-50-a);

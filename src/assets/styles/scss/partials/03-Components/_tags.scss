@@ -27,9 +27,11 @@
   font-size: var(--font-size-sm);
   text-decoration: none;
   vertical-align: text-top;
+
   &:visited {
     color: var(--body-font-color);
   }
+
   &:hover {
     border-color: var(--link-color);
     color: var(--link-color);

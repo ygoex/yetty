@@ -7,7 +7,7 @@
   border: 0;
   white-space: nowrap;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
 }
 
 .skip-link {
@@ -20,7 +20,8 @@
 .direct-link {
   position: relative;
   text-decoration: none;
-  &:after {
+
+  &::after {
     display: inline-block;
     position: relative;
     top: var(--space-sm-2);
@@ -32,9 +33,11 @@
     content: " ";
     filter: brightness(150%);
   }
+
   &:hover {
     cursor: pointer;
-    &:after {
+
+    &::after {
       filter: brightness(0%);
     }
   }
@@ -54,7 +57,7 @@
   --footer-color: var(--grey-200);
 
   img {
-    filter: grayscale(1) brightness(.8) contrast(1.2);
+    filter: grayscale(1) brightness(0.8) contrast(1.2);
   }
 
   pre[class*="language-"] {
@@ -71,7 +74,7 @@
 
   .direct-link {
     &:hover {
-      &:after {
+      &::after {
         filter: brightness(500%);
       }
     }

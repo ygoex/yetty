@@ -7,7 +7,8 @@
 // For this to work, loading=lazy is required in image.
 // https://twitter.com/argyleink/status/1417569595276206083?s=20
 @media (prefers-reduced-data: reduce) {
-  img, video {
+  img,
+  video {
     display: none;
   }
 }

@@ -1,22 +1,27 @@
 .hero {
   @extend %grid-column-full;
+
   position: relative;
   padding: var(--space-0) var(--space-lg-1h);
   overflow: hidden;
+
   // not in use: left in case we need to add an image before h1 using shortcut
   picture {
     position: absolute;
     z-index: -1;
   }
+
   // SVG Topography from http://www.heropatterns.com/
   // not in use: left in case we need to add an svg before h1
   svg {
     position: absolute;
     z-index: -1;
   }
+
   h1 {
     max-width: var(--w-breakpoint-md);
     margin: var(--space-lg-4) auto var(--space-lg-2);
+
     // Explanation about the magic numbers:
     // https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
     // See also: https://fluid-typography.netlify.app/
@@ -24,11 +29,13 @@
     margin: unquote("clamp(0rem, 33.3vw - 16rem, 4rem)") auto 2rem;
     color: var(--heading-font-color);
     line-height: 1.3;
+
     //Style for gradient text
     //background: linear-gradient(270deg, #ed0000, #7817a8, var(--link-color));
     //-webkit-background-clip: text;
     //-webkit-text-fill-color: transparent;
   }
+
   .lead {
     max-width: var(--w-breakpoint-md);
     margin: 0 auto unquote("clamp(0rem, 33.3vw - 16rem, 4rem)");

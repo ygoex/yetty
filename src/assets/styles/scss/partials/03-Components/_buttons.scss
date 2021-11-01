@@ -7,12 +7,14 @@
   color: var(--body-font-color-alt);
   letter-spacing: var(--space);
   text-decoration: none;
+
   &:hover {
     border: var(--border-width-medium) solid var(--body-font-color);
     background-color: var(--body-font-color-alt);
     color: var(--body-font-color);
     cursor: pointer;
   }
+
   &:visited {
     background-color: var(--body-font-color);
     color: var(--body-font-color-alt);

@@ -11,6 +11,7 @@
   grid-column: 2 / auto;
   display: flex;
   flex-direction: column;
+
   @include media-query(sm) {
     flex-direction: row;
   }
@@ -33,6 +34,7 @@
   @include media-query(xs) {
     display: flex;
   }
+
   @include media-query(sm) {
     display: flex;
     flex: 1 50%;
@@ -46,6 +48,7 @@
   border: var(--border-width-medium) solid var(--footer-color);
   color: var(--footer-color);
   font-size: var(--font-size-xl);
+
   &:hover {
     border: var(--border-width-medium) solid var(--link-color);
     color: var(--link-color);
@@ -83,7 +86,9 @@
 
 .footer__link {
   @extend %underline-dashed;
+
   padding: var(--space-sm-6) var(--space-sm-6) var(--space-sm-6) var(--space-sm-2);
+
   @include media-query(md) {
     padding: var(--space-sm-2);
   }
@@ -101,14 +106,17 @@
   border: var(--border-width-medium) solid var(--text-muted);
   border-radius: var(--border-radius-circle);
   font-size: var(--font-size-xl);
+
   svg {
     transition: var(--transition-default);
     fill: var(--text-muted);
     color: var(--text-muted);
     stroke: var(--text-muted);
   }
+
   &:hover {
     border-color: var(--link-color);
+
     svg {
       fill: var(--link-color);
       color: var(--link-color);

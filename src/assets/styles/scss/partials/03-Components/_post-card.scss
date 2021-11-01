@@ -1,5 +1,6 @@
 .post-card {
   position: relative;
+
   &:hover {
     .post-card__link,
     .post-card__link:visited {
@@ -16,7 +17,7 @@
 }
 
 .post-card__link {
-  &:after {
+  &::after {
     display: block;
     position: absolute;
     top: 0;
@@ -25,9 +26,11 @@
     left: 0;
     content: "";
   }
+
   &:focus-visible {
     outline: none;
-    &:after {
+
+    &::after {
       border: var(--border-width-medium) dashed var(--link-color-alt);
       border-radius: var(--border-radius-default);
     }
@@ -38,6 +41,7 @@
   display: flex;
   height: 10rem;
   filter: grayscale(1) brightness(1);
+
   img {
     width: 100%;
     object-fit: cover;
@@ -46,6 +50,7 @@
 
 .post-card__content {
   padding: var(--space-lg-1h);
+
   p:not(.post-card__title) {
     font-size: var(--font-size-base);
   }

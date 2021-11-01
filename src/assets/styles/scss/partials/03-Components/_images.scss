@@ -1,19 +1,25 @@
 .img {
   &-responsive {
     @extend %img;
+
     width: 100%;
     aspect-ratio: 16 / 9;
   }
+
   &-post {
     @extend %img;
+
     width: 90%;
     margin: 0 5%;
     aspect-ratio: 16 / 9;
   }
+
   &-accent {
     @extend %img;
+
     width: 90vw;
     max-height: 70vh;
+
     // Explanation about the magic numbers:
     // https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
     // See also: https://fluid-typography.netlify.app/
@@ -23,15 +29,19 @@
     aspect-ratio: 3 / 1;
     box-shadow: -1.5rem 1.5rem var(--banner-border-color);
   }
+
   &-full {
     @extend %img;
+
     width: 100vw;
     max-height: 70vh;
     margin-bottom: unquote("clamp(2rem, 16.7vw - 6rem, 4rem)");
     aspect-ratio: 2 / 1;
   }
+
   &-restricted {
     @extend %img;
+
     display: flex;
     align-self: center;
     width: var(--w-breakpoint-md);

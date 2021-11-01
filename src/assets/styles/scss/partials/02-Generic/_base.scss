@@ -1,16 +1,11 @@
 * {
-	box-sizing: border-box;
-	margin: var(--space-0);
-	padding: var(--space-0);
+  box-sizing: border-box;
+  margin: var(--space-0);
+  padding: var(--space-0);
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-::-moz-selection {
-  background-color: var(--yellow);
-  color: var(--body-font-color);
 }
 
 ::selection {
@@ -32,6 +27,7 @@ p {
   @extend %grid-column-center;
 
   margin-bottom: var(--space-lg-1);
+
   &:last-child {
     margin-bottom: var(--space-0);
   }
@@ -55,7 +51,8 @@ article {
   overflow: hidden;
 }
 
-img, video {
+img,
+video {
   max-width: 100%;
   height: auto;
 }
@@ -68,6 +65,7 @@ picture {
 
 a {
   color: var(--link-color);
+
   &:visited {
     color: var(--link-color-alt);
   }
@@ -76,6 +74,7 @@ a {
 button {
   border: none;
   background: transparent;
+
   &:hover {
     cursor: pointer;
   }
@@ -87,9 +86,11 @@ button {
     outline: var(--border-width-medium) dashed var(--link-color-alt);
     outline-offset: var(--space-sm-4);
   }
+
   &:focus:not(:focus-visible) {
     outline: none;
   }
+
   &:focus-visible {
     outline: var(--border-width-medium) dashed var(--link-color-alt);
     outline-offset: var(--space-sm-4);
@@ -101,6 +102,7 @@ code {
   font-family: var(--mono-font-family);
   line-height: 1.5;
 }
+
 pre {
   margin: var(--space) var(--space-0);
   padding: var(--space-lg-1);
@@ -112,21 +114,18 @@ pre {
   word-spacing: normal;
   direction: ltr;
   word-break: normal;
-  -moz-tab-size: 2;
-  -o-tab-size: 2;
   tab-size: 2;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
   hyphens: none;
 }
 
 pre[class*="language-"] {
   //Fix issue with pre inside columns breaking incorrectly
   display: block;
+
   //To avoid overflow in small devices
   max-width: calc(100vw - var(--space-lg-3));
   margin: var(--space-lg-1) var(--space-0);
+
   //Fix issue with prism
   padding: var(--space-lg-1);
   background-color: var(--body-font-color);

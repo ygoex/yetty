@@ -2,9 +2,10 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   @include media-query(md) {
     flex-direction: row;
-	}
+  }
 }
 
 .home {
@@ -22,9 +23,11 @@ header {
   line-height: 1;
   text-decoration: none;
   font-variant-caps: small-caps;
+
   &:visited {
     color: inherit;
   }
+
   &:hover {
     border-color: var(--link-color);
     color: var(--link-color);
