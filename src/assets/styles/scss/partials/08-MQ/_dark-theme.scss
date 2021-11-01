@@ -1,4 +1,3 @@
-
 // It follows system preferences
 @media (prefers-color-scheme: dark) {
   :root {
@@ -15,7 +14,7 @@
   }
 
   img {
-    filter: grayscale(1) brightness(.8) contrast(1.2);
+    filter: grayscale(1) brightness(0.8) contrast(1.2);
   }
 
   pre[class*="language-"] {
@@ -32,7 +31,7 @@
 
   .direct-link {
     &:hover {
-      &:after {
+      &::after {
         filter: brightness(500%);
       }
     }
@@ -63,22 +62,7 @@
     --link-color: var(--blue);
     --link-color-alt: var(--purple);
     --footer-color: var(--grey-800);
-  }
 
-  .gradient-home.light-theme {
-    background-image: url("/assets/images/mesh-gradient-white.webp");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
-  /*! purgecss ignore */
-  .no-webp .gradient-home.light-theme {
-    background-image: url("/assets/images/mesh-gradient-white.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
-  .light-theme {
     img {
       filter: grayscale(0);
     }
@@ -97,10 +81,23 @@
 
     .direct-link {
       &:hover {
-        &:after {
+        &::after {
           filter: brightness(0%);
         }
       }
     }
+  }
+
+  .gradient-home.light-theme {
+    background-image: url("/assets/images/mesh-gradient-white.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  /*! purgecss ignore */
+  .no-webp .gradient-home.light-theme {
+    background-image: url("/assets/images/mesh-gradient-white.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
