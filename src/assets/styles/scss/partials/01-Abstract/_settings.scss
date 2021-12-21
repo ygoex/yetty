@@ -12,12 +12,14 @@
 /// 62rem * 16px = 992px; not in use yet
 /// 64rem * 16px = 1024px;
 /// 80rem * 16px = 1280px;
+/// 90rem * 16px = 1440px
 $breakpoints: (
-  "xs": 36em,
-  "sm": 48em,
-  "md": 60em,
-  "lg": 64em,
-  "xl": 80em,
+  "xs":  36em,
+  "sm":  48em,
+  "md":  60em,
+  "lg":  64em,
+  "xl":  80em,
+  "xxl": 90em,
 ) !default;
 
 // Palette generated with -->
