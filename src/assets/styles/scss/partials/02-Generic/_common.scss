@@ -84,6 +84,9 @@
     background-image: url("/assets/images/mesh-gradient-black.webp");
     background-repeat: no-repeat;
     background-size: contain;
+    @include media-query(xxl) {
+      background-size: cover;
+    }
   }
 }
 
@@ -92,4 +95,7 @@
   background-image: url("/assets/images/mesh-gradient-black.jpg");
   background-repeat: no-repeat;
   background-size: contain;
+  @include media-query(xxl) {
+    background-size: cover;
+  }
 }

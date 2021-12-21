@@ -41,6 +41,9 @@
     background-image: url("/assets/images/mesh-gradient-black.webp");
     background-repeat: no-repeat;
     background-size: contain;
+    @include media-query(xxl) {
+      background-size: cover;
+    }
   }
 
   /*! purgecss ignore */
@@ -48,6 +51,9 @@
     background-image: url("/assets/images/mesh-gradient-black.jpg");
     background-repeat: no-repeat;
     background-size: contain;
+    @include media-query(xxl) {
+      background-size: cover;
+    }
   }
 
   .light-theme {
@@ -92,6 +98,9 @@
     background-image: url("/assets/images/mesh-gradient-white.webp");
     background-repeat: no-repeat;
     background-size: contain;
+    @include media-query(xxl) {
+      background-size: cover;
+    }
   }
 
   /*! purgecss ignore */
@@ -99,5 +108,8 @@
     background-image: url("/assets/images/mesh-gradient-white.jpg");
     background-repeat: no-repeat;
     background-size: contain;
+    @include media-query(xxl) {
+      background-size: cover;
+    }
   }
 }
